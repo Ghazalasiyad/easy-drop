@@ -1,19 +1,17 @@
-import { Outlet } from "react-router-dom"
-import Navbar from "../Navbar/Navbar"
-import Footer from '../Footer/Footer';
+import { Outlet } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+import Prenav from '../Prenav/Prenav';
 
-
-
-const HomePageLayout = () => {
+const HomePageLayout: React.FC = () => {
   return (
     <div>
-        <Navbar/>
-        <div>
-            <Outlet/>
-        </div>
-        <Footer/>
+      <Prenav />
+      <Navbar />
+      <main >
+        <Outlet />
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default HomePageLayout
+export default HomePageLayout;

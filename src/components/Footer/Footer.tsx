@@ -1,8 +1,13 @@
+import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <div className="font">Footer</div>
-  )
-}
+    <footer className="bg-gray-800 text-white py-6 mt-auto">
+      <div className="container mx-auto text-center">
+        <p>&copy; 2023 FASY DROP. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
