@@ -1,6 +1,7 @@
 import type React from "react"
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Tabs from "../../components/Tabs/Tabs"
 
 interface SlideData {
   title: string[]
@@ -13,19 +14,19 @@ const slides: SlideData[] = [
     title: ["Your Adventure,", "our Mission"],
     description:
       "Easy Drop Travels Offers Reliable Travel Services With Tailored Packages For Families, Businesses, And Solo Travelers. We Ensure Safe, Comfortable, And Hassle-Free Journeys Every Time.",
-    image: "/images/adventure.jpg",
+    image: "/images/background.jpg",
   },
   {
     title: ["Explore", "the World"],
     description:
       "Discover breathtaking destinations and create unforgettable memories with our expertly curated travel experiences. From serene beaches to bustling cities, we've got you covered.",
-    image: "/images/explore.jpg",
+    image: "/images/background.jpg",
   },
   {
     title: ["Travel", "Worry-Free"],
     description:
       "Let us handle the details while you focus on enjoying your journey. Our comprehensive travel packages ensure a smooth and stress-free experience from start to finish.",
-    image: "/images/worry-free.jpg",
+    image: "/images/background.jpg",
   },
 ]
 
@@ -41,9 +42,9 @@ const TravelSlider: React.FC = () => {
   }
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative  w-full overflow-hidden">
       {/* Slide */}
-      <div className="relative h-full w-full">
+      <div className="relative h-[100vh] w-full">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
@@ -54,7 +55,7 @@ const TravelSlider: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex h-full flex-col justify-center px-6 md:px-16 lg:px-24">
+        <div className="relative z-10 ml-30 flex h-full flex-col justify-center px-6 md:px-16 lg:px-24">
           <div className="max-w-2xl">
             {/* Title */}
             <h1 className="mb-4 font-semibold text-white text-[56px] leading-[90px]">
@@ -95,8 +96,11 @@ const TravelSlider: React.FC = () => {
             </button>
           </div>
         </div>
+        
       </div>
+      <Tabs/>
     </div>
+    
   )
 }
 
