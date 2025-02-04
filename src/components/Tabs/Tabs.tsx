@@ -93,19 +93,19 @@ export default function Tabs() {
   {filteredVehicles.map((vehicle) => (
     <div
       key={vehicle.id}
-      className="w-[380px] bg-[#F7F9FC] border-[1px] border-[#F7F9FC] shadow-md rounded-lg min-h-[300px] overflow-hidden transition-all duration-300 hover:bg-white hover:border-transparent"
+      className="w-[386px] bg-[#F7F9FC] border-[1px] border-[#F7F9FC] shadow-md rounded-lg h-[393px] overflow-hidden transition-all duration-300 hover:bg-white hover:border-transparent"
     >
       {/* Image Section with padding and Border Radius */}
-      <div className="relative w-full h-48 p-2">
+      <div className="relative w-[356px] h-[246px]">
         <img
           src={vehicle.image || "/placeholder.svg"}
           alt={vehicle.name}
-          className="w-full h-full object-cover rounded-lg"
+          className=" object-cover rounded-lg"
         />
       </div>
 
       {/* Title & Price */}
-      <div className="p-4 flex justify-between items-center">
+      <div className="p-4 flex justify-between items-center w-[356px] h-[93px]">
         <h3 className="font-semibold text-xl leading-[12px]">{vehicle.name}</h3>
         <p className="text-[8px] font-medium leading-[12px] text-black text-right">
           Starting from <br />
@@ -114,7 +114,7 @@ export default function Tabs() {
       </div>
 
       {/* Button Section */}
-      <div className="p-4 flex justify-between items-center">
+      <div className="flex justify-between items-center ml-4">
         <button className="px-6 py-3 text-xs border border-[#2C3486] text-[#2C3486] rounded-md shadow-md text-[14px] font-medium leading-[14px] hover:bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] hover:text-white">
           Request a Quote
         </button>
