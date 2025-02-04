@@ -15,62 +15,68 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-white to-blue-50">
-      <nav className="w-[1450px] h-[90px] mx-auto flex justify-between items-center pt-[69px] sm:px-6">
-        <div className="flex items-center">
-          <img src={Logo} alt="Logo" className="w-[172px] h-[50px]" />
-        </div>
-        <ul className="hidden md:flex space-x-8 font-medium">
+    <header className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
+    <nav className="container mx-auto max-w-screen-xl h-[90px] pt-16 flex justify-between items-center px-4 sm:px-6 lg:px-8">
+      <div>
+        <img src={Logo} alt="Logo" className="w-[172px] h-[50px]" />
+      </div>
+      <ul className="hidden md:flex space-x-8 font-medium">
+        {navLinks.map((link) => (
+          <li key={link.name}>
+            <NavLink
+              to={link.path}
+              className={({ isActive }) =>
+                `pb-1 transition duration-300 hover:text-blue-500 ${
+                  isActive ? "border-b-2 border-blue-500 font-semibold" : ""
+                }`
+              }
+            >
+              {link.name}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+
+      <button className="hidden md:block w-[134px] h-[47px] rounded-lg text-lg font-medium text-white
+        transition-colors duration-200 bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
+        hover:from-[#252369] hover:to-[#1d4683]">
+        Contact Us
+      </button>
+
+      <div className="md:hidden">
+        <button onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <FaTimes size={26} /> : <FaBars size={26} />}
+        </button>
+      </div>
+    </nav>
+    {isOpen && (
+      <div className="md:hidden bg-white absolute top-[90px] left-0 w-full shadow-lg">
+        <ul className="flex flex-col items-center space-y-6 py-6">
           {navLinks.map((link) => (
             <li key={link.name}>
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  `pb-1 transition duration-300 hover:text-blue-500 ${isActive ? "border-b-2 border-blue-500 font-semibold" : ""
+                  `pb-1 transition duration-300 hover:text-blue-500 ${
+                    isActive ? "border-b-2 border-blue-500 font-semibold" : ""
                   }`
                 }
+                onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </NavLink>
             </li>
           ))}
-        </ul>
-        <button className="hidden md:block w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white
-               transition-colors duration-200 bg-gradient-to-r from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683]">
-          Contact Us
-        </button>
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <FaTimes size={26} /> : <FaBars size={26} />}
+          <button className="w-[134px] h-[47px] rounded-lg text-lg font-medium text-white
+            transition-colors duration-200 bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
+            hover:from-[#252369] hover:to-[#1d4683]">
+            Contact Us
           </button>
-        </div>
-      </nav>
-      
-      {isOpen && (
-        <div className="md:hidden bg-white absolute top-[90px] left-0 w-full shadow-lg">
-          <ul className="flex flex-col items-center space-y-6 py-6">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <NavLink
-                  to={link.path}
-                  className={({ isActive }) =>
-                    `pb-1 transition duration-300 hover:text-blue-500 ${isActive ? "border-b-2 border-blue-500 font-semibold" : ""
-                    }`
-                  }
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </NavLink>
-              </li>
-            ))}
-            <button className="w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white
-                  transition-colors duration-200 bg-gradient-to-r from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683]">
-              Contact Us
-            </button>
-          </ul>
-        </div>
-      )}
-    </header>
+        </ul>
+      </div>
+    )}
+  </header>
+  
   );
 };
 
