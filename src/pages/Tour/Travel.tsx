@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Tabs from "../../components/Tabs/Tabs"
+import Form from "../../components/Form/Form"
 
 interface SlideData {
   title: string[]
@@ -194,6 +195,9 @@ const TravelSlider: React.FC = () => {
       </button>
     </div>
   </div>
+</section>
+<section>
+  <Form/>
 </section>
 
 
