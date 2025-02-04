@@ -44,7 +44,7 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 bg-[#F8FAFC]">
+    <div className="container mx-auto px-4 py-12 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <h2 className="text-3xl font-bold pl-[4%]">
