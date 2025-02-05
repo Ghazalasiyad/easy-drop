@@ -10,6 +10,28 @@ import WhyChooseUs from '../../components/WhyUs/WhyUs';
 // import { SliderData } from '../../components/SliderCard/SliderData';
 
 const Pick = () => {
+  const schools = [
+    {
+      name: "International School",
+      logo: "/images/kiu.png",
+    },
+    {
+      name: "College Logo",
+      logo: "/images/public.png",
+    },
+    {
+      name: "Modern Education",
+      logo: "/images/Akhss.png",
+    },
+    {
+      name: "Elysian",
+      logo: "/images/elysian.png",
+    },
+    {
+      name: "Educational Institution",
+      logo: "/images/police.png",
+    },
+  ]
   return (
     <div>
     <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ">
@@ -100,6 +122,33 @@ const Pick = () => {
      
       <div> <Form/></div>
       <div><WhyChooseUs/></div>
+
+      {/* Our Trusted School Section */}
+      <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl  leading-[28px] font-semibold mb-4">
+            Our Trusted <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">School and Colleges</span>, Universities
+          </h2>
+          <p className="text-[#666666] font-normal text-lg leading-[26px]">
+            Reliable transportation for schools, colleges, and universities,
+            <br />
+            ensuring safe and timely commutes every day
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center max-w-6xl mx-auto">
+          {schools.map((school, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300  w-[197px] h-[216px] aspect-square flex items-center justify-center"
+            >
+              <img src={school.logo || "/placeholder.svg"} alt={school.name} className="w-[98px] h-[96px]  object-contain" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 </div>
 
 
