@@ -1,13 +1,13 @@
 import React from 'react'
 import Form from '../../components/Form/Form';
 import WhyChooseUs from '../../components/WhyUs/WhyUs';
-// import "swiper/swiper-bundle.css";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation } from "swiper/modules";
-// import { ChevronLeft, ChevronRight } from "react-feather";
-// import "swiper/swiper-bundle.css";
-// import SliderCard from '../../components/SliderCard/SliderCard';
-// import { SliderData } from '../../components/SliderCard/SliderData';
+import "swiper/swiper-bundle.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { ArrowRight } from "react-feather";
+import "swiper/swiper-bundle.css";
+import SliderCard from '../../components/SliderCard/SliderCard';
+import { SliderData } from '../../components/SliderCard/SliderData';
 
 const Pick = () => {
   const schools = [
@@ -57,15 +57,14 @@ const Pick = () => {
     </div>
     
 </div>
-{/* <section className="w-full bg-white py-12 md:py-16">
+<section className="w-full bg-white py-12 md:py-16">
         <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
-          <div className="text-center max-w-3xl mx-auto mb-28">
-            <h2 className="text-3xl md:text-4xl  font-urbanist font-bold mb-4">
-              What Our <span className="text-[#97171F]">Clients Say</span>
+          <div className=" max-w-3xl  mb-28">
+            <h2 className="text-4xl md:text-4xl leading-[57px] font-semibold mb-4">
+             <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">Drive Safe,</span> Arrive Happy!
             </h2>
-            <p className="text-[#59636A] text-sm md:text-xl font-urbanist mt-4 max-w-3xl mx-auto">
-              Discover why Hotela is a trusted parter for Hoteliers Worldwide
-              Read genuine reviews from Satisfied Users!
+            <p className="text-lg md:text-xl font-normal leading-[27px] max-w-3xl text-[#666666]">
+            Your safety inspires us to go the extra mile, ensuring every journey is secure, reliable, and stress-free.
             </p>
           </div>
 
@@ -107,18 +106,16 @@ const Pick = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="flex justify-center items-center mt-0 mb-5 relative">
-            <div className="bottom-0 flex justify-center space-x-4">
-              <button className="prev-button w-9 h-9 border border-[#7C0914] text-[#7C0914] rounded-full flex justify-center items-center hover:bg-[#7C0914] hover:text-white transition mx-2">
-                <ChevronLeft />
-              </button>
-              <button className="next-button w-9 h-9 border border-[#7C0914] text-[#7C0914] rounded-full flex justify-center items-center hover:bg-[#7C0914] hover:text-white transition mx-2">
-                <ChevronRight />
+          <div className="flex border-b border-[#c1d0e5]  justify-between mt-0 mb-5  relative h-[85px] w-[560px]">
+            <h2 className='text-2xl font-bold leading-[44px]'>Need <span className='bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text'>Pick & Drop</span></h2>
+            <div className="flex  gap-[100px] justify-between">
+              <button className="next-button w-9 h-9  rounded-full flex  mx-2">
+                <ArrowRight />
               </button>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
      
       <div> <Form/></div>
       <div><WhyChooseUs/></div>
