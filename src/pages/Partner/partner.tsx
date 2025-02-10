@@ -1,6 +1,12 @@
 import React from 'react'
 import PartnerSlider from '../../components/PartnerSlider/PartnerSlider'
-import groupcaar from './../../../public/images/groupcaar.png'
+import Car from '../../../public/icons/Car.png'
+import ExpertDriversCard from '../../components/ExpertDrivers/ExpertDriversCard';
+import {ExpertDriversData} from '../../components/ExpertDrivers/ExpertDriversData';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, } from "swiper/modules";
+import Form from "../../components/Form/Form"
+import "swiper/swiper-bundle.css";
 
 interface BenefitCard {
   title: string;
@@ -12,29 +18,29 @@ const benefits: BenefitCard[] = [
   {
     title: "Flexible Work Hours",
     description: "Choose your own schedule, allowing you to balance work and personal life while maximizing your earnings.",
-    icon: ""
+    icon: Car,
   },
   {
     title: "Attractive Earnings",
     description: "Ensuring safety, punctuality, and comfort with professional drivers and well-maintained vehicles",
-    icon: ""
+    icon: Car
   },
   {
     title: "Maintenance Support",
     description: "Choose your own schedule, allowing you to balance work and personal life while maximizing your earnings.",
-    icon: ""
+    icon: Car
   },
   {
     title: "Secure Payments",
     description: "Receive prompt, reliable, and timely payments for every completed trip, ensuring peace of mind.",
-    icon: ""
+    icon: Car
   }
 ];
 const partner = () => {
   return (
     <div>
-    <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div className="container pl-[10%] bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] mx-auto h-[640px] max-w-full flex flex-col lg:flex-row items-center gap-12">
+    <div className="mx-auto  px-4 sm:px-6 lg:px-8 py-16">
+    <div className="pl-[10%] bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] mx-auto h-[640px] w-[1485px] flex flex-col lg:flex-row items-center gap-12">
       <div className="w-full lg:w-1/2 lg:pr-12 mb-[10px] lg:mb-0">
       <h1 className="text-[56px] font-semibold">Add your car <br/> and <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text"> Start </span> <br/>  <span className="text-[#2E2C80]"> earning </span> with Us</h1>
     
@@ -279,7 +285,8 @@ const partner = () => {
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-[334px] h-[284px] mt-10"
             >
               <div className=" w-[52px] h-[63px] rounded-lg flex items-center justify-center mb-4">
-                <span className="text-xl">{benefit.icon}</span>
+              
+                <img src={benefit.icon} alt="" />
               </div>
               <h3 className="text-xl font-medium mb-3 leading-[25px] text-gray-900">
                 {benefit.title}
@@ -292,6 +299,60 @@ const partner = () => {
         </div>
       </div>
     </section>
+
+    {/* Expert Drivers Section */}
+     <section className="w-full h-[848px] py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 2xl:px-36">
+          <div className="text-center max-w-3xl mx-auto mb-28">
+            <h2  className='text-[38px] font-semibold leading-[42px]'>Our <span className='bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text'>Expert</span> Drivers</h2>
+            
+            <p className="text-[#59636A] text-lg leading-[26px] font-normal md:text-xl font-urbanist mt-4 max-w-3xl mx-auto">
+            Our expert drivers are the backbone of Easy Drop, dedicated to providing safe, 
+            reliable, and punctual transportation services. With extensive experience and a commitment to customer satisfaction, they ensure every 
+            ride is a smooth and hassle-free experience for our passengers.
+            </p>
+          </div>
+
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={24}
+            slidesPerView={1}
+            pagination={{
+              clickable: true,
+              bulletActiveClass: "swiper-pagination-bullet-active bg-[#B11A28]",
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+              1280: {
+                slidesPerView: 2,
+              },
+              1380: {
+                slidesPerView: 2,
+              },
+              1480: {
+                slidesPerView: 4,
+              },
+            }}
+            className="!pb-24"
+          >
+            {ExpertDriversData.map((feature, index) => (
+              <SwiperSlide key={index}>
+                <ExpertDriversCard {...feature} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+    
   
 </div>
   )
