@@ -1,7 +1,35 @@
 import React from 'react'
 import PartnerSlider from '../../components/PartnerSlider/PartnerSlider'
+import groupcaar from './../../../public/images/groupcaar.png'
 
+interface BenefitCard {
+  title: string;
+  description: string;
+  icon: string;
+}
 
+const benefits: BenefitCard[] = [
+  {
+    title: "Flexible Work Hours",
+    description: "Choose your own schedule, allowing you to balance work and personal life while maximizing your earnings.",
+    icon: ""
+  },
+  {
+    title: "Attractive Earnings",
+    description: "Ensuring safety, punctuality, and comfort with professional drivers and well-maintained vehicles",
+    icon: ""
+  },
+  {
+    title: "Maintenance Support",
+    description: "Choose your own schedule, allowing you to balance work and personal life while maximizing your earnings.",
+    icon: ""
+  },
+  {
+    title: "Secure Payments",
+    description: "Receive prompt, reliable, and timely payments for every completed trip, ensuring peace of mind.",
+    icon: ""
+  }
+];
 const partner = () => {
   return (
     <div>
@@ -226,6 +254,41 @@ const partner = () => {
               <p className="text-[#2D2D2D] font-normal text-base leading-[27px]">Travel anywhere with ease and reliability, only with Easy Drop.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    {/* Why drive with us section  */}
+    <section className="py-16 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] mt-[10%]">
+      <div className="max-w-[1920px] h-[524px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 mt-10">
+          <h2 className="text-[38px] md:text-4xl font-semibold leading-[40px] mb-4">
+            <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">Why drive</span>   
+                 <span> with us ?</span>
+          </h2>
+          <p className="text-[#666666] font-normal text-xl leading-[26px] max-w-3xl mx-auto">
+            Drive with Easy Drop for flexible hours, attractive earnings, and the opportunity to grow your business. Enjoy regular vehicle maintenance support and secure, timely payments for every trip.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 align-middle">
+          {benefits.map((benefit, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-[334px] h-[284px] mt-10"
+            >
+              <div className=" w-[52px] h-[63px] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-xl">{benefit.icon}</span>
+              </div>
+              <h3 className="text-xl font-medium mb-3 leading-[25px] text-gray-900">
+                {benefit.title}
+              </h3>
+              <p className="text-[#666666] font-normal text-sm leading-[21px] mt-8">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
