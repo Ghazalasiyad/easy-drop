@@ -5,6 +5,9 @@ import SectionForth from "../../assets/sectionFourth.png"
 import CounterList from "../../counters/CounterList";
 import TravelTour from "../../components/GalleryBook/TravelTour";
 import Driver from "../../Drivers/Driver";
+import Testimonials from "../../components/SliderComp/Testimonials";
+import ContactForm from '../../components/contactform/ContactForm';
+import Footer from '../../components/Footer/Footer';
 
 
 export default function Home() {
@@ -102,13 +105,26 @@ export default function Home() {
       <div>
         <CounterList />
       </div>
+
       <div>
         <TravelTour />
       </div>
 
       {/* Sixth Section Start */}
-    <Driver />
+      <div>
+        <Driver />
+      </div>
       {/* Sixth Section End */}
+
+     <div>
+     <Testimonials />
+     </div>
+     <div>
+      <ContactForm />
+     </div>
+     <div>
+      <Footer />
+     </div>
     </>
   );
 }
