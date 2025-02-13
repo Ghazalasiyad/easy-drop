@@ -1,6 +1,7 @@
 import React from "react";
 import { CardProps } from "../../Types/type";
 import Card from "./Card";
+import { motion } from "framer-motion";
 
 import icon1 from "../../assets/CardIcons/pic and drop.png";
 import icon2 from "../../assets/CardIcons/loction.png";
@@ -47,23 +48,42 @@ const CardList: React.FC = () => {
         <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] px-4 sm:px-6 lg:px-8 py-16">
             <div className="container mx-auto max-w-screen-2xl">
                 <div className="text-center mb-12">
-                    <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    <h1 className="text-xl sm:text-3xl font-bold text-gray-900">
                         Why <span className="text-[#2E2C80]">choose us</span>
                     </h1>
-                    <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-                        At EasyDrop, we prioritize your convenience, safety, and satisfaction.
-                        Whether it's reliable pick-and-drop services or unforgettable travel
-                        experiences, we ensure top-notch service tailored to your needs.
+                    <p className="mt-2 text-gray-600 max-w-lg sm:max-w-2xl mx-auto text-sm sm:text-base">
+                        At EasyDrop, we prioritize your convenience, safety, and satisfaction. Whether it's reliable pick-and-drop services or unforgettable travel experiences, we ensure top-notch service tailored to your needs.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <motion.div
+                    className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.2,
+                            },
+                        },
+                    }}
+                >
                     {cardData.map((card, index) => (
-                        <div key={index} className="flex justify-center">
+                        <motion.div
+                            key={index}
+                            className="flex justify-center"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.8, delay: index * 0.2 }}
+                        >
                             <Card {...card} />
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
 
