@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Tabs from "../../components/Tabs/Tabs"
-import Form from "../../components/Form/Form"
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "react-feather";
+import Tabs from "../../components/Tabs/Tabs";
+import Form from "../../components/Form/Form";
 
 interface SlideData {
-  title: string[]
-  description: string
-  image: string
+  title: string[];
+  description: string;
+  image: string;
 }
 
 const slides: SlideData[] = [
@@ -28,19 +28,18 @@ const slides: SlideData[] = [
       "Let us handle the details while you focus on enjoying your journey. Our comprehensive travel packages ensure a smooth and stress-free experience from start to finish.",
     image: "/images/background.jpg",
   },
-]
-
+];
 
 const TravelSlider: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
   return (
     <div className="relative  w-full overflow-hidden">
@@ -101,110 +100,121 @@ const TravelSlider: React.FC = () => {
       <Tabs />
 
       <section className="py-16 px-4 md:px-6 lg:px-8">
-  <div className="max-w-7xl mx-auto">
-    <div className="mb-12">
-      <h2 className="text-4xl font-semibold mb-4 text-center">
-        Recent{" "}
-        <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">Gallery</span>
-      </h2>
-      <p className="text-[#666666] text-lg font-normal leading-[30px] text-center max-w-3xl mx-auto">
-        From serene valleys to majestic mountains, every trip is crafted with your comfort and exploration in mind.
-        Let us handle the logistics while you create memories that last a lifetime. Start your adventure today!
-      </p>
-    </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-4xl font-semibold mb-4 text-center">
+              Recent{" "}
+              <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
+                Gallery
+              </span>
+            </h2>
+            <p className="text-[#666666] text-lg font-normal leading-[30px] text-center max-w-3xl mx-auto">
+              From serene valleys to majestic mountains, every trip is crafted
+              with your comfort and exploration in mind. Let us handle the
+              logistics while you create memories that last a lifetime. Start
+              your adventure today!
+            </p>
+          </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {/* Large Featured Image - Hunza Baltit Fort */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Large Featured Image - Hunza Baltit Fort */}
+
+            <div className="relative rounded-2xl overflow-hidden md:col-span-2 row-span-2">
+              <img
+                src="/images/baltit.png"
+                alt="Hunza Baltit Fort"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 className="absolute bottom-4 left-4 text-white text-xl font-semibold">
+                  Hunza Baltit Fort
+                </h3>
+              </div>
+            </div>
+
+            {/* Deosai Lake */}
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="/images/deosai.png"
+                alt="Deosai Lake"
+                className="w-full h-[240px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">
+                  Deosai Lake
+                </h3>
+              </div>
+            </div>
+            {/* Skardu */}
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="/images/skardu.png"
+                alt="Skardu"
+                className="w-full h-[240px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">
+                  Skardu
+                </h3>
+              </div>
+            </div>
+
+            {/* Ghizer Valley */}
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="/images/ghizer.png"
+                alt="Ghizer Valley"
+                className="w-full h-[300px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">
+                  Ghizer Valley
+                </h3>
+              </div>
+            </div>
+
+            {/* Gilgit */}
+            <div className="relative rounded-2xl overflow-hidden md:col-span-1">
+              <img
+                src="/images/gilgit.png"
+                alt="Gilgit"
+                className="w-full h-[300px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">
+                  Gilgit
+                </h3>
+              </div>
+            </div>
+
+            {/* Rakhaposhi */}
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="/images/rakaposhi.png"
+                alt="Rakhaposhi"
+                className="w-full h-[300px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">
+                  Rakhaposhi
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <button className="rounded-md bg-gradient-to-b from-[#2E2C80] to-[#2458A4] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] hover:opacity-90 transition-opacity">
+              Explore Now
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <Form />
+      </section>
       
-      <div className="relative rounded-2xl overflow-hidden md:col-span-2 row-span-2">
-        <img
-          src="/images/baltit.png"
-          alt="Hunza Baltit Fort"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-          <h3 className="absolute bottom-4 left-4 text-white text-xl font-semibold">Hunza Baltit Fort</h3>
-        </div>
-      </div>
-      
-      {/* Deosai Lake */}
-      <div className="relative rounded-2xl overflow-hidden">
-        <img
-          src="/images/deosai.png"
-          alt="Deosai Lake"
-          className="w-full h-[240px] object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-          <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">Deosai Lake</h3>
-        </div>
-      </div>
-       {/* Skardu */}
-       <div className="relative rounded-2xl overflow-hidden">
-        <img
-          src="/images/skardu.png"
-          alt="Skardu"
-          className="w-full h-[240px] object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-          <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">Skardu</h3>
-        </div>
-      </div>
-
-      {/* Ghizer Valley */}
-      <div className="relative rounded-2xl overflow-hidden">
-        <img
-          src="/images/ghizer.png"
-          alt="Ghizer Valley"
-          className="w-full h-[300px] object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-          <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">Ghizer Valley</h3>
-        </div>
-      </div>
-
-      {/* Gilgit */}
-      <div className="relative rounded-2xl overflow-hidden md:col-span-1">
-        <img
-          src="/images/gilgit.png"
-          alt="Gilgit"
-          className="w-full h-[300px] object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-          <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">Gilgit</h3>
-        </div>
-      </div>
-
-     
-
-      {/* Rakhaposhi */}
-      <div className="relative rounded-2xl overflow-hidden">
-        <img
-          src="/images/rakaposhi.png"
-          alt="Rakhaposhi"
-          className="w-full h-[300px] object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-          <h3 className="absolute bottom-4 left-4 text-white text-lg font-semibold">Rakhaposhi</h3>
-        </div>
-      </div>
     </div>
+  );
+};
 
-    <div className="text-center mt-12">
-      <button className="rounded-md bg-gradient-to-b from-[#2E2C80] to-[#2458A4] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] hover:opacity-90 transition-opacity">
-        Explore Now
-      </button>
-    </div>
-  </div>
-</section>
-<section>
-  <Form/>
-</section>
-
-
-
-
-    </div>
-  )
-}
-
-export default TravelSlider
+export default TravelSlider;

@@ -5,8 +5,8 @@ import ExpertDriversCard from '../../components/ExpertDrivers/ExpertDriversCard'
 import {ExpertDriversData} from '../../components/ExpertDrivers/ExpertDriversData';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, } from "swiper/modules";
-import Form from "../../components/Form/Form"
 import "swiper/swiper-bundle.css";
+import DriverForm from '../../components/Form/DriverForm';
 
 interface BenefitCard {
   title: string;
@@ -352,7 +352,9 @@ const partner = () => {
           </Swiper>
         </div>
       </section>
-    
+      <div className='mt-10'>
+      <DriverForm/>
+      </div>
   
 </div>
   )
