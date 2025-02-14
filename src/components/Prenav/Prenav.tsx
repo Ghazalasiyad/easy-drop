@@ -2,9 +2,9 @@ import { FaPhoneAlt, FaMapMarkerAlt, FaFacebook, FaInstagram, FaYoutube } from "
 
 const Prenav: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-900 to-blue-900">
-      <div className="w-full max-w-[1920px] h-[45px]  text-white px-4 flex flex-col md:flex-row justify-around items-center text-xs mx-auto">
-        <div className="flex items-center space-x-4 md:space-x-6">
+    <div className="bg-gradient-to-r from-blue-900 to-blue-900 fixed top-0 right-0 left-0 z-50">
+      <div className="container h-[45px] text-white px-4 flex flex-col md:flex-row justify-around items-center text-xs mx-auto">
+        <div className="hidden md:flex items-center space-x-4 md:space-x-6">
           <div className="flex items-center space-x-2">
             <FaPhoneAlt className="text-sm" />
             <span className="text-xs sm:text-sm">+92-3554347521</span>
@@ -31,6 +31,7 @@ const Prenav: React.FC = () => {
         </div>
       </div>
     </div>
+
 
   );
 };

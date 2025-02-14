@@ -1,3 +1,6 @@
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePageLayout from './components/HomePageLayout/HomePageLayout';
@@ -6,6 +9,8 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import Drop from './pages/PickDrop/Drop';
 import Tour from './pages/Tours/Tour'; 
 import Partner from './pages/BPartner/Partner';
+
+
 
 function App() {
   return (
