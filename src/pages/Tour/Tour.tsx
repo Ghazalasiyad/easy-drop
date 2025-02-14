@@ -95,9 +95,9 @@ const TravelSlider: React.FC = () => {
 
       <motion.section
         className="py-16 px-4 md:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
@@ -121,6 +121,8 @@ const TravelSlider: React.FC = () => {
               className="relative rounded-2xl overflow-hidden md:col-span-2 row-span-2"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
+              whileInView={{ opacity: 1, y: 0 }}
+            
             >
               <img
                 src="/images/baltit.png"
@@ -159,6 +161,8 @@ const TravelSlider: React.FC = () => {
                 className="relative rounded-2xl overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
+                whileInView={{ opacity: 1, y: 0 }}
+               
               >
                 <img
                   src={item.src}
@@ -179,6 +183,8 @@ const TravelSlider: React.FC = () => {
               className="rounded-md bg-gradient-to-b from-[#2E2C80] to-[#2458A4] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
+              whileInView={{ opacity: 1, y: 0 }}
+             
             >
               Explore Now
             </motion.button>

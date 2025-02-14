@@ -60,8 +60,10 @@ const Form: React.FC = () => {
       <motion.div
         className="container mx-auto px-4 py-8 sm:py-12"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        // animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        
       >
         <div className="container mx-auto">
           <div className="mb-8">
@@ -85,8 +87,10 @@ const Form: React.FC = () => {
               onSubmit={handleSubmit}
               className="pl-0 sm:pl-[4%] space-y-4 sm:space-y-6 w-full lg:w-auto"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              // animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}
+              whileInView={{ opacity: 1, y: 0 }}
+             
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 {Object.keys(formData).map((key) => (
@@ -94,7 +98,8 @@ const Form: React.FC = () => {
                     key={key}
                     className="space-y-2"
                     initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    // animate={{ opacity: 1, x: 0 }}
                     transition={{
                       duration: 0.5,
                       delay: 0.1 * Object.keys(formData).indexOf(key),
@@ -124,6 +129,7 @@ const Form: React.FC = () => {
                 className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 Request Quote
               </motion.button>
@@ -132,7 +138,8 @@ const Form: React.FC = () => {
             <motion.div
               className="flex items-center justify-center lg:items-start lg:justify-start flex-1 mt-8 lg:mt-0"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              // animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               <img

@@ -33,49 +33,45 @@ const Pick = () => {
     },
   ];
 
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-  const gridVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
-
   return (
     <>
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
           className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
         >
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
             className="w-full lg:w-1/2 lg:pr-6 xl:pr-12 mb-8 lg:mb-0 px-4 sm:px-8 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
           >
-            <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: false }}
+              className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6"
+            >
               <span className="text-[#2E2C80]">Pick & Drop</span> Service
-            </h1>
-            <p className="text-gray-800 mb-8 sm:mb-12 leading-relaxed text-sm sm:text-base">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: false }}
+              className="text-gray-800 mb-8 sm:mb-12 leading-relaxed text-sm sm:text-base"
+            >
               <span className="text-[#2E2C80] font-bold">Easydrop</span> ensures
               safe, reliable transportation for students and professionals.
               Affordable monthly plans designed for convenience and flexibility.
               Sign up online with ease and customize your schedule effortlessly.
               Experience smooth, stress-free commutes tailored to your routine.
-            </p>
+            </motion.p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -86,8 +82,9 @@ const Pick = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
             className="w-full lg:w-1/2 flex justify-center"
           >
             <motion.img
@@ -95,8 +92,9 @@ const Pick = () => {
               alt="Pick & Drop Service"
               className="w-full max-w-[559px] h-auto object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
+              whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: false }}
             />
           </motion.div>
         </motion.div>
@@ -109,26 +107,38 @@ const Pick = () => {
           <motion.div
             className="max-w-3xl mb-14"
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-4xl leading-[57px] font-semibold mb-4">
+            <motion.h2
+              className="text-4xl md:text-4xl leading-[57px] font-semibold mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Drive Safe,
               </span>{" "}
               Arrive Happy!
-            </h2>
-            <p className="text-lg md:text-xl font-normal leading-[27px] max-w-3xl text-[#666666]">
+            </motion.h2>
+            <motion.p
+              className="text-lg md:text-xl font-normal leading-[27px] max-w-3xl text-[#666666]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Your safety inspires us to go the extra mile, ensuring every
               journey is secure, reliable, and stress-free.
-            </p>
+            </motion.p>
           </motion.div>
-
-          {/* Swiper Section */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
+            viewport={{ once: true }}
           >
             <Swiper
               modules={[Navigation]}
@@ -159,20 +169,25 @@ const Pick = () => {
               ))}
             </Swiper>
           </motion.div>
-
-          {/* Navigation & Heading */}
           <motion.div
             className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px] w-[560px]"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            // viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold leading-[44px]">
+            <motion.h2
+              className="text-2xl font-bold leading-[44px]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              // viewport={{ once: true }}
+            >
               Need{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Pick & Drop
               </span>
-            </h2>
+            </motion.h2>
             <div className="flex gap-[100px] justify-between">
               <motion.button
                 className="next-button w-9 h-9 rounded-full flex mx-2"
@@ -195,17 +210,20 @@ const Pick = () => {
       </div>
 
       {/* Our Trusted School Section */}
-      <motion.section
+      <motion.section 
+       initial={{ opacity: 0, y: 20 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       transition={{ duration: 0.8, ease: "easeOut" }}
         className="py-8 sm:py-12 md:py-16 bg-white"
         initial="hidden"
         animate="visible"
-        variants={sectionVariants}
       >
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-8 sm:mb-12"
-            variants={sectionVariants}
-          >
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 leading-tight">
               Our Trusted{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
@@ -221,15 +239,14 @@ const Pick = () => {
 
           <motion.div
             className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8 items-center justify-items-center max-w-6xl mx-auto"
-            variants={gridVariants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {schools.map((school, index) => (
               <motion.div
                 key={index}
                 className="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-full max-w-[197px] aspect-square flex items-center justify-center"
-                variants={itemVariants}
               >
                 <img
                   src={school.logo || "/placeholder.svg"}
