@@ -14,22 +14,19 @@ const SliderCard: React.FC<SliderProps> = ({
   review,
 }) => {
   return (
-    <div className="bg-white w-[333px] h-[323px]
-    rounded-xl border-[1px] hover:border-[1px] border-[#F5F5F5] hover:border-[#F5F5F5] p-6 hover:shadow-xl relative">
-      <div className=" items-center">
-        <div className="mb-6"><img
-          src={image}
-          alt="profile"
-          className="w-20 h-20 rounded-full object-cover"
-        /></div>
-        <div className=" font-normal text-base leading-[29px]">
-          <h3 className="font-semibold mb-4 text-lg">{name}</h3>
-        
-        </div>
-        
+    <div className="bg-white w-full max-w-[333px] min-h-[323px] rounded-xl border border-[#F5F5F5] p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 relative flex flex-col">
+    <div className="flex flex-col items-center sm:items-start mb-4">
+      <div className="mb-4 sm:mb-6">
+        <img
+          src={image || "/placeholder.svg"}
+          alt={`${name}'s profile`}
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover"
+        />
       </div>
-      <p className="text-[#787878] text-sm font-normal leading-[22px]">{review}</p>
+      <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4 text-center sm:text-left">{name}</h3>
     </div>
+    <p className="text-[#787878] text-sm font-normal leading-[22px] flex-grow">{review}</p>
+  </div>
   );
 };
 

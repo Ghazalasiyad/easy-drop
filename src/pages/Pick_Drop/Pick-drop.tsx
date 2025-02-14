@@ -7,6 +7,7 @@ import "swiper/swiper-bundle.css";
 import SliderCard from "../../components/SliderCard/SliderCard";
 import { SliderData } from "../../components/SliderCard/SliderData";
 import PickDropForm from "../../components/Form/PickDropForm";
+import { motion } from "framer-motion";
 
 const Pick = () => {
   const schools = [
@@ -31,34 +32,86 @@ const Pick = () => {
       logo: "/images/police.png",
     },
   ];
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const gridVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
   return (
     <>
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ">
-        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12">
-          <div className="w-full lg:w-1/2 lg:pr-12 mb-8 lg:mb-0 pl-36">
-            <h1 className="text-3xl font-bold mb-6">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
+        >
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full lg:w-1/2 lg:pr-6 xl:pr-12 mb-8 lg:mb-0 px-4 sm:px-8 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
+          >
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
               <span className="text-[#2E2C80]">Pick & Drop</span> Service
             </h1>
-            <p className="text-gray-800 mb-12 leading-relaxed">
-              <span className="text-[#2E2C80] font-bold">Easydrop</span>
-              ensures safe, reliable transportation for students<br></br> and
-              professionals. Affordable monthly plans designed for<br></br>{" "}
-              convenience and flexibility. Sign up online with ease and{" "}
-              <br></br>customize your schedule effortlessly. Experience smooth,
-              <br></br>stress-free commutes tailored to your routine.
+            <p className="text-gray-800 mb-8 sm:mb-12 leading-relaxed text-sm sm:text-base">
+              <span className="text-[#2E2C80] font-bold">Easydrop</span> ensures
+              safe, reliable transportation for students and professionals.
+              Affordable monthly plans designed for convenience and flexibility.
+              Sign up online with ease and customize your schedule effortlessly.
+              Experience smooth, stress-free commutes tailored to your routine.
             </p>
-            <button className="w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]"
+            >
               Subscribe
-            </button>
-          </div>
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <img src="/images/group.png" className="w-[559px] h-[529px]" />
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full lg:w-1/2 flex justify-center"
+          >
+            <motion.img
+              src="/images/group.png"
+              alt="Pick & Drop Service"
+              className="w-full max-w-[559px] h-auto object-contain"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            />
+          </motion.div>
+        </motion.div>
       </div>
+
+      {/* Second Section */}
       <section className="w-full bg-white py-12 md:py-16">
-        <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
-          <div className=" max-w-3xl  mb-14">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
+          {/* Heading & Description */}
+          <motion.div
+            className="max-w-3xl mb-14"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h2 className="text-4xl md:text-4xl leading-[57px] font-semibold mb-4">
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Drive Safe,
@@ -69,104 +122,125 @@ const Pick = () => {
               Your safety inspires us to go the extra mile, ensuring every
               journey is secure, reliable, and stress-free.
             </p>
-          </div>
+          </motion.div>
 
-          <Swiper
-            modules={[Navigation]}
-            navigation={{
-              prevEl: ".prev-button",
-              nextEl: ".next-button",
-            }}
-            spaceBetween={24}
-            slidesPerView={1}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-              },
-              1024: {
-                slidesPerView: 1,
-              },
-              1280: {
-                slidesPerView: 3,
-              },
-              1380: {
-                slidesPerView: 2,
-              },
-              1480: {
-                slidesPerView: 3,
-              },
-            }}
-            className="!pb-24"
+          {/* Swiper Section */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
-            {SliderData.map((review, index) => (
-              <SwiperSlide key={index}>
-                <SliderCard {...review} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="flex border-b border-[#c1d0e5]  justify-between mt-0 mb-5  relative h-[85px] w-[560px]">
+            <Swiper
+              modules={[Navigation]}
+              navigation={{
+                prevEl: ".prev-button",
+                nextEl: ".next-button",
+              }}
+              spaceBetween={24}
+              slidesPerView={1}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                1024: { slidesPerView: 1 },
+                1280: { slidesPerView: 3 },
+                1380: { slidesPerView: 2 },
+                1480: { slidesPerView: 3 },
+              }}
+              className="!pb-24"
+            >
+              {SliderData.map((review, index) => (
+                <SwiperSlide key={index}>
+                  <SliderCard {...review} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </motion.div>
+
+          {/* Navigation & Heading */}
+          <motion.div
+            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px] w-[560px]"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
             <h2 className="text-2xl font-bold leading-[44px]">
               Need{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Pick & Drop
               </span>
             </h2>
-            <div className="flex  gap-[100px] justify-between">
-              <button className="next-button w-9 h-9  rounded-full flex  mx-2">
+            <div className="flex gap-[100px] justify-between">
+              <motion.button
+                className="next-button w-9 h-9 rounded-full flex mx-2"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.5 }}
+              >
                 <ArrowRight />
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <div>
-        {" "}
         <PickDropForm />
       </div>
+
       <div>
         <WhyChooseUs />
       </div>
 
       {/* Our Trusted School Section */}
-      <section className="py-16 bg-white">
+      <motion.section
+        className="py-8 sm:py-12 md:py-16 bg-white"
+        initial="hidden"
+        animate="visible"
+        variants={sectionVariants}
+      >
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl  leading-[28px] font-semibold mb-4">
+          <motion.div
+            className="text-center mb-8 sm:mb-12"
+            variants={sectionVariants}
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 leading-tight">
               Our Trusted{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 School and Colleges
               </span>
               , Universities
             </h2>
-            <p className="text-[#666666] font-normal text-lg leading-[26px]">
+            <p className="text-[#666666] font-normal text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               Reliable transportation for schools, colleges, and universities,
-              <br />
               ensuring safe and timely commutes every day
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center max-w-6xl mx-auto">
+          <motion.div
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8 items-center justify-items-center max-w-6xl mx-auto"
+            variants={gridVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {schools.map((school, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300  w-[197px] h-[216px] aspect-square flex items-center justify-center"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-full max-w-[197px] aspect-square flex items-center justify-center"
+                variants={itemVariants}
               >
                 <img
                   src={school.logo || "/placeholder.svg"}
                   alt={school.name}
-                  className="w-[98px] h-[96px]  object-contain"
+                  className="w-full h-full max-w-[98px] max-h-[96px] object-contain"
                 />
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
