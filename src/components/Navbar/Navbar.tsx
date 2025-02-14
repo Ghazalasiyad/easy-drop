@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { motion } from 'framer-motion'
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from '../../assets/logo.png';
@@ -15,14 +16,25 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
-      <nav className="container mx-auto h-[90px] pt-16 flex justify-between items-center px-4 sm:px-6 lg:px-8 sticky">
-        <div>
-          <img src={Logo} alt="Logo" className="w-[172px] h-[50px]" />
-        </div>
-        <ul className="hidden md:flex space-x-8 font-bold">
+    <header className="fixed top-10 left-0 w-full bg-white z-50">
+      <nav className="container mx-auto h-[90px] flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <motion.img
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
+          src={Logo}
+          alt="Logo"
+          className="w-[150px] h-[40px] sm:w-[172px] sm:h-[50px]"
+        />
+
+        <ul className="hidden md:flex space-x-6 lg:space-x-8 font-bold text-sm lg:text-base">
           {navLinks.map((link) => (
-            <li key={link.name}>
+            <motion.li
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeInOut' }}
+              key={link.name}
+            >
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
@@ -32,15 +44,20 @@ const Navbar: React.FC = () => {
               >
                 {link.name}
               </NavLink>
-            </li>
+            </motion.li>
           ))}
         </ul>
 
-        <button className="hidden md:block w-[134px] h-[47px] rounded-lg text-lg font-medium text-white
+        <motion.button
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
+          className="hidden md:block w-[120px] h-[40px] lg:w-[134px] lg:h-[47px] rounded-lg text-sm lg:text-lg font-medium text-white
         transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
-        hover:from-[#252369] hover:to-[#1d4683]">
+        hover:from-[#252369] hover:to-[#1d4683]"
+        >
           Contact Us
-        </button>
+        </motion.button>
 
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -48,9 +65,15 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </nav>
+
       {isOpen && (
-        <div className="md:hidden bg-white absolute top-[90px] left-0 w-full shadow-lg">
-          <ul className="flex flex-col items-center space-y-6 py-6">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden bg-white absolute top-[70px] left-0 w-full shadow-lg z-50"
+        >
+          <ul className="flex flex-col items-start space-y-4 py-6 mx-4">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <NavLink
@@ -65,15 +88,17 @@ const Navbar: React.FC = () => {
                 </NavLink>
               </li>
             ))}
-            <button className="w-[134px] h-[47px] rounded-lg text-lg font-medium text-white
+            <button className="w-[120px] h-[40px] rounded-lg text-sm font-medium text-white
             transition-colors duration-200 bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
             hover:from-[#252369] hover:to-[#1d4683]">
               Contact Us
             </button>
           </ul>
-        </div>
+        </motion.div>
       )}
     </header>
+
+
 
   );
 };
