@@ -1,7 +1,8 @@
 import type React from "react"
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react"
+import { motion } from "framer-motion"
 
-import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser"
 
 interface FormData {
   name: string
@@ -15,7 +16,7 @@ interface FormData {
 }
 
 const DriverForm: React.FC = () => {
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null)
   const [formData, setFormData] = useState<FormData>({
     name: "",
     contactNumber: "",
@@ -28,25 +29,18 @@ const DriverForm: React.FC = () => {
   })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     if (formRef.current) {
-      emailjs
-        .sendForm(
-          "service_7ty2wk2",
-          "template_x7to1s8",
-          formRef.current,
-          "hRMsfCXWHx-PVRRzw"
-        )
-        .then(
-          (result) => {
-            console.log("Email sent successfully:", result.text);
-          },
-          (error) => {
-            console.error("Error sending email:", error.text);
-          }
-        );
+      emailjs.sendForm("service_7ty2wk2", "template_x7to1s8", formRef.current, "hRMsfCXWHx-PVRRzw").then(
+        (result) => {
+          console.log("Email sent successfully:", result.text)
+        },
+        (error) => {
+          console.error("Error sending email:", error.text)
+        },
+      )
     }
-  };
+  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -65,24 +59,51 @@ const DriverForm: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 sm:py-12 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="container mx-auto px-4 py-8 sm:py-12 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-normal leading-[42px] pl-0 sm:pl-[4%]">
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.h2
+            className="text-2xl sm:text-3xl font-normal leading-[42px] pl-0 sm:pl-[4%]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
             Add{" "}
             <span className="font-semibold bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
               Driver and Vehicle
             </span>{" "}
             details
-          </h2>
-          <p className="text-gray-600 mt-2 pl-0 sm:pl-[4%] text-sm sm:text-base">
+          </motion.h2>
+          <motion.p
+            className="text-gray-600 mt-2 pl-0 sm:pl-[4%] text-sm sm:text-base"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+          >
             Submit your driver and vehicle details to join the EasyDrop team and start earning. Help us provide{" "}
             <br className="hidden sm:inline" /> safe and reliable transportation by sharing accurate information.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
-          <form ref={formRef} onSubmit={handleSubmit}  className="pl-0 sm:pl-[4%] space-y-4 sm:space-y-6 w-full lg:w-auto">
+          <motion.form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="pl-0 sm:pl-[4%] space-y-4 sm:space-y-6 w-full lg:w-auto"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             {/* First Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               <div className="space-y-2">
@@ -216,23 +237,29 @@ const DriverForm: React.FC = () => {
             </div>
 
             {/* Submit Button */}
-            <button 
-            type="submit"
-            className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors">
+            <motion.button
+              type="submit"
+              className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Request Quote
-            </button>
-          </form>
+            </motion.button>
+          </motion.form>
 
           <div className="flex items-center justify-center lg:items-start lg:justify-start flex-1 mt-8 lg:mt-0">
-            <img
+            <motion.img
               src="/images/formimg.png"
               alt="Tour Illustration"
               className="object-contain w-full max-w-[416px] h-auto"
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             />
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

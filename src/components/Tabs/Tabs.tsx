@@ -50,9 +50,10 @@ export default function Tabs() {
         <motion.div
           className="text-center mb-8"
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          // animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          
         >
           <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10">
             <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] pr-2 text-transparent bg-clip-text">
@@ -79,6 +80,7 @@ export default function Tabs() {
               onClick={() => setActiveTab(tab.id)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0 }}
               className={`px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-md shadow-md transition-all duration-300
             ${
               activeTab === tab.id
@@ -97,9 +99,11 @@ export default function Tabs() {
             <motion.div
               key={vehicle.id}
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              // animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+           
               exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.5 }}
+              
               whileHover={{ scale: 1.05 }}
               className="bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden transition-all duration-300"
             >
@@ -124,10 +128,12 @@ export default function Tabs() {
               </div>
 
               {/* Button Section */}
-              <div className="flex justify-center pb-4">
+              <div className="flex pl-4 pb-4">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
                   className="px-5 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm border border-[#2C3486] text-[#2C3486] rounded-md shadow-md hover:bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] hover:text-white transition-all"
                 >
                   Request a Quote

@@ -1,14 +1,15 @@
-import type React from "react";
-import { useState } from "react";
+import type React from "react"
+import { useState } from "react"
+import { motion } from "framer-motion"
 
 interface FormData {
-  name: string;
-  contactNumber: string;
-  location: string;
-  pickup: string;
-  droptiming: string;
-  vehicleType: string;
-  destination: string;
+  name: string
+  contactNumber: string
+  location: string
+  pickup: string
+  droptiming: string
+  vehicleType: string
+  destination: string
 }
 
 const PickDropForm: React.FC = () => {
@@ -20,59 +21,87 @@ const PickDropForm: React.FC = () => {
     droptiming: "",
     vehicleType: "",
     destination: "",
-  });
+  })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
-  };
+    }))
+  }
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
-  };
+    }))
+  }
 
   return (
-    <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]"
+    >
       <div className="container mx-auto px-4 py-8 sm:py-12">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <h2 className="text-3xl sm:text-[38px] font-semibold leading-[1.2] sm:leading-[42px] pl-0 sm:pl-[4%]">
+          <motion.div
+            className="mb-8"
+            initial={{ opacity: 0, y: -20 }}
+            // animate={{ opacity: 1,  }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            // viewport={{ once: true }}
+          >
+            <motion.h2
+              className="text-3xl sm:text-[38px] font-semibold leading-[1.2] sm:leading-[42px] pl-0 sm:pl-[4%]"
+              initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 1 }}
+              whileInView={{ opacity: 1 }}
+              // viewport={{ once: true }}
+            >
               Monthly Pick &{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Drop Services
               </span>
-            </h2>
-            <p className="text-[#666666] font-normal text-base sm:text-lg leading-[1.5] sm:leading-[27px] mt-2 pl-0 sm:pl-[4%]">
-              Secure your spot with just a click! Whether it's a daily commute
-              or an adventure of a <br className="hidden sm:inline" /> lifetime,
-              EasyDrop makes booking quick and hassle-free.
-            </p>
-          </div>
+            </motion.h2>
+            <motion.p
+              className="text-[#666666] font-normal text-base sm:text-lg leading-[1.5] sm:leading-[27px] mt-2 pl-0 sm:pl-[4%]"
+              initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              whileInView={{ opacity: 1 }}
+              // viewport={{ once: true }}
+            >
+              Secure your spot with just a click! Whether it's a daily commute or an adventure of a{" "}
+              <br className="hidden sm:inline" /> lifetime, EasyDrop makes booking quick and hassle-free.
+            </motion.p>
+          </motion.div>
 
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
-            <form
+            <motion.form
               onSubmit={handleSubmit}
               className="pl-0 sm:pl-[4%] space-y-4 sm:space-y-6 w-full lg:w-auto"
+              initial={{ y: 20, opacity: 0 }}
+              // animate={{ y: 0, opacity: 1 }}
+              whileInView={{ opacity: 1,y:0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               {/* First Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <div className="space-y-2">
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-[#7f8a8f]"
-                  >
+                  <label htmlFor="name" className="block text-sm font-medium text-[#7f8a8f]">
                     Name
                   </label>
                   <input
@@ -87,10 +116,7 @@ const PickDropForm: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label
-                    htmlFor="contactNumber"
-                    className="block text-sm font-medium text-[#7f8a8f]"
-                  >
+                  <label htmlFor="contactNumber" className="block text-sm font-medium text-[#7f8a8f]">
                     Contact Number
                   </label>
                   <input
@@ -104,10 +130,7 @@ const PickDropForm: React.FC = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label
-                    htmlFor="location"
-                    className="block text-sm font-medium text-[#7f8a8f]"
-                  >
+                  <label htmlFor="location" className="block text-sm font-medium text-[#7f8a8f]">
                     Location
                   </label>
                   <select
@@ -125,10 +148,7 @@ const PickDropForm: React.FC = () => {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label
-                    htmlFor="pickup"
-                    className="block text-sm font-medium text-[#7f8a8f]"
-                  >
+                  <label htmlFor="pickup" className="block text-sm font-medium text-[#7f8a8f]">
                     Pick Up Timing
                   </label>
                   <input
@@ -146,10 +166,7 @@ const PickDropForm: React.FC = () => {
               {/* Second Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <div className="space-y-2">
-                  <label
-                    htmlFor="droptiming"
-                    className="block text-sm font-medium text-[#7f8a8f]"
-                  >
+                  <label htmlFor="droptiming" className="block text-sm font-medium text-[#7f8a8f]">
                     Drop off Timing
                   </label>
                   <input
@@ -164,10 +181,7 @@ const PickDropForm: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label
-                    htmlFor="Vehicle"
-                    className="block text-sm font-medium text-[#7f8a8f]"
-                  >
+                  <label htmlFor="Vehicle" className="block text-sm font-medium text-[#7f8a8f]">
                     Vehicle Type
                   </label>
                   <select
@@ -184,10 +198,7 @@ const PickDropForm: React.FC = () => {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label
-                    htmlFor="destination"
-                    className="block text-sm font-medium text-[#7f8a8f]"
-                  >
+                  <label htmlFor="destination" className="block text-sm font-medium text-[#7f8a8f]">
                     Destination
                   </label>
                   <select
@@ -206,23 +217,32 @@ const PickDropForm: React.FC = () => {
               </div>
 
               {/* Submit Button */}
-              <button className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors">
+              <motion.button
+                className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Request Quote
-              </button>
-            </form>
+              </motion.button>
+            </motion.form>
 
             <div className="flex items-center justify-center lg:items-start lg:justify-start flex-1 mt-8 lg:mt-0">
-              <img
+              <motion.img
                 src="/images/formimg.png"
                 alt="Tour Illustration"
                 className="object-contain w-full max-w-[416px] h-auto"
+                initial={{ x: 20, opacity: 0 }}
+                // animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                whileInView={{ opacity: 1, y:0 }}
               />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </motion.div>
+  )
+}
 
-export default PickDropForm;
+export default PickDropForm
+
