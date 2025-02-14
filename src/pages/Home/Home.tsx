@@ -16,7 +16,7 @@ export default function Home() {
     <>
       {/* First Section Start */}
       <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] flex justify-center items-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="container w-full max-w-[1920px] lg:h-[730px] flex justify-center items-center">
+        <div className="container w-full max-w-[1920px] lg:h-[868px] flex justify-center items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-full max-w-[1477.68px] text-center lg:text-left gap-8">
             <motion.div
               className="space-y-6"
