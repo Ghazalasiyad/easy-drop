@@ -1,6 +1,7 @@
 import type React from "react"
-import { useState } from "react"
+import  { useRef, useState } from "react";
 import { motion } from "framer-motion"
+import emailjs from "@emailjs/browser";
 
 interface FormData {
   name: string
@@ -12,7 +13,9 @@ interface FormData {
   destination: string
 }
 
-const PickDropForm: React.FC = () => {
+const PickDropForm: React.FC = () =>
+  {
+    const formRef = useRef<HTMLFormElement>(null); 
   const [formData, setFormData] = useState<FormData>({
     name: "",
     contactNumber: "",
@@ -24,9 +27,25 @@ const PickDropForm: React.FC = () => {
   })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-  }
+    e.preventDefault();
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_7ty2wk2",
+          "template_8wwro0o",
+          formRef.current,
+          "hRMsfCXWHx-PVRRzw"
+        )
+        .then(
+          (result) => {
+            console.log("Email sent successfully:", result.text);
+          },
+          (error) => {
+            console.error("Error sending email:", error.text);
+          }
+        );
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -91,6 +110,7 @@ const PickDropForm: React.FC = () => {
 
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
             <motion.form
+            ref={formRef}
               onSubmit={handleSubmit}
               className="pl-0 sm:pl-[4%] space-y-4 sm:space-y-6 w-full lg:w-auto"
               initial={{ y: 20, opacity: 0 }}
@@ -218,6 +238,7 @@ const PickDropForm: React.FC = () => {
 
               {/* Submit Button */}
               <motion.button
+              type="submit"
                 className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
