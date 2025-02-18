@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import HomePageLayout from './components/HomePageLayout/HomePageLayout'
 import Home from './pages/Home/Home'
-import Pick from './pages/Pick_Drop/Pick-Drop'
+// import Pick from './pages/Pick_Drop/Pick-Drop'
 
 // import VehicleBooking from './components/Tabs/Tabs'
 // import Tour from './pages/Tour/Tour'
-// import Partner from './pages/Partner/Partner'
+import Partner from './pages/Partner/Partner'
 // import Tour from './pages/Tour/Tour'
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
     <>
     {/* <VehicleBooking/> */}
     {/* <Tour/> */}
-  <Pick/>
-    {/* <Partner/> */}
+  {/* <Pick/> */}
+    <Partner/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePageLayout/>}>

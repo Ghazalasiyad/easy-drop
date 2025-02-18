@@ -1,10 +1,14 @@
-import PartnerSlider from "../../components/PartnerSlider/PartnerSlider";
+// import PartnerSlider from "../../components/PartnerSlider/PartnerSlider";
 import Car from "../../../public/icons/Car.png";
 import ExpertDriversCard from "../../components/ExpertDrivers/ExpertDriversCard";
 import { ExpertDriversData } from "../../components/ExpertDrivers/ExpertDriversData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import { ArrowRight } from "react-feather";
+import { Navigation } from "swiper/modules";
+import PartnerCard from "../../components/PartnerSlider/PartnerCard";
+import { PartnerData } from "../../components/PartnerSlider/PartnerData";
 import DriverForm from "../../components/Form/DriverForm";
 import { motion } from "framer-motion";
 
@@ -267,7 +271,73 @@ const partner = () => {
         </div>
       </section>
       ;
-      <PartnerSlider />
+     {/* Partner slider */}
+      <section className="w-full bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <Swiper
+              modules={[Navigation]}
+              navigation={{
+                prevEl: ".prev-button",
+                nextEl: ".next-button",
+              }}
+              spaceBetween={24}
+              slidesPerView={1}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                1024: { slidesPerView: 1 },
+                1280: { slidesPerView: 3 },
+                1380: { slidesPerView: 2 },
+                1480: { slidesPerView: 2 },
+              }}
+              className="!pb-10"
+            >
+              {PartnerData.map((review, index) => (
+                <SwiperSlide key={index}>
+                  <PartnerCard {...review} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </motion.div>
+          <motion.div
+            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px] w-[560px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            // viewport={{ once: true }}
+          >
+            <motion.h2
+              className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              // viewport={{ once: true }}
+            >
+             Be A Partner With Us
+            </motion.h2>
+            <div className="flex gap-[100px] justify-between">
+              <motion.button
+                className="next-button w-9 h-9 rounded-full flex mx-2"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.5 }}
+              >
+                <ArrowRight />
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       <section className="py-16 px-4 max-w-[1186px] mx-auto">
         {/* Easy Drop Text */}
         <div className="text-center mb-4">
