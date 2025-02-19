@@ -31,7 +31,7 @@ const slides: SlideData[] = [
   },
 ];
 
-const TravelSlider: React.FC = () => {
+const Tour: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -198,4 +198,4 @@ const TravelSlider: React.FC = () => {
   );
 };
 
-export default TravelSlider;
+export default Tour;
