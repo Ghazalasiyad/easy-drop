@@ -63,7 +63,7 @@ const cardVariants = {
     
   }),
 };
-const partner = () => {
+const Partner = () => {
   return (
     <div>
       <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
@@ -608,4 +608,4 @@ const partner = () => {
   );
 };
 
-export default partner;
+export default Partner;

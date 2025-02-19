@@ -215,7 +215,6 @@ const Pick = () => {
        whileInView={{ opacity: 1, y: 0 }}
        transition={{ duration: 0.8, ease: "easeOut" }}
         className="py-8 sm:py-12 md:py-16 bg-white"
-        initial="hidden"
         animate="visible"
       >
         <div className="container mx-auto px-4">
