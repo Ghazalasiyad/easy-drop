@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import van from "../../assets/Images/van.jpg"
+import tx from "../../assets/Images/tx.jpg"
+import bolan from "../../assets/Images/bolan.jpg"
 
 interface Vehicle {
   id: number;
@@ -16,28 +19,28 @@ export default function Tabs() {
     {
       id: 1,
       name: "Bolan Van",
-      image: "/images/van.jpg",
+      image: van,
       price: 10000,
       type: "bolan",
     },
     {
       id: 2,
       name: "Tx Parado",
-      image: "/images/tx.jpg",
+      image: tx,
       price: 10000,
       type: "parado",
     },
     {
       id: 3,
       name: "Bolan Van",
-      image: "/images/bolan.jpg",
+      image: bolan,
       price: 10000,
       type: "bolan",
     },
     {
       id: 4,
       name: "Tx Parado",
-      image: "/images/tx.jpg",
+      image: tx,
       price: 10000,
       type: "parado",
     },
@@ -100,14 +103,14 @@ export default function Tabs() {
               
               
              
-              className="bg-[#F7F9FC] border hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
+              className="bg-[#F7F9FC] border  hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
             >
               {/* Image Section */}
-              <div className="w-full h-56 md:h-64 lg:h-72">
+              <div className="w-full h-56 md:h-64 lg:h-72 p-4">
                 <img
                   src={vehicle.image || "/placeholder.svg"}
                   alt={vehicle.name}
-                  className="object-cover w-full h-full rounded-t-lg"
+                  className="object-cover w-[356px] h-[246px] rounded-lg"
                 />
               </div>
 

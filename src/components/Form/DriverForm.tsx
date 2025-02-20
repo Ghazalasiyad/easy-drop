@@ -1,6 +1,7 @@
 import type React from "react"
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
+import formimg from "../../assets/Images/formimg.png"
 
 import emailjs from "@emailjs/browser"
 
@@ -249,7 +250,7 @@ const DriverForm: React.FC = () => {
 
           <div className="flex items-center justify-center lg:items-start lg:justify-start flex-1 mt-8 lg:mt-0">
             <motion.img
-              src="/images/formimg.png"
+              src={formimg}
               alt="Tour Illustration"
               className="object-contain w-full max-w-[416px] h-auto"
               initial={{ x: 20, opacity: 0 }}

@@ -10,28 +10,34 @@ import PickDropForm from "../../components/Form/PickDropForm";
 import { motion } from "framer-motion";
 import CounterList from "../../counters/CounterList";
 import Testimonials from "../../components/SliderComp/Testimonials";
+import group from "../../assets/Images/group.png"
+import kiu from "../../assets/Images/kiu.png"
+import school from "../../assets/Images/school.png"
+import Akhss from "../../assets/Images/Akhss.png"
+import elysian from "../../assets/Images/elysian.png"
+import police from "../../assets/Images/police.png"
 
 const Pick = () => {
   const schools = [
     {
       name: "International School",
-      logo: "/images/kiu.png",
+      logo: kiu,
     },
     {
       name: "College Logo",
-      logo: "/images/public.png",
+      logo: school,
     },
     {
       name: "Modern Education",
-      logo: "/images/Akhss.png",
+      logo: Akhss,
     },
     {
       name: "Elysian",
-      logo: "/images/elysian.png",
+      logo: elysian,
     },
     {
       name: "Educational Institution",
-      logo: "/images/police.png",
+      logo: police,
     },
   ];
 
@@ -83,7 +89,7 @@ const Pick = () => {
             className="w-full lg:w-1/2 flex justify-center"
           >
             <motion.img
-              src="/images/group.png"
+              src={group}
               alt="Pick & Drop Service"
               className="w-full max-w-[559px] h-auto object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
