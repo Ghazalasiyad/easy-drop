@@ -23,6 +23,7 @@ import groupcar from "../../assets/Images/groupcar.png"
 import pace from "../../assets/Images/pace.png"
 import sides from "../../assets/Images/sides.png"
 import anywhere from "../../assets/Images/anywhere.png"
+import Footer from '../../components/Footer/Footer';
 
 interface BenefitCard {
   title: string;
@@ -170,7 +171,7 @@ const Partner = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               Reliability, Trust, And Commitment To Excellence. At Easy Drop, We
-              Pride Ourselves On Delivering Safe, Punctual, And Hassle-Free
+              Pride Ourselves On Delivering Safe, Punctual, And <br/> Hassle-Free
               Pick-And-Drop Services Tailored To Your Needs. Whether For
               Students, Schools, Or Businesses,
               <br />
@@ -323,14 +324,14 @@ const Partner = () => {
             </Swiper>
           </motion.div>
           <motion.div
-            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px] w-[560px]"
+            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 ml-6 relative h-[85px] w-[560px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             // viewport={{ once: true }}
           >
             <motion.h2
-              className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text"
+              className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent  bg-clip-text"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -350,7 +351,7 @@ const Partner = () => {
           </motion.div>
         </div>
       </section>
-      <section className="py-16 px-4 max-w-[1186px] mx-auto">
+      <section className="py-16 px-4 max-w-[1186px] h-[650px] mx-auto">
         {/* Easy Drop Text */}
         <div className="text-center mb-4">
           <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-medium text-lg leading-[18px]">
@@ -615,6 +616,10 @@ const Partner = () => {
       </section>
       <div className="mt-10">
         <DriverForm />
+      </div>
+      
+      <div>
+        <Footer />
       </div>
     </div>
   );

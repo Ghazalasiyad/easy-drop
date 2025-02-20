@@ -12,6 +12,7 @@ import rakaposhi from "../../assets/Images/rakaposhi.png"
 import skardu from "../../assets/Images/skardu.png"
 import gilgit from "../../assets/Images/gilgit.png"
 import background from "../../assets/Images/background.jpg"
+import Footer from '../../components/Footer/Footer';
 interface SlideData {
   title: string[];
   description: string;
@@ -50,7 +51,7 @@ const Tour: React.FC = () => {
 
   return (
     <div className="relative  w-full overflow-hidden">
-      <div className="container mx-auto  relative h-screen w-full">
+      <div className="container mx-auto  relative h-screen w-[1920px]">
         {/* Background Image */}
         <div
   className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
@@ -211,7 +212,9 @@ const Tour: React.FC = () => {
         <Testimonials />
       </div>
       
-
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

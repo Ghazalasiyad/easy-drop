@@ -16,6 +16,7 @@ import school from "../../assets/Images/school.png"
 import Akhss from "../../assets/Images/Akhss.png"
 import elysian from "../../assets/Images/elysian.png"
 import police from "../../assets/Images/police.png"
+import Footer from '../../components/Footer/Footer';
 
 const Pick = () => {
   const schools = [
@@ -268,6 +269,9 @@ const Pick = () => {
           </motion.div>
         </div>
       </motion.section>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };
