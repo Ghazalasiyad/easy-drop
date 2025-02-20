@@ -125,15 +125,14 @@ const Form: React.FC = () => {
                 ))}
               </div>
 
-              <motion.button
-                type="submit"
-                className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0 }}
-              >
-                Request Quote
-              </motion.button>
+             <motion.button
+                           type="submit"
+                             className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 ml-[-2%]  text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
+                             whileHover={{ scale: 1.05 }}
+                             whileTap={{ scale: 0.95 }}
+                           >
+                             Request Quote
+                           </motion.button>
             </motion.form>
 
             <motion.div
