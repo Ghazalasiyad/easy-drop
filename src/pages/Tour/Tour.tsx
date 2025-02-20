@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "react-feather";
 import Tabs from "../../components/Tabs/Tabs";
 import Form from "../../components/Form/Form";
 import { motion } from "framer-motion";
-
+import CounterList from "../../counters/CounterList";
 interface SlideData {
   title: string[];
   description: string;
@@ -45,9 +45,9 @@ const Tour: React.FC = () => {
       <div className="container mx-auto  relative h-screen w-full">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
-          style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
-        ></div>
+  className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
+  style={{ backgroundImage: `url(/backgroung.jpg)` }}
+></div>
 
         {/* Content Section */}
         <div className="relative z-10 flex h-full flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24">
@@ -91,7 +91,12 @@ const Tour: React.FC = () => {
           </div>
         </div>
       </div>
-      <Tabs />
+      <div><Tabs />
+      </div>
+      
+      <div>
+        <CounterList />
+      </div>
 
       <motion.section
         className="py-16 px-4 md:px-6 lg:px-8"
@@ -194,6 +199,7 @@ const Tour: React.FC = () => {
       <section>
         <Form />
       </section>
+      
     </div>
   );
 };
