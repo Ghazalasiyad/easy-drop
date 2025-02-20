@@ -2,7 +2,6 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Prenav from '../Prenav/Prenav';
 import { useState, useEffect } from 'react';
-
 import { GoArrowUp } from 'react-icons/go';
 
 const HomePageLayout: React.FC = () => {
@@ -38,7 +37,7 @@ const HomePageLayout: React.FC = () => {
 
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-6 cursor-pointer right-6 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
         <GoArrowUp size={18} />
       </button>

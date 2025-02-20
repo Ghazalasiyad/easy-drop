@@ -5,10 +5,10 @@ import FAQ from "./FAQ/FAQ";
 import Footer from "../../components/Footer/Footer";
 import { RightNowData } from "../../components/RightNow/RightNowData";
 import RightNowCard from "../../components/RightNow/RightNowCard";
-import { ArrowRight, } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import { FaArrowRight } from "react-icons/fa";
 
 
 const AboutUs: React.FC = () => {
@@ -23,7 +23,7 @@ const AboutUs: React.FC = () => {
       <div className="bg-[#F7F9FC] py-10 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 sm:mb-6">
-            Our <span className="bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
+            Our <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
                text-transparent bg-clip-text">Story</span>
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4 text-base sm:text-lg">
@@ -40,7 +40,7 @@ const AboutUs: React.FC = () => {
           <hr className="w-full max-w-md border-t border-gray-600 mb-6" />
           <p className="bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
                text-transparent bg-clip-text font-medium text-sm sm:text-base">
-            Learn more about Easy Drop
+            Easy Drop
           </p>
         </div>
       </div>
@@ -69,7 +69,7 @@ const AboutUs: React.FC = () => {
             }}
             spaceBetween={24}
             slidesPerView={1}
-            loop={false}
+            loop={true}
             allowTouchMove={false}
             breakpoints={{
               1280: { slidesPerView: 3 },
@@ -92,12 +92,11 @@ const AboutUs: React.FC = () => {
               Be A Partner With Us
             </h2>
             <div className="flex gap-4 sm:gap-[100px] items-center">
-              <button className="next-button w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 hover:bg-gray-200">
-                <ArrowRight />
+              <button className="next-button cursor-pointer w-12 h-12 flex items-center justify-center">
+                <FaArrowRight />
               </button>
             </div>
           </div>
-
         </div>
       </div>
       {/* Slider Section */}

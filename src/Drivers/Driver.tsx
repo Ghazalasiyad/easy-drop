@@ -9,7 +9,7 @@ const Driver = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <motion.div
                         className="space-y-6"
-                        initial={{ opacity: 0, x: -100 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 0.8 }}
@@ -38,7 +38,7 @@ const Driver = () => {
                             smooth and stress-free.
                         </motion.p>
                         <motion.button
-                            className="w-[134px] h-[47px] rounded-lg text-lg font-medium text-white bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] transition-colors"
+                            className="w-[134px] h-[47px] rounded-lg text-lg font-medium text-white bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] transition-colors cursor-pointer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -51,7 +51,7 @@ const Driver = () => {
                     <div className="relative w-full h-[400px] lg:h-[600px]">
                         <motion.div
                             className="absolute top-0 left-0 w-[300px] lg:w-[480px] h-[250px] lg:h-[400px]"
-                            initial={{ opacity: 0, x: 100 }}
+                            initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ delay: 0.6, duration: 0.8 }}
@@ -63,11 +63,11 @@ const Driver = () => {
                             />
                         </motion.div>
                         <motion.div
-                            className="absolute bottom-0 right-0 w-[250px] lg:w-[380px] h-[180px] lg:h-[280px] translate-y-4"
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{ delay: 0.8, duration: 0.8 }}
+                            className="absolute bottom-20 right-20 w-[250px] lg:w-[350px] h-[180px] lg:h-[280px] translate-y-4"
+                            initial={{ opacity: 0, x: 0, y: 50 }}
+                            whileInView={{ opacity: 1, x: 0, y: 0 }}
+                            viewport={{ once: false, amount: 0.3 }}
+                            transition={{ delay: 0.8, duration: 1 }}
                         >
                             <img
                                 src={TopImage}

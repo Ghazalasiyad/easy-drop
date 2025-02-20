@@ -54,6 +54,9 @@ const TestimonialsSlider = () => {
     centerMode: true,
     centerPadding: "0px",
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -97,28 +100,29 @@ const TestimonialsSlider = () => {
           {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.id}
-              className="p-4"
+              className="p-10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: testimonial.id * 0.1 }}
             >
-              <div className="bg-white border-t-4 border-[#2E2C80]  rounded-lg p-8 relative h-[300px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-110">
-                <p className="text-gray-700 italic mb-8">"{testimonial.message}"</p>
-                <div className="flex items-center mt-auto">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover mr-4" />
-                  <div>
+              <div className="transition-all duration-300 transform hover:scale-125 rounded-b-lg hover:shadow-[1px_1px_1px_rgba(0,0,0,0.1),-1px_1px_1px_rgba(0,0,0,0.1)]">
+                <div className="bg-white border-t-4 border-[#2E2C80] rounded-lg p-6 relative h-[300px] flex flex-col justify-between">
+                  <p className="text-gray-700 italic mb-8">"{testimonial.message}"</p>
+                  <div className="flex items-center mt-auto">
+                    <img src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover mr-4" />
                     <div>
                       <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
                       <p className="text-gray-500 text-sm">{testimonial.position}</p>
                     </div>
                   </div>
+                  <img src={Icon} alt="Testimonial Icon" className="absolute bottom-10 right-6 w-10 h-10" />
                 </div>
-                <img src={Icon} alt="Testimonial Icon" className="absolute bottom-4 right-4 w-10 h-10" />
-              </div>
+              </div> 
             </motion.div>
           ))}
         </Slider>
+
 
         <div className="absolute -bottom-16 left-0 right-0 flex justify-center space-x-4">
           <button
