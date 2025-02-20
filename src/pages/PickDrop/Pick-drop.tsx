@@ -38,12 +38,9 @@ const Pick = () => {
   return (
     <>
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
+        <div
+         
+          className="container  pt-[10%]  mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
         >
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -57,22 +54,21 @@ const Pick = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: false }}
-              className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6"
+              className="text-5xl leading-[60px] sm:text-3xl font-semibold mb-4 sm:mb-6"
             >
-              <span className="text-[#2E2C80]">Pick & Drop</span> Service
+              Your <span className="text-[#2E2C80]">Journey, </span><br/>
+              our Commitment
+              
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: false }}
-              className="text-gray-800 mb-8 sm:mb-12 leading-relaxed text-sm sm:text-base"
+              className="text-[#666666] leading-[30px] text-lg mb-8 sm:mb-12 font-normal sm:text-base"
             >
-              <span className="text-[#2E2C80] font-bold">Easydrop</span> ensures
-              safe, reliable transportation for students and professionals.
-              Affordable monthly plans designed for convenience and flexibility.
-              Sign up online with ease and customize your schedule effortlessly.
-              Experience smooth, stress-free commutes tailored to your routine.
+              Easy Drop offers reliable pick-and-drop services for students, schools, 
+              colleges, and businesses with monthly fixed-budget plans. We ensure safe, punctual, and hassle-free commuting every day
             </motion.p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -82,11 +78,8 @@ const Pick = () => {
               Subscribe
             </motion.button>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: false, amount: 0.3 }}
+          <div
+          
             className="w-full lg:w-1/2 flex justify-center"
           >
             <motion.img
@@ -98,8 +91,8 @@ const Pick = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: false }}
             />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
 
       <div>
