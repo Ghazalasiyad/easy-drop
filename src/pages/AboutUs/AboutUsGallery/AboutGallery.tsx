@@ -15,7 +15,7 @@ const AboutGallery: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] py-10 sm:py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 lg:h-[100%] lg:pt-35">
+      <div className="container mx-auto px-4 sm:px-7 lg:px-8 lg:h-[100%] lg:pt-35">
         <motion.div
           className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full"
           initial="hidden"
