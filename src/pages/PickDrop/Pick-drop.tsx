@@ -8,6 +8,8 @@ import SliderCard from "../../components/SliderCard/SliderCard";
 import { SliderData } from "../../components/SliderCard/SliderData";
 import PickDropForm from "../../components/Form/PickDropForm";
 import { motion } from "framer-motion";
+import CounterList from "../../counters/CounterList";
+import Testimonials from "../../components/SliderComp/Testimonials";
 
 const Pick = () => {
   const schools = [
@@ -99,6 +101,12 @@ const Pick = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      <div>
+        <CounterList />
+      </div>
+
+
 
       {/* Second Section */}
       <section className="w-full bg-white py-12 md:py-16">
@@ -207,6 +215,10 @@ const Pick = () => {
 
       <div>
         <WhyChooseUs />
+      </div>
+
+      <div>
+        <Testimonials />
       </div>
 
       {/* Our Trusted School Section */}
