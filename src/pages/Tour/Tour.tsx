@@ -51,56 +51,56 @@ const Tour: React.FC = () => {
 
   return (
     <div className="relative  w-full overflow-hidden">
-      <div className="container mx-auto  relative h-screen w-[1920px]">
-        {/* Background Image */}
-        <div
-  className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
-  style={{ backgroundImage: `url(${background})` }}
-></div>
+     <div className="container mx-auto relative h-screen">
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
+    style={{ backgroundImage: `url(${background})` }}
+  ></div>
 
+  {/* Content Section */}
+  <div className="relative z-10 flex flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24 h-full">
+    <div className="max-w-full text-center sm:text-left">
+      {/* Title */}
+      <h1 className="mb-4 font-semibold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight sm:leading-[50px] md:leading-[60px] lg:leading-[70px]">
+        {slides[currentSlide].title.map((line, index) => (
+          <span key={index} className="block">
+            {line}
+          </span>
+        ))}
+      </h1>
 
-        {/* Content Section */}
-        <div className="relative z-10 flex h-full flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24">
-          <div className="max-w-7xl text-center sm:text-left">
-            {/* Title */}
-            <h1 className="mb-4 font-semibold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight sm:leading-[50px] md:leading-[60px] lg:leading-[70px]">
-              {slides[currentSlide].title.map((line, index) => (
-                <span key={index} className="block">
-                  {line}
-                </span>
-              ))}
-            </h1>
+      {/* Description */}
+      <p className="mb-8 max-w-xl text-base sm:text-lg md:text-xl leading-[26px] sm:leading-[28px] md:leading-[30px] font-normal text-white/90">
+        {slides[currentSlide].description}
+      </p>
 
-            {/* Description */}
-            <p className="mb-8 max-w-xl text-base sm:text-lg md:text-xl leading-[26px] sm:leading-[28px] md:leading-[30px] font-normal text-white/90">
-              {slides[currentSlide].description}
-            </p>
+      {/* Button */}
+      <button className="rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-xs sm:text-sm md:text-base font-semibold text-white transition-all">
+        Make your trip
+      </button>
+    </div>
 
-            {/* Button */}
-            <button className="rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-xs sm:text-sm md:text-base font-semibold text-white transition-all">
-              Make your trip
-            </button>
-          </div>
+    {/* Navigation Buttons */}
+    <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 transform items-center gap-4">
+      <button
+        onClick={prevSlide}
+        className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
+      </button>
+    </div>
+  </div>
+</div>
 
-          {/* Navigation Buttons */}
-          <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 transform items-center gap-4">
-            <button
-              onClick={prevSlide}
-              className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
-            </button>
-          </div>
-        </div>
-      </div>
       <div><Tabs />
       </div>
       

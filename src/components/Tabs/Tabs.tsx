@@ -11,7 +11,6 @@ interface Vehicle {
   price: number;
   type: string;
 }
-
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("bolan");
 
@@ -53,10 +52,8 @@ export default function Tabs() {
         <motion.div
           className="text-center mb-8"
           initial={{ opacity: 0, x: -50 }}
-          // animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          
         >
           <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10">
             <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] pr-2 text-transparent bg-clip-text">
@@ -84,7 +81,7 @@ export default function Tabs() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className={`px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-md shadow-md transition-all duration-300
+              className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-base font-medium rounded-md shadow-md transition-all duration-300
             ${
               activeTab === tab.id
                 ? "bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
@@ -97,26 +94,24 @@ export default function Tabs() {
         </div>
 
         {/* Vehicle Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center p-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center p-2">
           {filteredVehicles.map((vehicle) => (
             <div
-              
-              
-             
-              className="bg-[#F7F9FC] border  hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
+              key={vehicle.id}
+              className="bg-[#F7F9FC] border hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
             >
               {/* Image Section */}
-              <div className="w-full h-56 md:h-64 lg:h-72 p-4">
+              <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 p-4">
                 <img
                   src={vehicle.image || "/placeholder.svg"}
                   alt={vehicle.name}
-                  className="object-cover w-[356px] h-[246px] rounded-lg"
+                  className="object-cover w-full h-full rounded-lg"
                 />
               </div>
 
               {/* Title & Price */}
               <div className="p-4 flex justify-between items-center">
-                <h3 className="text-lg font-semibold">{vehicle.name}</h3>
+                <h3 className="text-sm sm:text-lg font-semibold">{vehicle.name}</h3>
                 <p className="text-xs sm:text-sm text-gray-700">
                   Starting from <br />
                   <span className="block text-[#2C3486] text-sm font-medium">
@@ -132,7 +127,7 @@ export default function Tabs() {
                   whileTap={{ scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="px-5 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm border border-[#2C3486] text-[#2C3486] rounded-md shadow-md hover:bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] hover:text-white transition-all"
+                  className="px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm border border-[#2C3486] text-[#2C3486] rounded-md shadow-md hover:bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] hover:text-white transition-all"
                 >
                   Request a Quote
                 </motion.button>
