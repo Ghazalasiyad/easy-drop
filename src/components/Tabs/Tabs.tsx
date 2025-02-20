@@ -45,7 +45,7 @@ export default function Tabs() {
   const filteredVehicles = vehicles;
 
   return (
-    <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
+    <div className="bg-[#F7F9FC]">
       <div className="container mx-auto px-4 py-12">
         <motion.div
           className="text-center mb-8"
@@ -96,16 +96,11 @@ export default function Tabs() {
         {/* Vehicle Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center p-2">
           {filteredVehicles.map((vehicle) => (
-            <motion.div
-              key={vehicle.id}
-              initial={{ opacity: 0, y: 50 }}
-              // animate={{ opacity: 1, y: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-           
-              exit={{ opacity: 0, y: -50 }}
+            <div
               
-              whileHover={{ scale: 1.05 }}
-              className="bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden transition-all duration-300"
+              
+             
+              className="bg-[#F7F9FC] border hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
             >
               {/* Image Section */}
               <div className="w-full h-56 md:h-64 lg:h-72">
@@ -139,7 +134,7 @@ export default function Tabs() {
                   Request a Quote
                 </motion.button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
