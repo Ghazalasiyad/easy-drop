@@ -199,10 +199,10 @@ const Tour: React.FC = () => {
       </motion.section>
       <section>
         <Form />
-      </section>
-      <div>
+      </section><div>
         <Testimonials />
       </div>
+      
 
     </div>
   );
