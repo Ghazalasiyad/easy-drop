@@ -2,7 +2,7 @@ import iconBusiness from "../assets/CounterIcons/business.png";
 import iconDrivers from "../assets/CounterIcons/drivers.png";
 import iconPassengers from "../assets/CounterIcons/passengers.png";
 import iconVehicles from "../assets/CounterIcons/vehicles.png";
-import Counter from './counter';
+import Counter from "./counter";
 
 const stats = [
   { icon: iconBusiness, value: "6+", label: "Years in Business" },

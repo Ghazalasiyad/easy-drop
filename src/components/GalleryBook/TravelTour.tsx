@@ -9,7 +9,7 @@ const TravelTour: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <motion.div
               className="w-full lg:w-1/2 text-center lg:text-left"
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: 0 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
@@ -35,7 +35,7 @@ const TravelTour: React.FC = () => {
               </motion.p>
   
               <motion.button
-                className="w-full sm:w-[160px] h-[45px] rounded-md text-base sm:text-lg font-medium text-white transition-colors bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683]"
+                className="w-full sm:w-[160px] h-[45px] rounded-md text-base sm:text-lg font-medium text-white transition-colors bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683] cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -48,9 +48,9 @@ const TravelTour: React.FC = () => {
   
             <motion.div
               className="w-full lg:w-1/2 flex justify-center"
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              initial={{ opacity: 0, x: 0, y: 50 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ delay: 0.8, duration: 1 }}
             >
               <Gallery />
