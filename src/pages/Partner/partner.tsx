@@ -11,6 +11,18 @@ import PartnerCard from "../../components/PartnerSlider/PartnerCard";
 import { PartnerData } from "../../components/PartnerSlider/PartnerData";
 import DriverForm from "../../components/Form/DriverForm";
 import { motion } from "framer-motion";
+import caar from "../../assets/Images/caar.png"
+import vector from "../../assets/Images/vector.png"
+import register from "../../assets/Images/register.png"
+import boy from "../../assets/Images/boy.png"
+import contact from "../../assets/Images/contact.png"
+import hours from "../../assets/Images/hours.png"
+import support from "../../assets/Images/support.png"
+import paid from "../../assets/Images/paid.png"
+import groupcar from "../../assets/Images/groupcar.png"
+import pace from "../../assets/Images/pace.png"
+import sides from "../../assets/Images/sides.png"
+import anywhere from "../../assets/Images/anywhere.png"
 
 interface BenefitCard {
   title: string;
@@ -118,7 +130,7 @@ const Partner = () => {
               variants={imageVariants}
             >
               <img
-                src="/images/caar.png"
+                src={caar}
                 className="w-[90%] sm:w-[682px] h-auto sm:h-[357px]"
               />
             </motion.div>
@@ -177,13 +189,13 @@ const Partner = () => {
             >
               <div className="mb-10 relative mt-3">
                 <img
-                  src="/images/vector.png"
+                  src={vector}
                   alt=""
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[206px] h-[163px]"
                   aria-hidden="true"
                 />
                 <img
-                  src="/images/register.png"
+                  src={register}
                   alt="Register your car"
                   className="relative z-10 w-[195px] h-[130px] mx-auto"
                 />
@@ -212,13 +224,13 @@ const Partner = () => {
             >
               <div className="mb-6 relative">
                 <img
-                  src="/images/vector.png"
+                  src={vector}
                   alt=""
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[203px] h-[160px]"
                   aria-hidden="true"
                 />
                 <img
-                  src="/images/boy.png"
+                  src={boy}
                   alt="Contact us"
                   className="relative z-10 w-[109px] h-[159px] mx-auto"
                 />
@@ -245,13 +257,13 @@ const Partner = () => {
             >
               <div className="mb-6 relative">
                 <img
-                  src="/images/vector.png"
+                  src={vector}
                   alt=""
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[203px] h-[160px]"
                   aria-hidden="true"
                 />
                 <img
-                  src="/images/contact.png"
+                  src={contact}
                   alt="Drive with us"
                   className="relative z-10 w-[109px] h-[159px] mx-auto"
                 />
@@ -371,17 +383,17 @@ const Partner = () => {
           <div className="flex-1 space-y-8 md:max-w-[340px] w-full md:w-auto px-4 md:px-0">
             {[
               {
-                img: "/images/hours.png",
+                img: hours,
                 title: "Set Your Own Hours",
                 desc: "Enjoy flexibility and freedom by setting your own hours with EasyDrop.",
               },
               {
-                img: "/images/paid.png",
+                img: paid,
                 title: "Get Paid Fast",
                 desc: "Earn securely and get paid quickly with our reliable payment system.",
               },
               {
-                img: "/images/support.png",
+                img: support,
                 title: "Get Support At Every Time",
                 desc: "Receive 24/7 support to ensure a seamless and hassle-free experience.",
               },
@@ -421,7 +433,7 @@ const Partner = () => {
             className="relative flex justify-center w-full md:w-auto"
           >
             <img
-              src="/images/Groupcar.png"
+              src={groupcar}
               alt="Car illustration"
               className="w-[79px] h-[395px] md:h-[495px]"
             />
@@ -431,17 +443,17 @@ const Partner = () => {
           <div className="flex-1 space-y-8 md:max-w-[340px] w-full md:w-auto px-4 md:px-0">
             {[
               {
-                img: "/images/pace.png",
+                img: pace,
                 title: "Onboard People At Your Own Pace",
                 desc: "Onboard people effortlessly and at your own pace with complete flexibility.",
               },
               {
-                img: "/images/sides.png",
+                img: sides,
                 title: "Safe Rides, Reliable Service",
                 desc: "Enjoy safe rides and reliable service every time you travel with us.",
               },
               {
-                img: "/images/anywhere.png",
+                img: anywhere,
                 title: "Go Anywhere With Easy Drop",
                 desc: "Travel anywhere with ease and reliability, only with Easy Drop.",
               },

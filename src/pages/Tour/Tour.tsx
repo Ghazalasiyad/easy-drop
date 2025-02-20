@@ -5,6 +5,13 @@ import Form from "../../components/Form/Form";
 import { motion } from "framer-motion";
 import CounterList from "../../counters/CounterList";
 import Testimonials from "../../components/SliderComp/Testimonials";
+import baltit from "../../assets/Images/baltit.png"
+import deosai from "../../assets/Images/deosai.png"
+import ghizer from "../../assets/Images/ghizer.png"
+import rakaposhi from "../../assets/Images/rakaposhi.png"
+import skardu from "../../assets/Images/skardu.png"
+import gilgit from "../../assets/Images/gilgit.png"
+import background from "../../assets/Images/background.jpg"
 interface SlideData {
   title: string[];
   description: string;
@@ -47,8 +54,9 @@ const Tour: React.FC = () => {
         {/* Background Image */}
         <div
   className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
-  style={{ backgroundImage: `url(/backgroung.jpg)` }}
+  style={{ backgroundImage: `url(${background})` }}
 ></div>
+
 
         {/* Content Section */}
         <div className="relative z-10 flex h-full flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24">
@@ -131,7 +139,7 @@ const Tour: React.FC = () => {
             
             >
               <img
-                src="/images/baltit.png"
+                src={baltit}
                 alt="Hunza Baltit Fort"
                 className="w-full h-full object-cover"
               />
@@ -145,19 +153,19 @@ const Tour: React.FC = () => {
             {/** Other Images */}
             {[
               {
-                src: "/images/deosai.png",
+                src: deosai,
                 alt: "Deosai Lake",
                 height: "h-[240px]",
               },
-              { src: "/images/skardu.png", alt: "Skardu", height: "h-[240px]" },
+              { src: skardu, alt: "Skardu", height: "h-[240px]" },
               {
-                src: "/images/ghizer.png",
+                src: ghizer,
                 alt: "Ghizer Valley",
                 height: "h-[300px]",
               },
-              { src: "/images/gilgit.png", alt: "Gilgit", height: "h-[300px]" },
+              { src: gilgit, alt: "Gilgit", height: "h-[300px]" },
               {
-                src: "/images/rakaposhi.png",
+                src: rakaposhi,
                 alt: "Rakhaposhi",
                 height: "h-[300px]",
               },
