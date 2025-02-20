@@ -44,17 +44,17 @@ const Pick = () => {
 
   return (
     <>
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="px-4 mt-[10%] lg:px-8 py-8 sm:py-12 lg:py-16">
         <div
          
-          className="container  pt-[10%]  mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
+          className="container  mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
         >
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="w-full lg:w-1/2 lg:pr-6 xl:pr-12 mb-8 lg:mb-0 px-4 sm:px-8 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
+            className="w-full lg:w-1/2 lg:pr-6 xl:pr-12 mb-8 lg:mb-0 px-4  sm:px-8 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -92,7 +92,7 @@ const Pick = () => {
             <motion.img
               src={group}
               alt="Pick & Drop Service"
-              className="w-full max-w-[559px] h-auto object-contain"
+              className=" max-w-[559px] h-[384px] object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}

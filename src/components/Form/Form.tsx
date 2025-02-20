@@ -145,7 +145,7 @@ const Form: React.FC = () => {
               <img
                 src={formimg}
                 alt="Tour Illustration"
-                className="object-contain w-full max-w-[416px] h-auto"
+                className="object-contain w-full max-w-[416px] h-[250px]"
               />
                
             </motion.div>

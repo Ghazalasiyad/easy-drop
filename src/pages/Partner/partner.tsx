@@ -79,7 +79,7 @@ const cardVariants = {
 const Partner = () => {
   return (
     <div>
-      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
+      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] h-[700px]">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="pl-[5%] sm:pl-[10%] mx-auto h-auto sm:h-[640px] max-w-[1485px] flex flex-col lg:flex-row items-center gap-12">
             <motion.div
@@ -322,7 +322,7 @@ const Partner = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </motion.div>
+          </motion.div> 
           <motion.div
             className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 ml-6 relative h-[85px] w-[560px]"
             initial={{ opacity: 0, y: 30 }}
