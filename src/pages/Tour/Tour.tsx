@@ -4,6 +4,7 @@ import Tabs from "../../components/Tabs/Tabs";
 import Form from "../../components/Form/Form";
 import { motion } from "framer-motion";
 import CounterList from "../../counters/CounterList";
+import Testimonials from "../../components/SliderComp/Testimonials";
 interface SlideData {
   title: string[];
   description: string;
@@ -199,7 +200,10 @@ const Tour: React.FC = () => {
       <section>
         <Form />
       </section>
-      
+      <div>
+        <Testimonials />
+      </div>
+
     </div>
   );
 };
