@@ -8,69 +8,73 @@ import SliderCard from "../../components/SliderCard/SliderCard";
 import { SliderData } from "../../components/SliderCard/SliderData";
 import PickDropForm from "../../components/Form/PickDropForm";
 import { motion } from "framer-motion";
+import CounterList from "../../counters/CounterList";
+import Testimonials from "../../components/SliderComp/Testimonials";
+import group from "../../assets/Images/group.png"
+import kiu from "../../assets/Images/kiu.png"
+import school from "../../assets/Images/school.png"
+import Akhss from "../../assets/Images/Akhss.png"
+import elysian from "../../assets/Images/elysian.png"
+import police from "../../assets/Images/police.png"
+import Footer from '../../components/Footer/Footer';
 
 const Pick = () => {
   const schools = [
     {
       name: "International School",
-      logo: "/images/kiu.png",
+      logo: kiu,
     },
     {
       name: "College Logo",
-      logo: "/images/public.png",
+      logo: school,
     },
     {
       name: "Modern Education",
-      logo: "/images/Akhss.png",
+      logo: Akhss,
     },
     {
       name: "Elysian",
-      logo: "/images/elysian.png",
+      logo: elysian,
     },
     {
       name: "Educational Institution",
-      logo: "/images/police.png",
+      logo: police,
     },
   ];
 
   return (
     <>
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
+      <div className="px-4 mt-[10%] lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div         
+          className="container  mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
         >
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="w-full lg:w-1/2 lg:pr-6 xl:pr-12 mb-8 lg:mb-0 px-4 sm:px-8 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
+            className="w-full lg:w-1/2 lg:pr-6 xl:pr-12 mb-8 lg:mb-0 px-4  sm:px-8 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: false }}
-              className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6"
+              className="text-2xl lg:text-4xl  leading-[60px] sm:text-2xl font-semibold mb-4 sm:mb-6"
             >
-              <span className="text-[#2E2C80]">Pick & Drop</span> Service
+              Your <span className="text-[#2E2C80]">Journey, </span><br/>
+              our Commitment
+              
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: false }}
-              className="text-gray-800 mb-8 sm:mb-12 leading-relaxed text-sm sm:text-base"
+              className="text-[#666666] leading-[30px] text-lg mb-8 sm:mb-12 font-normal sm:text-base"
             >
-              <span className="text-[#2E2C80] font-bold">Easydrop</span> ensures
-              safe, reliable transportation for students and professionals.
-              Affordable monthly plans designed for convenience and flexibility.
-              Sign up online with ease and customize your schedule effortlessly.
-              Experience smooth, stress-free commutes tailored to your routine.
+              Easy Drop offers reliable pick-and-drop services for students, schools, 
+              colleges, and businesses with monthly fixed-budget plans. We ensure safe, punctual, and hassle-free commuting every day
             </motion.p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -80,30 +84,29 @@ const Pick = () => {
               Subscribe
             </motion.button>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: false, amount: 0.3 }}
+          <div
+          
             className="w-full lg:w-1/2 flex justify-center"
           >
             <motion.img
-              src="/images/group.png"
+              src={group}
               alt="Pick & Drop Service"
-              className="w-full max-w-[559px] h-auto object-contain"
+              className="w-full h-[384px] object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: false }}
             />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
 
-      {/* Second Section */}
+      <div>
+        <CounterList />
+      </div>
+
       <section className="w-full bg-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
-          {/* Heading & Description */}
           <motion.div
             className="max-w-3xl mb-14"
             initial={{ opacity: 0, y: 50 }}
@@ -170,18 +173,16 @@ const Pick = () => {
             </Swiper>
           </motion.div>
           <motion.div
-            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px] w-[560px]"
+            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            // viewport={{ once: true }}
           >
             <motion.h2
               className="text-2xl font-bold leading-[44px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              // viewport={{ once: true }}
             >
               Need{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
@@ -207,6 +208,10 @@ const Pick = () => {
 
       <div>
         <WhyChooseUs />
+      </div>
+
+      <div>
+        <Testimonials />
       </div>
 
       {/* Our Trusted School Section */}
@@ -257,6 +262,9 @@ const Pick = () => {
           </motion.div>
         </div>
       </motion.section>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

@@ -11,6 +11,19 @@ import PartnerCard from "../../components/PartnerSlider/PartnerCard";
 import { PartnerData } from "../../components/PartnerSlider/PartnerData";
 import DriverForm from "../../components/Form/DriverForm";
 import { motion } from "framer-motion";
+import caar from "../../assets/Images/caar.png";
+import vector from "../../assets/Images/vector.png";
+import register from "../../assets/Images/register.png";
+import boy from "../../assets/Images/boy.png";
+import contact from "../../assets/Images/contact.png";
+import hours from "../../assets/Images/hours.png";
+import support from "../../assets/Images/support.png";
+import paid from "../../assets/Images/paid.png";
+import groupcar from "../../assets/Images/groupcar.png";
+import pace from "../../assets/Images/pace.png";
+import sides from "../../assets/Images/sides.png";
+import anywhere from "../../assets/Images/anywhere.png";
+import Footer from "../../components/Footer/Footer";
 
 interface BenefitCard {
   title: string;
@@ -50,7 +63,7 @@ const textVariants = {
 };
 
 const imageVariants = {
-  hidden: { opacity: 0, x: 50 },
+  hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
 };
 
@@ -60,18 +73,17 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.6, delay: index * 0.2 },
-    
   }),
 };
 const Partner = () => {
   return (
-    <div>
-      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <>
+      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] h-[700] pt-45 sm:pt-28">
+        <div className="mx-auto px-2 sm:px-3 lg:px-4 py-16">
           <div className="pl-[5%] sm:pl-[10%] mx-auto h-auto sm:h-[640px] max-w-[1485px] flex flex-col lg:flex-row items-center gap-12">
             <motion.div
               className="w-full lg:w-1/2 lg:pr-12 text-center lg:text-left mb-6 lg:mb-0"
-              initial={{ opacity: 0, x: -10 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 1 }}
@@ -111,35 +123,32 @@ const Partner = () => {
 
             <motion.div
               className="w-full lg:w-1/2 flex justify-center"
-              initial={{ opacity: 0, x: 10 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ delay: 0.8, duration: 1 }}
               variants={imageVariants}
             >
               <img
-                src="/images/caar.png"
-                className="w-[90%] sm:w-[682px] h-auto sm:h-[357px]"
+                src={caar}
+                className="w-full sm:w-[682px] h-auto sm:h-[357px]"
               />
             </motion.div>
           </div>
         </div>
       </div>
-      ;{/* Partner section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
-            // animate="visible"
             whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-          
+            transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
             variants={textVariants}
           >
             <motion.h2
-              className="text-[38px] leading-[60px] font-normal mb-6"
+              className="text-4xl leading-[60px] font-normal mb-6"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -158,16 +167,15 @@ const Partner = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               Reliability, Trust, And Commitment To Excellence. At Easy Drop, We
-              Pride Ourselves On Delivering Safe, Punctual, And Hassle-Free
-              Pick-And-Drop Services Tailored To Your Needs. Whether For
-              Students, Schools, Or Businesses,
+              Pride Ourselves On Delivering Safe, Punctual, And <br />{" "}
+              Hassle-Free Pick-And-Drop Services Tailored To Your Needs. Whether
+              For Students, Schools, Or Businesses,
               <br />
               We're Your Dependable Partner For Seamless Daily Commuting.
             </motion.p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Register Card */}
             <motion.div
               className="text-center p-6"
               initial="hidden"
@@ -177,13 +185,13 @@ const Partner = () => {
             >
               <div className="mb-10 relative mt-3">
                 <img
-                  src="/images/vector.png"
+                  src={vector}
                   alt=""
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[206px] h-[163px]"
                   aria-hidden="true"
                 />
                 <img
-                  src="/images/register.png"
+                  src={register}
                   alt="Register your car"
                   className="relative z-10 w-[195px] h-[130px] mx-auto"
                 />
@@ -202,7 +210,6 @@ const Partner = () => {
               </p>
             </motion.div>
 
-            {/* Contact Card */}
             <motion.div
               className="text-center p-6"
               initial="hidden"
@@ -212,13 +219,13 @@ const Partner = () => {
             >
               <div className="mb-6 relative">
                 <img
-                  src="/images/vector.png"
+                  src={vector}
                   alt=""
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[203px] h-[160px]"
                   aria-hidden="true"
                 />
                 <img
-                  src="/images/boy.png"
+                  src={boy}
                   alt="Contact us"
                   className="relative z-10 w-[109px] h-[159px] mx-auto"
                 />
@@ -235,7 +242,6 @@ const Partner = () => {
               </p>
             </motion.div>
 
-            {/* Drive Card */}
             <motion.div
               className="text-center p-6"
               initial="hidden"
@@ -245,13 +251,13 @@ const Partner = () => {
             >
               <div className="mb-6 relative">
                 <img
-                  src="/images/vector.png"
+                  src={vector}
                   alt=""
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[203px] h-[160px]"
                   aria-hidden="true"
                 />
                 <img
-                  src="/images/contact.png"
+                  src={contact}
                   alt="Drive with us"
                   className="relative z-10 w-[109px] h-[159px] mx-auto"
                 />
@@ -271,10 +277,8 @@ const Partner = () => {
         </div>
       </section>
       ;
-     {/* Partner slider */}
       <section className="w-full bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
-          
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-48 2xl:px-48">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -311,24 +315,22 @@ const Partner = () => {
             </Swiper>
           </motion.div>
           <motion.div
-            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px] w-[560px]"
+            className="flex flex-col sm:flex-row  border-b border-[#c1d0e5] justify-between mt-0 mb-5 sm:ml-0 relative h-[85px] w-full sm:w-[560px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            // viewport={{ once: true }}
           >
             <motion.h2
-              className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text"
+              className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text text-center sm:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              // viewport={{ once: true }}
             >
-             Be A Partner With Us
+              Be A Partner With Us
             </motion.h2>
-            <div className="flex gap-[100px] justify-between">
+            <div className="flex gap-2 justify-center sm:justify-start mt-4 sm:mt-0">
               <motion.button
-                className="next-button w-9 h-9 rounded-full flex mx-2"
+                className="next-button w-9 h-9 rounded-full flex"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.5 }}
               >
@@ -338,15 +340,12 @@ const Partner = () => {
           </motion.div>
         </div>
       </section>
-      <section className="py-16 px-4 max-w-[1186px] mx-auto">
-        {/* Easy Drop Text */}
+      <section className="py-12 px-4 max-w-[1186px] h-auto md:h-[650px] mx-auto flex flex-col items-center">
         <div className="text-center mb-4">
           <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-medium text-lg leading-[18px]">
             Easy Drop
           </span>
         </div>
-
-        {/* Main Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -360,28 +359,26 @@ const Partner = () => {
           Commutes
         </motion.h2>
 
-        {/* Features Container */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col md:flex-row items-center justify-between relative space-y-8 md:space-y-0"
         >
-          {/* Left Column */}
           <div className="flex-1 space-y-8 md:max-w-[340px] w-full md:w-auto px-4 md:px-0">
             {[
               {
-                img: "/images/hours.png",
+                img: hours,
                 title: "Set Your Own Hours",
                 desc: "Enjoy flexibility and freedom by setting your own hours with EasyDrop.",
               },
               {
-                img: "/images/paid.png",
+                img: paid,
                 title: "Get Paid Fast",
                 desc: "Earn securely and get paid quickly with our reliable payment system.",
               },
               {
-                img: "/images/support.png",
+                img: support,
                 title: "Get Support At Every Time",
                 desc: "Receive 24/7 support to ensure a seamless and hassle-free experience.",
               },
@@ -413,7 +410,6 @@ const Partner = () => {
             ))}
           </div>
 
-          {/* Center Car Image */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -421,27 +417,26 @@ const Partner = () => {
             className="relative flex justify-center w-full md:w-auto"
           >
             <img
-              src="/images/Groupcar.png"
+              src={groupcar}
               alt="Car illustration"
               className="w-[79px] h-[395px] md:h-[495px]"
             />
           </motion.div>
 
-          {/* Right Column */}
           <div className="flex-1 space-y-8 md:max-w-[340px] w-full md:w-auto px-4 md:px-0">
             {[
               {
-                img: "/images/pace.png",
+                img: pace,
                 title: "Onboard People At Your Own Pace",
                 desc: "Onboard people effortlessly and at your own pace with complete flexibility.",
               },
               {
-                img: "/images/sides.png",
+                img: sides,
                 title: "Safe Rides, Reliable Service",
                 desc: "Enjoy safe rides and reliable service every time you travel with us.",
               },
               {
-                img: "/images/anywhere.png",
+                img: anywhere,
                 title: "Go Anywhere With Easy Drop",
                 desc: "Travel anywhere with ease and reliability, only with Easy Drop.",
               },
@@ -474,7 +469,6 @@ const Partner = () => {
           </div>
         </motion.div>
       </section>
-      ;{/* Why drive with us section  */}
       <section className="py-16 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] mt-[10%]">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -524,8 +518,7 @@ const Partner = () => {
           </motion.div>
         </div>
       </section>
-      {/* Expert Drivers Section */}
-      <section className="w-full h-[848px] py-12 md:py-16">
+      <section className="w-full h-auto py-12 md:py-12">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 2xl:px-36">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -604,7 +597,10 @@ const Partner = () => {
       <div className="mt-10">
         <DriverForm />
       </div>
-    </div>
+      <div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

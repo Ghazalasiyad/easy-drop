@@ -18,10 +18,10 @@ const PartnerCard: React.FC<SliderProps> = ({
   return (
     <motion.div
     className="sm:p-6  relative flex flex-col"
-    initial={{ opacity: 0, y: 30 }} // Starts hidden & slightly below
-    whileInView={{ opacity: 1, y: 0 }} // Animates when in view
-    transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
-    viewport={{ once: false }} // Runs every time it comes into view
+    initial={{ opacity: 0, y: 30 }} 
+    whileInView={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 0.8, ease: "easeOut" }} 
+    viewport={{ once: false }} 
   >
     <div className="flex flex-col items-center sm:items-start mb-4 w-[496px] h-[396px]">
       <div className="mb-4 sm:mb-6">
