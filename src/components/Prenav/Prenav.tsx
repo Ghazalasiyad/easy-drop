@@ -16,15 +16,15 @@ const Prenav: React.FC = () => {
         </div>
 
         <div className="flex items-center space-x-3 sm:space-x-4">
-          <a href="#" className="flex items-center space-x-1 text-xs sm:text-sm">
+          <a href="https://www.facebook.com/easydroptravels512" target="_blank" className="flex items-center space-x-1 text-xs sm:text-sm">
             <FaFacebook className="text-sm" />
             <span>Facebook</span>
           </a>
-          <a href="#" className="flex items-center space-x-1 text-xs sm:text-sm">
+          <a href="https://www.instagram.com/easydroptravel/" target="_blank" className="flex items-center space-x-1 text-xs sm:text-sm">
             <FaInstagram className="text-sm" />
             <span>Instagram</span>
           </a>
-          <a href="#" className="flex items-center space-x-1 text-xs sm:text-sm">
+          <a href="https://www.linkedin.com/company/pick-and-drop/" target="_blank" className="flex items-center space-x-1 text-xs sm:text-sm">
             <FaYoutube className="text-sm" />
             <span>Youtube</span>
           </a>

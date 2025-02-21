@@ -1,11 +1,13 @@
-import { NavLink } from "react-router-dom";
-import { motion } from 'framer-motion'
-import { useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from '../../assets/logo.png';
+import Logo from "../../assets/logo.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -15,13 +17,27 @@ const Navbar: React.FC = () => {
     { name: "Be a Partner", path: "/partner" },
   ];
 
+  const handleContactClick = () => {
+    if (location.pathname === "/") {
+      document.getElementById("ContactForm")?.scrollIntoView({ behavior: "auto" });
+    } else {
+      navigate("/", { state: { scrollToContact: true } });
+    }
+  };
+
+  useEffect(() => {
+    if (location.state?.scrollToContact) {
+      document.getElementById("ContactForm")?.scrollIntoView({ behavior: "auto" });
+    }
+  }, [location]);
+
   return (
     <header className="fixed top-10 left-0 w-full bg-white z-50">
       <nav className="container mx-auto h-[90px] flex justify-between items-center px-4 sm:px-6 lg:px-8">
         <motion.img
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
           src={Logo}
           alt="Logo"
           className="w-[150px] h-[40px] sm:w-[172px] sm:h-[50px]"
@@ -32,7 +48,7 @@ const Navbar: React.FC = () => {
             <motion.li
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: 'easeInOut' }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
               key={link.name}
             >
               <NavLink
@@ -48,16 +64,14 @@ const Navbar: React.FC = () => {
           ))}
         </ul>
 
-        <motion.button
-          initial={{ opacity: 0, x: 10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
+        <button
+          onClick={handleContactClick}
           className="hidden md:block w-[120px] h-[40px] lg:w-[134px] lg:h-[47px] rounded-lg text-sm lg:text-lg font-medium text-white
-        transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
-        hover:from-[#252369] hover:to-[#1d4683]"
+            transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
+            hover:from-[#252369] hover:to-[#1d4683] cursor-pointer"
         >
           Contact Us
-        </motion.button>
+        </button>
 
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -88,18 +102,18 @@ const Navbar: React.FC = () => {
                 </NavLink>
               </li>
             ))}
-            <button className="w-[120px] h-[40px] rounded-lg text-sm font-medium text-white
-            transition-colors duration-200 bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
-            hover:from-[#252369] hover:to-[#1d4683]">
+            <button
+              onClick={handleContactClick}
+              className="w-[120px] h-[40px] rounded-lg text-sm font-medium text-white
+                transition-colors duration-200 bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
+                hover:from-[#252369] hover:to-[#1d4683]"
+            >
               Contact Us
             </button>
           </ul>
         </motion.div>
       )}
     </header>
-
-
-
   );
 };
 
