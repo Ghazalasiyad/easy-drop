@@ -61,14 +61,14 @@ const WhyChooseUs: React.FC = () => {
     variants={sectionVariants}
   >
     <div className="container mx-auto px-6">
-      <div className="mb-8 pl-[6%]">
-        <h2 className="text-3xl font-bold pl-[4%]">
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold">
           Why{" "}
           <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
             choose us
           </span>
         </h2>
-        <p className="text-[#666666] mt-2 pl-[4%]">
+        <p className="text-[#666666] mt-2">
           At EasyDrop, we prioritize your convenience, safety, and satisfaction. Whether it's reliable pick-and-drop
           <br />
           services or unforgettable travel experiences, we ensure top-notch service tailored to your needs.

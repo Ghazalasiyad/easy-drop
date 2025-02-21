@@ -51,15 +51,15 @@ const Tour: React.FC = () => {
 
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="mx-auto relative h-screen">
+      <div className="mx-auto relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
           style={{ backgroundImage: `url(${background})` }}
         ></div>
 
-        <div className="relative z-10 flex flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24 h-full">
+        <div className="container relative z-10 flex flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24 min-h-screen">
           <div className="max-w-full text-center sm:text-left">
-            <h1 className="mb-4 font-semibold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight sm:leading-[50px] md:leading-[60px] lg:leading-[70px]">
+            <h1 className="mb-4 font-semibold text-white text-[clamp(28px,5vw,64px)] leading-[clamp(36px,6vw,70px)]">
               {slides[currentSlide].title.map((line, index) => (
                 <span key={index} className="block">
                   {line}
@@ -67,26 +67,26 @@ const Tour: React.FC = () => {
               ))}
             </h1>
 
-            <p className="mb-8 max-w-xl text-base sm:text-lg md:text-xl leading-[26px] sm:leading-[28px] md:leading-[30px] font-normal text-white/90">
+            <p className="mb-8 max-w-xl text-[clamp(14px,1.5vw,20px)] leading-[clamp(24px,2vw,30px)] font-normal text-white/90">
               {slides[currentSlide].description}
             </p>
 
-            <button className="rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-xs sm:text-sm md:text-base font-semibold text-white transition-all">
+            <button className="rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[clamp(12px,1vw,16px)] font-semibold text-white transition-all">
               Make your trip
             </button>
           </div>
 
-          <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 transform items-center gap-4">
+          <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 transform items-center gap-4 flex-wrap">
             <button
               onClick={prevSlide}
-              className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
+              className="flex h-[clamp(32px,4vw,40px)] w-[clamp(32px,4vw,40px)] items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
               aria-label="Previous slide"
             >
               <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
+              className="flex h-[clamp(32px,4vw,40px)] w-[clamp(32px,4vw,40px)] items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
               aria-label="Next slide"
             >
               <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
@@ -94,6 +94,7 @@ const Tour: React.FC = () => {
           </div>
         </div>
       </div>
+
 
       <div>
         <Tabs />

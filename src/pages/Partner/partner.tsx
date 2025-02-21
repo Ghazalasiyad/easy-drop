@@ -79,10 +79,10 @@ const Partner = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] h-[700] pt-45 sm:pt-28">
-        <div className="mx-auto px-2 sm:px-3 lg:px-4 py-16">
-          <div className="pl-[5%] sm:pl-[10%] mx-auto h-auto sm:h-[640px] max-w-[1485px] flex flex-col lg:flex-row items-center gap-12">
+        <div className="container mx-auto px-2 sm:px-3 lg:px-4 py-16">
+          <div className="mx-auto h-auto sm:h-[640px] flex flex-col lg:flex-row items-center gap-12">
             <motion.div
-              className="w-full lg:w-1/2 lg:pr-12 text-center lg:text-left mb-6 lg:mb-0"
+              className="w-full text-center lg:text-left mb-6 lg:mb-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
@@ -122,7 +122,7 @@ const Partner = () => {
             </motion.div>
 
             <motion.div
-              className="w-full lg:w-1/2 flex justify-center"
+              className="w-full flex justify-center"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
@@ -131,7 +131,7 @@ const Partner = () => {
             >
               <img
                 src={caar}
-                className="w-full sm:w-[682px] h-auto sm:h-[357px]"
+                className="w-full h-auto"
               />
             </motion.div>
           </div>
@@ -340,7 +340,8 @@ const Partner = () => {
           </motion.div>
         </div>
       </section>
-      <section className="py-12 px-4 max-w-[1186px] h-auto md:h-[650px] mx-auto flex flex-col items-center">
+
+      <section className="py-12 px-4 md:px-6 lg:px-8 max-w-[1186px] h-auto md:h-auto mx-auto flex flex-col items-center">
         <div className="text-center mb-4">
           <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-medium text-lg leading-[18px]">
             Easy Drop
@@ -350,7 +351,7 @@ const Partner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-[28px] md:text-[38px] font-normal leading-[40px] md:leading-[60px] mb-12 md:mb-16"
+          className="text-center text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-normal leading-[34px] md:leading-[50px] lg:leading-[60px] mb-8 md:mb-12 lg:mb-16"
         >
           Your Road To{" "}
           <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-semibold">
@@ -363,9 +364,10 @@ const Partner = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-col md:flex-row items-center justify-between relative space-y-8 md:space-y-0"
+          className="flex flex-col lg:flex-row items-center justify-between w-full space-y-8 lg:space-y-0 px-4 sm:px-6 lg:px-0"
         >
-          <div className="flex-1 space-y-8 md:max-w-[340px] w-full md:w-auto px-4 md:px-0">
+          {/* Left Section */}
+          <div className="flex-1 space-y-8 max-w-[320px] w-full">
             {[
               {
                 img: hours,
@@ -388,21 +390,21 @@ const Partner = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex gap-4"
+                className="flex gap-4 items-center"
               >
                 <img
                   src={item.img}
                   alt=""
-                  className="w-[30px] h-[30px] flex-shrink-0"
+                  className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px] flex-shrink-0"
                 />
                 <div>
-                  <h3 className="font-normal text-lg md:text-xl leading-[24px] md:leading-[30px] mb-1">
+                  <h3 className="font-normal text-base sm:text-lg md:text-xl leading-[22px] sm:leading-[24px] md:leading-[30px] mb-1">
                     {item.title.split(" ").slice(0, -2).join(" ")}{" "}
                     <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-semibold">
                       {item.title.split(" ").slice(-2).join(" ")}
                     </span>
                   </h3>
-                  <p className="text-[#2D2D2D] font-normal text-sm md:text-base leading-[24px] md:leading-[27px]">
+                  <p className="text-[#2D2D2D] font-normal text-xs sm:text-sm md:text-base leading-[20px] sm:leading-[24px] md:leading-[27px]">
                     {item.desc}
                   </p>
                 </div>
@@ -410,6 +412,7 @@ const Partner = () => {
             ))}
           </div>
 
+          {/* Center Image */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -419,11 +422,12 @@ const Partner = () => {
             <img
               src={groupcar}
               alt="Car illustration"
-              className="w-[79px] h-[395px] md:h-[495px]"
+              className="w-[60px] sm:w-[79px] h-[300px] sm:h-[395px] md:h-[495px] max-h-[495px]"
             />
           </motion.div>
 
-          <div className="flex-1 space-y-8 md:max-w-[340px] w-full md:w-auto px-4 md:px-0">
+          {/* Right Section */}
+          <div className="flex-1 space-y-8 max-w-[320px] w-full">
             {[
               {
                 img: pace,
@@ -446,21 +450,21 @@ const Partner = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex gap-4"
+                className="flex gap-4 items-center"
               >
                 <img
                   src={item.img}
                   alt=""
-                  className="w-[30px] h-[30px] flex-shrink-0"
+                  className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px] flex-shrink-0"
                 />
                 <div>
-                  <h3 className="font-normal text-lg md:text-xl leading-[24px] md:leading-[30px] mb-1">
+                  <h3 className="font-normal text-base sm:text-lg md:text-xl leading-[22px] sm:leading-[24px] md:leading-[30px] mb-1">
                     {item.title.split(" ").slice(0, -2).join(" ")}{" "}
                     <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-semibold">
                       {item.title.split(" ").slice(-2).join(" ")}
                     </span>
                   </h3>
-                  <p className="text-[#2D2D2D] font-normal text-sm md:text-base leading-[24px] md:leading-[27px]">
+                  <p className="text-[#2D2D2D] font-normal text-xs sm:text-sm md:text-base leading-[20px] sm:leading-[24px] md:leading-[27px]">
                     {item.desc}
                   </p>
                 </div>
@@ -469,32 +473,36 @@ const Partner = () => {
           </div>
         </motion.div>
       </section>
-      <section className="py-16 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] mt-[10%]">
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
+
+
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] mt-10">
+        <div className="w-full container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12 mt-10"
+            className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-[38px] md:text-4xl font-semibold leading-[40px] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-4">
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Why drive
               </span>
-              <span> with us ?</span>
+              <span> with us?</span>
             </h2>
-            <p className="text-[#666666] font-normal text-xl leading-[26px] max-w-3xl mx-auto">
-              Drive with Easy Drop for flexible hours, attractive earnings, and
-              the opportunity to grow your business. Enjoy regular vehicle
-              maintenance support and secure, timely payments for every trip.
+            <p className="text-gray-600 font-normal text-base sm:text-lg leading-relaxed max-w-3xl mx-auto px-2">
+              Drive with Easy Drop for flexible hours, attractive earnings, and the opportunity
+              to grow your business. Enjoy regular vehicle maintenance support and secure,
+              timely payments for every trip.
             </p>
           </motion.div>
 
+          {/* Benefits Grid Section */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-center"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 justify-center"
           >
             {benefits.map((benefit, index) => (
               <motion.div
@@ -502,15 +510,20 @@ const Partner = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-full max-w-[334px] h-auto mx-auto"
+                className="bg-white rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 
+          max-w-[350px] w-full mx-auto flex flex-col items-start text-start"
               >
-                <div className="w-[52px] h-[63px] rounded-lg flex items-center justify-center mb-4">
-                  <img src={benefit.icon} alt="" />
+                {/* Icon */}
+                <div className="w-[52px] h-[63px] flex items-start justify-center mb-4">
+                  <img src={benefit.icon} alt={benefit.title} className="max-w-full h-auto" />
                 </div>
-                <h3 className="text-xl font-medium mb-3 leading-[25px] text-gray-900">
+
+                <h3 className="text-lg sm:text-xl font-medium mb-2 leading-snug text-gray-900">
                   {benefit.title}
                 </h3>
-                <p className="text-[#666666] font-normal text-sm leading-[21px] mt-8">
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mt-2">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -518,6 +531,9 @@ const Partner = () => {
           </motion.div>
         </div>
       </section>
+
+
+
       <section className="w-full h-auto py-12 md:py-12">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-36 2xl:px-36">
           <motion.div

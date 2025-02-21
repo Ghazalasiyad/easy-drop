@@ -44,54 +44,51 @@ const Pick = () => {
 
   return (
     <>
-      <div className="px-4 mt-[10%] lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div         
-          className="container  mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
-        >
+      <div className="px-4 mt-[8%] lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="w-full lg:w-1/2 lg:pr-6 xl:pr-12 mb-8 lg:mb-0 px-4  sm:px-8 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
+            className="w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: false }}
-              className="text-2xl lg:text-4xl  leading-[60px] sm:text-2xl font-semibold mb-4 sm:mb-6"
+              className="text-[clamp(24px,4vw,40px)] font-semibold mb-4 sm:mb-6 leading-[clamp(30px,5vw,60px)]"
             >
-              Your <span className="text-[#2E2C80]">Journey, </span><br/>
+              Your <span className="text-[#2E2C80]">Journey, </span><br />
               our Commitment
-              
             </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: false }}
-              className="text-[#666666] leading-[30px] text-lg mb-8 sm:mb-12 font-normal sm:text-base"
+              className="text-[#666666] text-[clamp(14px,1.5vw,18px)] leading-[clamp(22px,2vw,30px)] mb-6 sm:mb-8 font-normal"
             >
-              Easy Drop offers reliable pick-and-drop services for students, schools, 
-              colleges, and businesses with monthly fixed-budget plans. We ensure safe, punctual, and hassle-free commuting every day
+              Easy Drop offers reliable pick-and-drop services for students, schools,
+              colleges, and businesses with monthly fixed-budget plans. We ensure safe, punctual, and hassle-free commuting every day.
             </motion.p>
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]"
+              className="w-full sm:w-[140px] h-[45px] sm:h-[50px] rounded-[8px] text-[clamp(14px,1vw,18px)] font-medium text-white transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]"
             >
               Subscribe
             </motion.button>
           </motion.div>
-          <div
-          
-            className="w-full lg:w-1/2 flex justify-center"
-          >
+
+          <div className="w-full lg:w-1/2 flex justify-center">
             <motion.img
               src={group}
               alt="Pick & Drop Service"
-              className="w-full h-[384px] object-contain"
+              className="w-full max-w-[480px] h-auto object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -215,19 +212,19 @@ const Pick = () => {
       </div>
 
       {/* Our Trusted School Section */}
-      <motion.section 
-       initial={{ opacity: 0, y: 20 }}
-       whileInView={{ opacity: 1, y: 0 }}
-       transition={{ duration: 0.8, ease: "easeOut" }}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="py-8 sm:py-12 md:py-16 bg-white"
         animate="visible"
       >
         <div className="container mx-auto px-4">
           <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-8 sm:mb-12">
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 leading-tight">
               Our Trusted{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
