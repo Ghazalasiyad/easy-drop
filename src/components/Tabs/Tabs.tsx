@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import van from "../../assets/Images/van.jpg"
+import tx from "../../assets/Images/tx.jpg"
+import bolan from "../../assets/Images/bolan.jpg"
 
 interface Vehicle {
   id: number;
@@ -8,7 +11,6 @@ interface Vehicle {
   price: number;
   type: string;
 }
-
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("bolan");
 
@@ -16,28 +18,28 @@ export default function Tabs() {
     {
       id: 1,
       name: "Bolan Van",
-      image: "/images/van.jpg",
+      image: van,
       price: 10000,
       type: "bolan",
     },
     {
       id: 2,
       name: "Tx Parado",
-      image: "/images/tx.jpg",
+      image: tx,
       price: 10000,
       type: "parado",
     },
     {
       id: 3,
       name: "Bolan Van",
-      image: "/images/bolan.jpg",
+      image: bolan,
       price: 10000,
       type: "bolan",
     },
     {
       id: 4,
       name: "Tx Parado",
-      image: "/images/tx.jpg",
+      image: tx,
       price: 10000,
       type: "parado",
     },
@@ -45,30 +47,27 @@ export default function Tabs() {
   const filteredVehicles = vehicles;
 
   return (
-    <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]">
-      <div className="container mx-auto px-4 py-12">
+    <div className="bg-[#F7F9FC]">
+      <div className="container mx-auto px-2 lg:px-4 py-12">
         <motion.div
           className="text-center mb-8"
-          initial={{ opacity: 0, x: -50 }}
-          // animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, y: 50 }}
+          exit={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          
         >
-          <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10">
-            <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] pr-2 text-transparent bg-clip-text">
+          <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10 text-center">
+            <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
               Book
             </span>
             Vehicle
           </h1>
-          <p className="text-[#666666] text-base sm:text-lg max-w-3xl leading-[26px] mx-auto">
+          <p className="text-[#666666] text-base sm:text-lg mx-auto">
             Pre-designed tour packages to explore the beauty of
             Gilgit-Baltistan. Customizable trips with your choice of vehicle,
             destinations, and duration.
           </p>
         </motion.div>
 
-        {/* Tabs Section */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {[
             { id: "bolan", label: "Bolan Car" },
@@ -81,7 +80,7 @@ export default function Tabs() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className={`px-5 sm:px-6 py-3 text-sm sm:text-base font-medium rounded-md shadow-md transition-all duration-300
+              className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-base font-medium rounded-md shadow-md transition-all duration-300
             ${
               activeTab === tab.id
                 ? "bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
@@ -93,32 +92,22 @@ export default function Tabs() {
           ))}
         </div>
 
-        {/* Vehicle Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center p-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center p-2">
           {filteredVehicles.map((vehicle) => (
-            <motion.div
+            <div
               key={vehicle.id}
-              initial={{ opacity: 0, y: 50 }}
-              // animate={{ opacity: 1, y: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-           
-              exit={{ opacity: 0, y: -50 }}
-              
-              whileHover={{ scale: 1.05 }}
-              className="bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden transition-all duration-300"
+              className="bg-[#F7F9FC] border hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
             >
-              {/* Image Section */}
-              <div className="w-full h-56 md:h-64 lg:h-72">
+              <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 p-4">
                 <img
                   src={vehicle.image || "/placeholder.svg"}
                   alt={vehicle.name}
-                  className="object-cover w-full h-full rounded-t-lg"
+                  className="object-cover w-full h-full rounded-lg"
                 />
               </div>
 
-              {/* Title & Price */}
               <div className="p-4 flex justify-between items-center">
-                <h3 className="text-lg font-semibold">{vehicle.name}</h3>
+                <h3 className="text-sm sm:text-lg font-semibold">{vehicle.name}</h3>
                 <p className="text-xs sm:text-sm text-gray-700">
                   Starting from <br />
                   <span className="block text-[#2C3486] text-sm font-medium">
@@ -127,19 +116,18 @@ export default function Tabs() {
                 </p>
               </div>
 
-              {/* Button Section */}
               <div className="flex pl-4 pb-4">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="px-5 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm border border-[#2C3486] text-[#2C3486] rounded-md shadow-md hover:bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] hover:text-white transition-all"
+                  className="px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm border border-[#2C3486] text-[#2C3486] rounded-md shadow-md hover:bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] hover:text-white transition-all"
                 >
                   Request a Quote
                 </motion.button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
