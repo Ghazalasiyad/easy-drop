@@ -2,6 +2,7 @@ import type React from "react"
 import  { useRef, useState } from "react";
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser";
+import formimg from "../../assets/Images/formimg.png"
 
 interface FormData {
   name: string
@@ -239,7 +240,7 @@ const PickDropForm: React.FC = () =>
               {/* Submit Button */}
               <motion.button
               type="submit"
-                className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
+                className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3  text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -249,7 +250,7 @@ const PickDropForm: React.FC = () =>
 
             <div className="flex items-center justify-center lg:items-start lg:justify-start flex-1 mt-8 lg:mt-0">
               <motion.img
-                src="/images/formimg.png"
+                src= {formimg}
                 alt="Tour Illustration"
                 className="object-contain w-full max-w-[416px] h-auto"
                 initial={{ x: 20, opacity: 0 }}

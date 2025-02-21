@@ -1,5 +1,8 @@
 import type React from "react";
 import { motion } from "framer-motion";
+import Car from "../../assets/Images/Car.png"
+import gcar from "../../assets/Images/gcar.png"
+import location from "../../assets/Images/location.png"
 
 interface FeatureCard {
   title: string;
@@ -13,29 +16,29 @@ const featureCards: FeatureCard[] = [
     title: "Pick & Drop",
     description:
       "Effortless commuting made simple with our Pick & Drop service, ensuring a comfortable ride to your destination.",
-    icon1: "/images/car.png",
-    icon2: "/images/location.png",
+    icon1: gcar,
+    icon2: location,
   },
   {
     title: "Safe & Secure",
     description:
       "Ensuring safety, punctuality, and comfort with professional drivers and well-maintained vehicles.",
-    icon1: "/images/car.png",
-    icon2: "/images/location.png",
+    icon1: Car,
+    icon2: location,
   },
   {
     title: "Anytime Reservation",
     description:
       "Enjoy the flexibility of making reservations at your convenience with our Anytime Reservation service.",
-    icon1: "/images/car.png",
-    icon2: "/images/location.png",
+    icon1: gcar,
+    icon2: location,
   },
   {
     title: "Pick & Drop",
     description:
       "Effortless commuting made simple with our Pick & Drop service, ensuring a comfortable ride to your destination.",
-    icon1: "/images/car.png",
-    icon2: "/images/location.png",
+    icon1: gcar,
+    icon2: location,
   },
 ];
 const sectionVariants = {
@@ -72,7 +75,7 @@ const WhyChooseUs: React.FC = () => {
         </p>
       </div>
 
-      <div className="mt-10 flex justify-center px-10">
+      <div className="mt-10 flex justify-center">
         <motion.div
           className="grid gap-10 md:grid-cols-3 lg:grid-cols-4"
           initial="hidden"
@@ -83,14 +86,14 @@ const WhyChooseUs: React.FC = () => {
           {featureCards.map((card, index) => (
             <motion.div
               key={index}
-              className="p-6 bg-white shadow-lg rounded-lg w-[340px] h-[284px]"
+              className="p-6 bg-white shadow-lg rounded-lg w-full h-[284px]"
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <div className="flex justify-between mb-4">
-                <img src={card.icon1 || "/placeholder.svg"} alt={card.title} className="h-10 w-10" />
-                <img src={card.icon2 || "/placeholder.svg"} alt={card.title} className="h-10 w-10" />
+                <img src={card.icon1 || "/placeholder.svg"} alt={card.title} className="h-[63px] w-[50px]" />
+                <img src={card.icon2 || "/placeholder.svg"} alt={card.title} className="h-[50px] w-[41px]" />
               </div>
               <h3 className="text-2xl pt-6 leading-[30px] font-medium text-left">{card.title}</h3>
               <p className="mt-4 text-base font-normal leading-[24px] text-[#666666] text-left">

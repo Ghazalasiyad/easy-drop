@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import formimg from "../../assets/ImagesGallery/formimg.png"
 
 interface FormData {
   name: string;
@@ -66,7 +67,7 @@ const Form: React.FC = () => {
         
       >
         <div className="container mx-auto">
-          <div className="mb-8">
+          <div className="mb-8 ml-8">
             <h2 className="text-2xl sm:text-3xl font-bold pl-0 sm:pl-[4%]">
               Book a
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
@@ -124,29 +125,29 @@ const Form: React.FC = () => {
                 ))}
               </div>
 
-              <motion.button
-                type="submit"
-                className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0 }}
-              >
-                Request Quote
-              </motion.button>
+             <motion.button
+                           type="submit"
+                             className="w-full sm:w-auto rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 ml-[-2%]  text-[14px] font-semibold text-white leading-[17.07px] text-center transition-colors"
+                             whileHover={{ scale: 1.05 }}
+                             whileTap={{ scale: 0.95 }}
+                           >
+                             Request Quote
+                           </motion.button>
             </motion.form>
 
             <motion.div
-              className="flex items-center justify-center lg:items-start lg:justify-start flex-1 mt-8 lg:mt-0"
+              className="flex items-center justify-center lg:items-start lg:justify-start flex-1 mt-4 lg:mt-0"
               initial={{ opacity: 0, scale: 0.9 }}
               // animate={{ opacity: 1, scale: 1 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/images/formimg.png"
+                src={formimg}
                 alt="Tour Illustration"
-                className="object-contain w-full max-w-[416px] h-auto"
+                className="object-contain w-full max-w-[416px] h-[250px]"
               />
+               
             </motion.div>
           </div>
         </div>
