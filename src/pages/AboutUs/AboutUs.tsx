@@ -53,7 +53,7 @@ const AboutUs: React.FC = () => {
       {/* Slider Section */}
       <div className="w-full bg-white py-12 md:py-16">
         <div className="container relative mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
-          <div className=" max-w-3xl mb-14">
+          <div className="max-w-3xl mb-14">
             <h2 className="text-4xl md:text-4xl leading-[57px] font-semibold mb-4 text-center">
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Right now
