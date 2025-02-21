@@ -88,7 +88,7 @@ const TestimonialsSlider = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-gray-900">
+        <h2 className="text-4xl font-bold text-gray-900">
           What <span className="text-[#2E2C80]">Our Customers</span> Say!
         </h2>
         <p className="mt-4 text-gray-600">
