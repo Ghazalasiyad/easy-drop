@@ -15,7 +15,7 @@ const AboutGallery: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] py-10 sm:py-12">
-      <div className="container mx-auto px-4 sm:px-7 lg:px-8 lg:h-[100%] lg:pt-35">
+      <div className="container mx-auto pt-30 px-4 sm:pt-200 sm:px-7 lg:px-8 lg:h-[100%] lg:pt-35">
         <motion.div
           className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full"
           initial="hidden"
@@ -24,7 +24,7 @@ const AboutGallery: React.FC = () => {
           variants={staggerContainer}
         >
           <motion.div className="w-full text-center lg:text-left" variants={fadeInUp}>
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
+            <h1 className="text-4xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
             text-transparent bg-clip-text mb-4">
               About Us
             </h1>

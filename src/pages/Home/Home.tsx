@@ -16,8 +16,8 @@ export default function Home() {
     <>
       {/* First Section Start */}
       <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] flex justify-center items-center">
-        <div className="container w-full h-auto pt-20 sm:pt-28 md:pt-36 lg:pt-60 pb-10 sm:pb-16 lg:pb-20 flex justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full max-w-[1477.68px] text-center md:text-left gap-6 sm:gap-8">
+        <div className="container w-full h-auto pt-45 sm:pt-28 md:pt-36 lg:pt-60 pb-10 sm:pb-16 lg:pb-20 flex justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full text-center md:text-left gap-6 sm:gap-8">
             <motion.div
               className="space-y-4 sm:space-y-6 px-4 sm:px-8"
               initial={{ opacity: 0, y: 50 }}
@@ -26,7 +26,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <motion.h1
-                className="text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-snug"
+                className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-snug"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}
@@ -72,7 +72,7 @@ export default function Home() {
               <img
                 src={Hero}
                 alt="Easy Drop Fleet"
-                className="w-full max-w-[250px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[650px] h-auto object-contain"
+                className="w-full sm:max-w-[350px] md:max-w-[450px] lg:max-w-[650px] h-auto object-contain"
               />
             </motion.div>
           </div>
