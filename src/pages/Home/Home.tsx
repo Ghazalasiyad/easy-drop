@@ -15,34 +15,35 @@ export default function Home() {
   return (
     <>
       {/* First Section Start */}
-      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] flex justify-center items-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="container w-full max-w-[1920px] lg:h-[868px] flex justify-center items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-full max-w-[1477.68px] text-center lg:text-left gap-8">
+      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] flex justify-center items-center">
+        <div className="container w-full h-auto pt-45 sm:pt-28 md:pt-36 lg:pt-60 pb-10 sm:pb-16 lg:pb-20 flex justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full text-center md:text-left gap-6 sm:gap-8">
             <motion.div
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6 px-4 sm:px-8"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.8 }}
             >
               <motion.h1
-                className="text-2xl sm:text-3xl lg:text-6xl font-bold leading-snug"
+                className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-snug"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{ delay: 0.2, duration: 1 }}
               >
                 <span className="text-gray-800">Seamless </span>
-                <span className="text-[#37439D]">Rides</span>
+                <span className="font-bold bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
+            text-transparent bg-clip-text">Rides</span>
                 <span className="text-gray-800">, </span>
-                <br className="hidden lg:block" />
+                <br className="hidden md:block" />
                 <span className="text-gray-800">Memorable</span>
                 <br />
                 <span className="text-gray-800">Adventures</span>
               </motion.h1>
 
               <motion.p
-                className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0"
+                className="text-gray-600 text-sm sm:text-base md:text-lg max-w-sm sm:max-w-md md:max-w-lg mx-auto md:mx-0"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
@@ -52,7 +53,7 @@ export default function Home() {
               </motion.p>
 
               <motion.button
-                className="w-[120px] sm:w-[134px] h-[45px] sm:h-[47px] rounded-md text-base sm:text-lg font-medium text-white transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683]"
+                className="w-[110px] sm:w-[130px] h-[40px] sm:h-[45px] rounded-md text-sm sm:text-base font-medium text-white transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683] cursor-pointer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false }}
@@ -61,25 +62,22 @@ export default function Home() {
                 Contact Us
               </motion.button>
             </motion.div>
-
             <motion.div
-              className="flex justify-center"
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="flex justify-center px-4 sm:px-8"
+              initial={{ opacity: 0, x: 0, y: 50 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ delay: 0.8, duration: 1 }}
             >
               <img
                 src={Hero}
                 alt="Easy Drop Fleet"
-                className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[835.68px] h-auto object-contain"
+                className="w-full sm:max-w-[350px] md:max-w-[450px] lg:max-w-[650px] h-auto object-contain"
               />
             </motion.div>
           </div>
         </div>
       </div>
-
-
       {/* First Section End */}
 
       {/* Second Section Start */}
@@ -87,7 +85,7 @@ export default function Home() {
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12">
           <motion.div
             className="w-full lg:w-1/2 lg:pr-12 text-center lg:text-left"
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 1 }}
@@ -104,7 +102,7 @@ export default function Home() {
 
             <motion.p
               className="text-gray-800 mb-12 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -116,7 +114,7 @@ export default function Home() {
             </motion.p>
 
             <motion.button
-              className="w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]"
+              className="w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false }}
@@ -128,7 +126,7 @@ export default function Home() {
 
           <motion.div
             className="w-full lg:w-1/2 flex justify-center"
-            initial={{ opacity: 0, x: 100, y: 100 }}
+            initial={{ opacity: 0, x: 0, y: 50 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ delay: 0.8, duration: 1 }}
@@ -137,7 +135,6 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-
       {/* Second Section End */}
 
       <div>
@@ -149,7 +146,7 @@ export default function Home() {
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           <motion.div
             className="w-full lg:w-1/2 lg:pr-12"
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8 }}
@@ -162,23 +159,22 @@ export default function Home() {
               and professionals. Affordable monthly plans designed for <br /> convenience and flexibility. Sign up online with ease
               and <br /> customize your schedule effortlessly. Experience smooth, <br /> stress-free commutes tailored to your routine.
             </p>
-            <button className="w-[120px] sm:w-[134px] h-[45px] sm:h-[47px] rounded-md text-base sm:text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]">
+            <button className="w-[120px] sm:w-[134px] h-[45px] sm:h-[47px] rounded-md text-base sm:text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer">
               Subscribe
             </button>
           </motion.div>
 
           <motion.div
             className="w-full lg:w-1/2 flex justify-center"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, x: 0, y: 50 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ delay: 0.8, duration: 1 }}
           >
             <img src={SectionForth} className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[559px] h-auto object-contain" alt="Pick & Drop Service" />
           </motion.div>
         </div>
       </div>
-
       {/* Fourth Section End */}
 
       <div>

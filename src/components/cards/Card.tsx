@@ -9,7 +9,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description }) => {
         "transition-all duration-300 ease-in-out",
         "rounded-xl hover:shadow-md",
         "hover:border-gray-200",
-        "w-full sm:w-[418px] h-auto sm:h-[367px]",
+        "w-full h-auto sm:h-[367px]",
         "cursor-pointer"
       )}
     >

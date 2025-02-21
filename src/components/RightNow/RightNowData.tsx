@@ -2,7 +2,7 @@
 export const RightNowData = [
     {
         name: "Register Car",
-        image: "/Images/Car.png",
+        image: "/Images/StartDriving.png",
         review: "Register your car with Easy Drop and earn by providing safe, reliable services."
       },
       {
@@ -27,7 +27,7 @@ export const RightNowData = [
       },
       {
         name: "Confirmation",
-        image: "/Images/Car.png",
+        image: "/Images/Confirmation.png",
         review: "Get confirmation quickly and enjoy secure, reliable services with Easy Drope we handle your commute.."
       }
     ]
