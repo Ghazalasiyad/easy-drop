@@ -45,12 +45,11 @@ const Pick = () => {
   return (
     <>
       <div className="px-4 mt-[10%] lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div
-         
+        <div         
           className="container  mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
         >
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
@@ -61,7 +60,7 @@ const Pick = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: false }}
-              className="text-5xl leading-[60px] sm:text-3xl font-semibold mb-4 sm:mb-6"
+              className="text-2xl lg:text-4xl  leading-[60px] sm:text-2xl font-semibold mb-4 sm:mb-6"
             >
               Your <span className="text-[#2E2C80]">Journey, </span><br/>
               our Commitment
@@ -92,7 +91,7 @@ const Pick = () => {
             <motion.img
               src={group}
               alt="Pick & Drop Service"
-              className=" max-w-[559px] h-[384px] object-contain"
+              className="w-full h-[384px] object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -106,12 +105,8 @@ const Pick = () => {
         <CounterList />
       </div>
 
-
-
-      {/* Second Section */}
       <section className="w-full bg-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
-          {/* Heading & Description */}
           <motion.div
             className="max-w-3xl mb-14"
             initial={{ opacity: 0, y: 50 }}
@@ -178,18 +173,16 @@ const Pick = () => {
             </Swiper>
           </motion.div>
           <motion.div
-            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px] w-[560px]"
+            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            // viewport={{ once: true }}
           >
             <motion.h2
               className="text-2xl font-bold leading-[44px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              // viewport={{ once: true }}
             >
               Need{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">

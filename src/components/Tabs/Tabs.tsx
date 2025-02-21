@@ -48,27 +48,26 @@ export default function Tabs() {
 
   return (
     <div className="bg-[#F7F9FC]">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-2 lg:px-4 py-12">
         <motion.div
           className="text-center mb-8"
-          initial={{ opacity: 0, x: -50 }}
-          exit={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, y: 50 }}
+          exit={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10">
-            <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] pr-2 text-transparent bg-clip-text">
+          <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10 text-center">
+            <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
               Book
             </span>
             Vehicle
           </h1>
-          <p className="text-[#666666] text-base sm:text-lg max-w-3xl leading-[26px] mx-auto">
+          <p className="text-[#666666] text-base sm:text-lg mx-auto">
             Pre-designed tour packages to explore the beauty of
             Gilgit-Baltistan. Customizable trips with your choice of vehicle,
             destinations, and duration.
           </p>
         </motion.div>
 
-        {/* Tabs Section */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {[
             { id: "bolan", label: "Bolan Car" },
@@ -93,14 +92,12 @@ export default function Tabs() {
           ))}
         </div>
 
-        {/* Vehicle Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center p-2">
           {filteredVehicles.map((vehicle) => (
             <div
               key={vehicle.id}
               className="bg-[#F7F9FC] border hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
             >
-              {/* Image Section */}
               <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 p-4">
                 <img
                   src={vehicle.image || "/placeholder.svg"}
@@ -109,7 +106,6 @@ export default function Tabs() {
                 />
               </div>
 
-              {/* Title & Price */}
               <div className="p-4 flex justify-between items-center">
                 <h3 className="text-sm sm:text-lg font-semibold">{vehicle.name}</h3>
                 <p className="text-xs sm:text-sm text-gray-700">
@@ -120,7 +116,6 @@ export default function Tabs() {
                 </p>
               </div>
 
-              {/* Button Section */}
               <div className="flex pl-4 pb-4">
                 <motion.button
                   whileHover={{ scale: 1.1 }}

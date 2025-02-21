@@ -75,7 +75,7 @@ const WhyChooseUs: React.FC = () => {
         </p>
       </div>
 
-      <div className="mt-10 flex justify-center px-10">
+      <div className="mt-10 flex justify-center">
         <motion.div
           className="grid gap-10 md:grid-cols-3 lg:grid-cols-4"
           initial="hidden"
@@ -86,7 +86,7 @@ const WhyChooseUs: React.FC = () => {
           {featureCards.map((card, index) => (
             <motion.div
               key={index}
-              className="p-6 bg-white shadow-lg rounded-lg w-[340px] h-[284px]"
+              className="p-6 bg-white shadow-lg rounded-lg w-full h-[284px]"
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
