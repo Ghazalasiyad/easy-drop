@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Icon from "../../assets/LoctionIcon.png";
 import { motion } from "framer-motion";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-
+import SliderImage from "../../assets/Images/SliderImage.png"
 
 const testimonials = [
   {
@@ -14,7 +14,7 @@ const testimonials = [
     position: "CEO - Ideometrix",
     message:
       "Easy Drop ensures my kids' safety with reliable pick-and-drop services and polite drivers. Highly recommended for parents!",
-    avatar: "/src/assets/Slider_Image.png",
+    avatar: SliderImage,
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const testimonials = [
     position: "Head - School",
     message:
       "Easy Drop is the perfect solution for college students! Affordable, punctual, and always reliable. It makes daily commuting hassle-free and convenient.",
-    avatar: "/src/assets/Slider_Image.png",
+    avatar: SliderImage,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const testimonials = [
     position: "Head - Drivers",
     message:
       "Professional drivers and well-maintained vehicles make Easy Drop perfect for office commutes and travel tours alike!",
-    avatar: "/src/assets/Slider_Image.png",
+    avatar: SliderImage,
   },
   {
     id: 4,
@@ -38,12 +38,12 @@ const testimonials = [
     position: "Teacher",
     message:
       "Excellent service! The drivers are always on time, and the vehicles are comfortable and clean. Highly reliable!",
-    avatar: "/src/assets/Slider_Image.png",
+    avatar: SliderImage,
   },
 ];
 
 const TestimonialsSlider = () => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<Slider | null>(null);
 
   const settings = {
     dots: false,
@@ -75,9 +75,8 @@ const TestimonialsSlider = () => {
       },
     ],
   };
-
-  const handleNext = () => (sliderRef.current as any).slickNext();
-  const handlePrev = () => (sliderRef.current as any).slickPrev();
+  const handleNext = () => sliderRef.current?.slickNext();
+  const handlePrev = () => sliderRef.current?.slickPrev();
 
   return (
     <motion.div
@@ -92,7 +91,8 @@ const TestimonialsSlider = () => {
           What <span className="text-[#2E2C80]">Our Customers</span> Say!
         </h2>
         <p className="mt-4 text-gray-600">
-          Real stories from satisfied travelers and daily commuters who trust <br /> EasyDrop for seamless journeys and unforgettable experiences.
+          Real stories from satisfied travelers and daily commuters who trust{" "}
+          <br /> EasyDrop for seamless journeys and unforgettable experiences.
         </p>
       </div>
       <div className="mt-12 container mx-auto relative">
@@ -108,21 +108,34 @@ const TestimonialsSlider = () => {
             >
               <div className="transition-all duration-300 transform hover:scale-125 rounded-b-lg hover:shadow-[1px_1px_1px_rgba(0,0,0,0.1),-1px_1px_1px_rgba(0,0,0,0.1)]">
                 <div className="bg-white border-t-4 border-[#2E2C80] rounded-lg p-6 relative h-[300px] flex flex-col justify-between">
-                  <p className="text-gray-700 italic mb-8">"{testimonial.message}"</p>
+                  <p className="text-gray-700 italic mb-8">
+                    "{testimonial.message}"
+                  </p>
                   <div className="flex items-center mt-auto">
-                    <img src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover mr-4" />
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-14 h-14 rounded-full object-cover mr-4"
+                    />
                     <div>
-                      <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-gray-500 text-sm">{testimonial.position}</p>
+                      <h4 className="font-bold text-gray-900">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-gray-500 text-sm">
+                        {testimonial.position}
+                      </p>
                     </div>
                   </div>
-                  <img src={Icon} alt="Testimonial Icon" className="absolute bottom-10 right-6 w-10 h-10" />
+                  <img
+                    src={Icon}
+                    alt="Testimonial Icon"
+                    className="absolute bottom-10 right-6 w-10 h-10"
+                  />
                 </div>
-              </div> 
+              </div>
             </motion.div>
           ))}
         </Slider>
-
 
         <div className="absolute -bottom-16 left-0 right-0 flex justify-center space-x-4">
           <button
