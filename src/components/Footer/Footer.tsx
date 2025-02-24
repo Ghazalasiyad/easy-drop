@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import footerImg from "../../assets/Images/footerLogo.png";
 
 const Footer: React.FC = () => {
   const fadeIn = {
@@ -19,20 +20,35 @@ const Footer: React.FC = () => {
           <motion.div variants={fadeIn}>
             <div className="mb-4">
               <img
-                src="/src/assets/footerLogo.png"
+                src={footerImg}
                 alt="Easy Drop Travel Logo"
                 className="h-10 w-auto"
               />
             </div>
             <h4 className="font-medium mb-3">Connect With Us</h4>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/easydroptravels512" target="_blank" aria-label="Facebook" className="p-2 bg-white rounded-full hover:scale-110 transition-transform">
+              <a
+                href="https://www.facebook.com/easydroptravels512"
+                target="_blank"
+                aria-label="Facebook"
+                className="p-2 bg-white rounded-full hover:scale-110 transition-transform"
+              >
                 <FaFacebookF className="text-[#2458A4]" />
               </a>
-              <a href="https://www.instagram.com/easydroptravel/" target="_blank" aria-label="Instagram" className="p-2 bg-white rounded-full hover:scale-110 transition-transform">
+              <a
+                href="https://www.instagram.com/easydroptravel/"
+                target="_blank"
+                aria-label="Instagram"
+                className="p-2 bg-white rounded-full hover:scale-110 transition-transform"
+              >
                 <FaInstagram className="text-[#2458A4]" />
               </a>
-              <a href="https://www.linkedin.com/company/pick-and-drop/" target="_blank" aria-label="LinkedIn" className="p-2 bg-white rounded-full hover:scale-110 transition-transform">
+              <a
+                href="https://www.linkedin.com/company/pick-and-drop/"
+                target="_blank"
+                aria-label="LinkedIn"
+                className="p-2 bg-white rounded-full hover:scale-110 transition-transform"
+              >
                 <FaLinkedinIn className="text-[#2458A4]" />
               </a>
             </div>
@@ -41,36 +57,101 @@ const Footer: React.FC = () => {
           <motion.div variants={fadeIn}>
             <h4 className="font-semibold mb-4">Our Destinations</h4>
             <ul className="space-y-2">
-              <li><a href="https://en.wikipedia.org/wiki/Gilgit-Baltistan" target="_blank" className="hover:text-gray-300">Gilgit</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Hunza_Valley" target="_blank" className="hover:text-gray-300">Hunza</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Skardu" target="_blank" className="hover:text-gray-300">Skardu</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Fairy_Meadows_National_Park" target="_blank" className="hover:text-gray-300">Fairy Meadows</a></li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Gilgit-Baltistan"
+                  target="_blank"
+                  className="hover:text-gray-300"
+                >
+                  Gilgit
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Hunza_Valley"
+                  target="_blank"
+                  className="hover:text-gray-300"
+                >
+                  Hunza
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Skardu"
+                  target="_blank"
+                  className="hover:text-gray-300"
+                >
+                  Skardu
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Fairy_Meadows_National_Park"
+                  target="_blank"
+                  className="hover:text-gray-300"
+                >
+                  Fairy Meadows
+                </a>
+              </li>
             </ul>
           </motion.div>
 
           <motion.div variants={fadeIn}>
             <h4 className="font-semibold mb-4">Our Activities</h4>
             <ul className="space-y-2">
-              <li><a href="#" target="_blank" className="hover:text-gray-300">Pick & Drop Services</a></li>
-              <li><a href="#" target="_blank" className="hover:text-gray-300">Travel & Tour Service</a></li>
-              <li><a href="#" target="_blank" className="hover:text-gray-300">Drivers</a></li>
+              <li>
+                <a href="#" target="_blank" className="hover:text-gray-300">
+                  Pick & Drop Services
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" className="hover:text-gray-300">
+                  Travel & Tour Service
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" className="hover:text-gray-300">
+                  Drivers
+                </a>
+              </li>
             </ul>
           </motion.div>
 
           <motion.div variants={fadeIn}>
             <h4 className="font-semibold mb-4">About Us</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300">Our Story</a></li>
-              <li><a href="#" className="hover:text-gray-300">Who We Are</a></li>
-              <li><a href="#" className="hover:text-gray-300">FAQs</a></li>
+              <li>
+                <a href="#" className="hover:text-gray-300">
+                  Our Story
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-300">
+                  Who We Are
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-300">
+                  FAQs
+                </a>
+              </li>
             </ul>
           </motion.div>
 
           <motion.div variants={fadeIn}>
             <h4 className="font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2">
-              <li><span>0355 4173434</span></li>
-              <li><span className='cursor-pointer'>easydroptravels.@gmailcom</span></li>
+              <li>
+                <span>0355 4173434</span>
+              </li>
+              <li>
+                <a
+                  href="mailto:easydroptravels@gmail.com"
+                  className="hover:text-gray-300"
+                >
+                  easydroptravels@gmail.com
+                </a>
+              </li>
             </ul>
           </motion.div>
         </motion.div>
