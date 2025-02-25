@@ -51,52 +51,46 @@ const Tour: React.FC = () => {
 
   return (
     <>
-   
-   <div className="mx-auto relative min-h-screen">
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{ backgroundImage: `url(${background})` }}
-  ></div>
+      <div className="mx-auto relative h-[100vh] flex items-center justify-center">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}></div>
 
-  <div className="container relative z-10 flex flex-col justify-center px-4 sm:px-8 md:px-20 lg:px-34 min-h-screen">
-    <div className="max-w-full text-center sm:text-left">
-      <h1 className="mb-4 font-semibold text-white text-[clamp(28px,5vw,64px)] leading-[clamp(36px,6vw,70px)]">
-        {slides[currentSlide].title.map((line, index) => (
-          <span key={index} className="block">
-            {line}
-          </span>
-        ))}
-      </h1>
+        <div className="container z-10 text-start flex flex-col items-start px-4 sm:px-8">
+          <h1 className="mb-4 font-semibold text-white text-[clamp(28px,5vw,64px)] leading-[clamp(36px,6vw,70px)]">
+            {slides[currentSlide].title.map((line, index) => (
+              <span key={index} className="block">{line}</span>
+            ))}
+          </h1>
 
-      <p className="mb-8 max-w-xl text-[clamp(14px,1.5vw,20px)] leading-[clamp(24px,2vw,30px)] font-normal text-white/90">
-        {slides[currentSlide].description}
-      </p>
+          <p className="mb-8 max-w-xl text-[clamp(14px,1.5vw,20px)] leading-[clamp(24px,2vw,30px)] font-normal text-white/90">
+            {slides[currentSlide].description}
+          </p>
 
-      <button className="rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[clamp(12px,1vw,16px)] font-semibold text-white transition-all">
-        Make your trip
-      </button>
-    </div>
+          <button className="rounded-md bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] px-6 py-3 text-[clamp(12px,1vw,16px)] font-semibold text-white transition-all">
+            Make your trip
+          </button>
+        </div>
 
-    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center gap-4 flex-wrap">
-      <button
-        onClick={prevSlide}
-        className="flex h-[clamp(32px,4vw,40px)] w-[clamp(32px,4vw,40px)] items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
-        aria-label="Previous slide"
-        style={{ padding: "8px" }} 
-      >
-        <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="flex h-[clamp(32px,4vw,40px)] w-[clamp(32px,4vw,40px)] items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
-        aria-label="Next slide"
-        style={{ padding: "8px" }} // Adjust padding as needed
-      >
-        <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
-      </button>
-    </div>
-  </div>
-</div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center gap-4">
+          <button
+            onClick={prevSlide}
+            className="flex h-[clamp(32px,4vw,40px)] w-[clamp(32px,4vw,40px)] items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
+            aria-label="Previous slide"
+            style={{ padding: "8px" }}
+          >
+            <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="flex h-[clamp(32px,4vw,40px)] w-[clamp(32px,4vw,40px)] items-center justify-center border border-white rounded-full bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
+            aria-label="Next slide"
+            style={{ padding: "8px" }}
+          >
+            <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
+          </button>
+        </div>
+      </div>
+
 
 
 
@@ -203,7 +197,7 @@ const Tour: React.FC = () => {
       <div>
         <Footer />
       </div>
-   
+
     </>
   );
 };

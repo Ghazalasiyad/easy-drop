@@ -1,4 +1,3 @@
-// import PartnerSlider from "../../components/PartnerSlider/PartnerSlider";
 import Car from "../../../public/icons/Car.png";
 import ExpertDriversCard from "../../components/ExpertDrivers/ExpertDriversCard";
 import { ExpertDriversData } from "../../components/ExpertDrivers/ExpertDriversData";
@@ -78,18 +77,20 @@ const cardVariants = {
 const Partner = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] h-[700] pt-45 sm:pt-28">
-        <div className="container mx-auto px-2 sm:px-3 lg:px-4 py-16">
-          <div className="mx-auto h-auto sm:h-[640px] flex flex-col lg:flex-row items-center gap-12">
+      <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] min-h-[700px] pt-20 sm:pt-28">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12">
+
+            {/* Text Section */}
             <motion.div
-              className="w-full text-center lg:text-left mb-6 lg:mb-0"
+              className="w-full text-center lg:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 1 }}
             >
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] xl:text-[56px] font-semibold leading-tight sm:leading-[48px] xl:leading-[62px]"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
@@ -101,26 +102,26 @@ const Partner = () => {
                   Start
                 </span>{" "}
                 <br />
-                <span className="text-[#2E2C80]"> earning </span> with Us
+                <span className="text-[#2E2C80]">earning</span> with Us
               </motion.h1>
 
               <motion.p
-                className="font-normal text-base sm:text-lg text-[#666666] leading-6 sm:leading-[26px] mt-4"
+                className="font-normal text-sm sm:text-base md:text-lg text-[#666666] leading-[22px] sm:leading-[26px] md:leading-[28px] mt-4"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 From daily pick-and-drop services to tailored{" "}
-                <br className="hidden sm:block" /> travel experiences, we’ve got
-                you covered
+                <br className="hidden sm:block" /> travel experiences, we’ve got you covered.
               </motion.p>
 
-              <button className="mt-6 w-[150px] sm:w-[170px] h-[45px] sm:h-[47px] rounded-[8px] text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]">
+              <button className="mt-6 w-[150px] sm:w-[170px] h-[45px] sm:h-[47px] rounded-[8px] text-base sm:text-lg font-medium text-white text-center transition-all duration-300 hover:opacity-90 bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]">
                 Be a Partner
               </button>
             </motion.div>
 
+            {/* Image Section */}
             <motion.div
               className="w-full flex justify-center"
               initial={{ opacity: 0, y: 10 }}
@@ -129,14 +130,14 @@ const Partner = () => {
               transition={{ delay: 0.8, duration: 1 }}
               variants={imageVariants}
             >
-              <img
-                src={caar}
-                className="w-full h-auto"
-              />
+              <img src={caar} className="w-full h-auto" alt="Car" />
             </motion.div>
+
           </div>
         </div>
       </div>
+
+
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
@@ -160,17 +161,17 @@ const Partner = () => {
               </span>
             </motion.h2>
             <motion.p
-              className="text-[#666666] font-normal text-base leading-[26px] max-w-4xl mx-auto"
+              className="text-[#666666] text-sm sm:text-base md:text-lg leading-[26px] max-w-[956px] mx-auto"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               Reliability, Trust, And Commitment To Excellence. At Easy Drop, We
-              Pride Ourselves On Delivering Safe, Punctual, And <br />{" "}
+              Pride Ourselves On Delivering Safe, Punctual, And
               Hassle-Free Pick-And-Drop Services Tailored To Your Needs. Whether
               For Students, Schools, Or Businesses,
-              <br />
+
               We're Your Dependable Partner For Seamless Daily Commuting.
             </motion.p>
           </motion.div>
@@ -202,7 +203,7 @@ const Partner = () => {
                   Your Car
                 </span>
               </h3>
-              <p className="font-normal text-xs leading-[18px] text-center text-[#84878B]">
+              <p className="font-normal text-sm leading-[18px] text-center text-[#84878B]">
                 Partner with us and add your car to <br /> provide safe,
                 reliable and hassle-
                 <br />
@@ -236,7 +237,7 @@ const Partner = () => {
                   With US
                 </span>
               </h3>
-              <p className="font-normal text-xs leading-[18px] text-center text-[#84878B]">
+              <p className="font-normal text-sm leading-[18px] text-center text-[#84878B]">
                 Get in touch with us for safe, reliable,
                 <br /> and hassle-free commuting <br /> solutions.
               </p>
@@ -268,7 +269,7 @@ const Partner = () => {
                   With Us
                 </span>
               </h3>
-              <p className="font-normal text-xs leading-[18px] text-center text-[#84878B]">
+              <p className="font-normal text-sm leading-[18px] text-center text-[#84878B]">
                 Join our team and drive with <br /> us to provide safe and
                 reliable <br /> commuting services.
               </p>
@@ -305,7 +306,7 @@ const Partner = () => {
                 1380: { slidesPerView: 2 },
                 1480: { slidesPerView: 2 },
               }}
-              className="!pb-10"
+              className="!pb-5"
             >
               {PartnerData.map((review, index) => (
                 <SwiperSlide key={index}>
@@ -314,14 +315,8 @@ const Partner = () => {
               ))}
             </Swiper>
           </motion.div>
-          <div
-            className="flex flex-col sm:flex-row  border-b border-[#c1d0e5] justify-between mt-0 mb-5 sm:ml-0 relative h-[85px] w-full sm:w-[560px]"
-            
-          >
-            <h2
-              className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text text-center sm:text-left"
-             
-            >
+          <div className="flex flex-col sm:flex-row  border-b border-[#c1d0e5] justify-between mt-0 mb-5 sm:ml-0 relative h-[85px] w-full sm:w-[560px]">
+            <h2 className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text text-center sm:text-left">
               Be A Partner With Us
             </h2>
             <div className="flex gap-2 justify-center sm:justify-start mt-4 sm:mt-0">
@@ -347,7 +342,7 @@ const Partner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-normal leading-[34px] md:leading-[50px] lg:leading-[60px] mb-8 md:mb-12 lg:mb-16"
+          className="text-center text-[20px] sm:text-[24px] md:text-[32px] lg:text-[38px] font-normal leading-[28px] sm:leading-[32px] md:leading-[50px] lg:leading-[60px] mb-6 sm:mb-8 md:mb-12 lg:mb-16 px-4"
         >
           Your Road To{" "}
           <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-semibold">
@@ -355,6 +350,7 @@ const Partner = () => {
           </span>{" "}
           Commutes
         </motion.h2>
+
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -386,15 +382,15 @@ const Partner = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex gap-4 items-center"
+                className="flex items-start gap-4"
               >
                 <img
                   src={item.img}
                   alt=""
-                  className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px] flex-shrink-0"
+                  className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px] flex-shrink-0 mt-1"
                 />
                 <div>
-                  <h3 className="font-normal text-base sm:text-lg md:text-xl leading-[22px] sm:leading-[24px] md:leading-[30px] mb-1">
+                  <h3 className="flex items-center gap-2 font-normal text-base sm:text-lg md:text-xl leading-[22px] sm:leading-[24px] md:leading-[30px] mb-1">
                     {item.title.split(" ").slice(0, -2).join(" ")}{" "}
                     <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-semibold">
                       {item.title.split(" ").slice(-2).join(" ")}
@@ -446,20 +442,21 @@ const Partner = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="flex gap-4 items-center"
+                className="flex items-start gap-4"
               >
                 <img
                   src={item.img}
                   alt=""
-                  className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px] flex-shrink-0"
+                  className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px] flex-shrink-0 mt-1"
                 />
                 <div>
-                  <h3 className="font-normal text-base sm:text-lg md:text-xl leading-[22px] sm:leading-[24px] md:leading-[30px] mb-1">
+                  <h3 className="flex items-center gap-2 font-normal text-base sm:text-lg md:text-xl leading-[22px] sm:leading-[24px] md:leading-[30px] mb-1 whitespace-nowrap">
                     {item.title.split(" ").slice(0, -2).join(" ")}{" "}
                     <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-semibold">
                       {item.title.split(" ").slice(-2).join(" ")}
                     </span>
                   </h3>
+
                   <p className="text-[#2D2D2D] font-normal text-xs sm:text-sm md:text-base leading-[20px] sm:leading-[24px] md:leading-[27px]">
                     {item.desc}
                   </p>
@@ -469,6 +466,7 @@ const Partner = () => {
           </div>
         </motion.div>
       </section>
+
 
 
       <section className="py-12 sm:py-16 bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] mt-10">
