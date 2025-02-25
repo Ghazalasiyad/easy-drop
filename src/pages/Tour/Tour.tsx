@@ -116,13 +116,13 @@ const Tour: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-4xl font-semibold mb-4 text-center">
+            <h2 className="text-4xl font-semibold mb-4">
               Recent{" "}
               <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
                 Gallery
               </span>
             </h2>
-            <p className="text-[#666666] text-lg font-normal leading-[30px] text-center max-w-3xl mx-auto">
+            <p className="text-[#666666] text-lg font-normal leading-[30px]  max-w-[1119px]">
               From serene valleys to majestic mountains, every trip is crafted
               with your comfort and exploration in mind. Let us handle the
               logistics while you create memories that last a lifetime. Start
