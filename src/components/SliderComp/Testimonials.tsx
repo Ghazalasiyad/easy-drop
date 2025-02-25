@@ -2,7 +2,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useRef } from "react";
-import Icon from "../../assets/LoctionIcon.png";
 import { motion } from "framer-motion";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import SliderImage from "../../assets/Images/SliderImage.png"
@@ -90,23 +89,24 @@ const TestimonialsSlider = () => {
         <h2 className="text-4xl font-bold text-gray-900">
           What <span className="text-[#2E2C80]">Our Customers</span> Say!
         </h2>
-        <p className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg">
-          Real stories from satisfied travelers and daily commuters who trust{" "}
-          <br /> EasyDrop for seamless journeys and unforgettable experiences.
+        <p className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg max-w-[600px] mx-auto">
+          Real stories from satisfied travelers and daily commuters who trust
+          EasyDrop for seamless journeys and unforgettable experiences.
         </p>
       </div>
+
       <div className="mt-12 container mx-auto relative">
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.id}
-              className="p-10"
+              className="sm:p-10 p-2 "
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: testimonial.id * 0.1 }}
             >
-              <div className="transition-all duration-300 transform hover:scale-125 rounded-b-lg hover:shadow-[1px_1px_1px_rgba(0,0,0,0.1),-1px_1px_1px_rgba(0,0,0,0.1)]">
+              <div className="testimonial transition-all duration-300 transform hover:scale-[1.1] rounded-b-lg">
                 <div className="bg-white border-t-4 border-[#2E2C80] rounded-lg p-6 relative h-[300px] flex flex-col justify-between">
                   <p className="text-gray-700 italic mb-8">
                     "{testimonial.message}"
@@ -126,11 +126,13 @@ const TestimonialsSlider = () => {
                       </p>
                     </div>
                   </div>
-                  <img
-                    src={Icon}
+                  <div className="hidden">                  <img
+                    src='/LoctionIcon.png'
                     alt="Testimonial Icon"
-                    className="absolute bottom-10 right-6 w-10 h-10 sm:hidden md:hidden"
+                    className="absolute bottom-10 right-6 w-10 h-10 hidden"
+                    
                   />
+                  </div>
                 </div>
               </div>
             </motion.div>

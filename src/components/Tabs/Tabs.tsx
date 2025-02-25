@@ -69,7 +69,6 @@ export default function Tabs() {
           </p>
         </motion.div>
 
-        {/* Buttons Section */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {[
             { id: "bolan", label: "Bolan Car" },
@@ -102,7 +101,6 @@ export default function Tabs() {
           ))}
         </div>
 
-        {/* Vehicles Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center p-2">
           {filteredVehicles.map((vehicle) => (
             <div

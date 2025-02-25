@@ -1,4 +1,6 @@
 @import "tailwindcss";
 
 
-
+.testimonial:hover{
+    box-shadow: 0px 20px 60px 0px rgba(195, 195, 195, 0.20);
+}
