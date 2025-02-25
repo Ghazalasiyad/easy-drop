@@ -545,7 +545,7 @@ const Partner = () => {
               </span>{" "}
               Drivers
             </h2>
-            <p className="text-[#59636A] text-lg leading-[26px] font-normal md:text-xl font-urbanist mt-4 max-w-3xl mx-auto">
+            <p className="text-[#59636A] text-lg leading-[26px] font-normal md:text-xl font-urbanist mt-4 max-w-[949px] mx-auto">
               Our expert drivers are the backbone of Easy Drop, dedicated to
               providing safe, reliable, and punctual transportation services.
               With extensive experience and a commitment to customer
