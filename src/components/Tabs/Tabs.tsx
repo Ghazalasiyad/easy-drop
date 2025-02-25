@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import van from "../../assets/Images/van.jpg"
-import tx from "../../assets/Images/tx.jpg"
-import bolan from "../../assets/Images/bolan.jpg"
+import van from "../../assets/Images/van.jpg";
+import tx from "../../assets/Images/tx.jpg";
+import bolan from "../../assets/Images/bolan.jpg";
+import btncar from "../../assets/Images/btncar.png";
 
 interface Vehicle {
   id: number;
@@ -11,6 +12,7 @@ interface Vehicle {
   price: number;
   type: string;
 }
+
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("bolan");
 
@@ -61,13 +63,13 @@ export default function Tabs() {
             </span>
             Vehicle
           </h1>
-          <p className="text-[#666666] text-base sm:text-lg mx-auto">
-            Pre-designed tour packages to explore the beauty of
-            Gilgit-Baltistan. Customizable trips with your choice of vehicle,
-            destinations, and duration.
+          <p className="text-[#666666] text-base sm:text-lg mx-auto max-w-[755px]">
+          Pre-designed tour packages to explore the beauty of Gilgit-Baltistan. Customizable trips with your choice of
+           vehicle, destinations, and duration. Comfortable and well-maintained transport for a stress-free travel experience.
           </p>
         </motion.div>
 
+        {/* Buttons Section */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {[
             { id: "bolan", label: "Bolan Car" },
@@ -80,18 +82,27 @@ export default function Tabs() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-base font-medium rounded-md shadow-md transition-all duration-300
+              className={`group flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-base font-medium rounded-md shadow-md transition-all duration-300
             ${
               activeTab === tab.id
                 ? "bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] text-white"
                 : "bg-white text-black hover:bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] hover:text-white"
             }`}
             >
+              <img
+                src={btncar}
+                alt="icon"
+                className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-300
+                ${
+                  activeTab === tab.id ? "invert" : "filter-none"
+                } group-hover:invert`}
+              />
               {tab.label}
             </motion.button>
           ))}
         </div>
 
+        {/* Vehicles Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center p-2">
           {filteredVehicles.map((vehicle) => (
             <div
@@ -107,7 +118,9 @@ export default function Tabs() {
               </div>
 
               <div className="p-4 flex justify-between items-center">
-                <h3 className="text-sm sm:text-lg font-semibold">{vehicle.name}</h3>
+                <h3 className="text-sm sm:text-lg font-semibold">
+                  {vehicle.name}
+                </h3>
                 <p className="text-xs sm:text-sm text-gray-700">
                   Starting from <br />
                   <span className="block text-[#2C3486] text-sm font-medium">
