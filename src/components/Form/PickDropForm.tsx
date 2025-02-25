@@ -91,7 +91,7 @@ const PickDropForm: React.FC = () => {
               </span>
             </motion.h2>
             <motion.p
-              className="text-[#666666] font-normal text-base sm:text-lg leading-[1.5] sm:leading-[27px] mt-2 pl-0 sm:pl-[4%]"
+              className="text-[#666666] text-sm sm:text-base md:text-lg leading-[1.5] sm:leading-[27px] mt-2 pl-0 sm:pl-[4%]"
               initial={{ opacity: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               whileInView={{ opacity: 1 }}

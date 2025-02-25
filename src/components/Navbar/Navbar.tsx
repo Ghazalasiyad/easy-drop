@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   }, [location]);
 
   return (
-    <header className="fixed top-10 left-0 w-full bg-white z-50">
+    <header className="fixed top-11 left-0 w-full bg-white z-50">
       <nav className="container mx-auto h-[90px] flex justify-between items-center px-4 sm:px-6 lg:px-8">
         <motion.img
           initial={{ opacity: 0, x: 50 }}
@@ -93,13 +93,13 @@ const Navbar: React.FC = () => {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `pb-1 transition duration-300 hover:text-blue-500 ${isActive ? "border-b-2 border-blue-500 font-semibold" : ""
-                    }`
+                    `pb-1 transition duration-300 hover:text-blue-500 ${isActive ? "font-semibold md:border-b-2 md:border-blue-500" : ""}`
                   }
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </NavLink>
+
               </li>
             ))}
             <button

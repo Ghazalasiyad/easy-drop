@@ -90,7 +90,7 @@ const TestimonialsSlider = () => {
         <h2 className="text-4xl font-bold text-gray-900">
           What <span className="text-[#2E2C80]">Our Customers</span> Say!
         </h2>
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg">
           Real stories from satisfied travelers and daily commuters who trust{" "}
           <br /> EasyDrop for seamless journeys and unforgettable experiences.
         </p>
@@ -129,7 +129,7 @@ const TestimonialsSlider = () => {
                   <img
                     src={Icon}
                     alt="Testimonial Icon"
-                    className="absolute bottom-10 right-6 w-10 h-10"
+                    className="absolute bottom-10 right-6 w-10 h-10 sm:hidden md:hidden"
                   />
                 </div>
               </div>

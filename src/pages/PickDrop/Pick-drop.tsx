@@ -2,7 +2,6 @@ import WhyChooseUs from "../../components/WhyUs/WhyUs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { ArrowRight } from "react-feather";
 import "swiper/swiper-bundle.css";
 import SliderCard from "../../components/SliderCard/SliderCard";
 import { SliderData } from "../../components/SliderCard/SliderData";
@@ -17,6 +16,7 @@ import Akhss from "../../assets/Images/Akhss.png"
 import elysian from "../../assets/Images/elysian.png"
 import police from "../../assets/Images/police.png"
 import Footer from '../../components/Footer/Footer';
+import { FaArrowRight } from "react-icons/fa";
 
 const Pick = () => {
   const schools = [
@@ -44,14 +44,14 @@ const Pick = () => {
 
   return (
     <>
-      <div className="px-4 mt-[8%] lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+      <section className="py-8 sm:py-12 lg:py-16">
+        <div className="container mx-auto mt-[8%] px-4 flex flex-col lg:flex-row items-center gap-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 lg:pl-8 xl:pl-36 text-center lg:text-left"
+            className="w-full max-w-2xl px-4 sm:px-6 lg:px-0 text-center lg:text-left"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ const Pick = () => {
               className="text-[clamp(24px,4vw,40px)] font-semibold mb-4 sm:mb-6 leading-[clamp(30px,5vw,60px)]"
             >
               Your <span className="text-[#2E2C80]">Journey, </span><br />
-              our Commitment
+              Our Commitment
             </motion.h1>
 
             <motion.p
@@ -69,41 +69,43 @@ const Pick = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: false }}
-              className="text-[#666666] text-[clamp(14px,1.5vw,18px)] leading-[clamp(22px,2vw,30px)] mb-6 sm:mb-8 font-normal"
+              className="text-[clamp(14px,1.5vw,18px)] leading-[clamp(22px,2vw,30px)] mb-6"
             >
               Easy Drop offers reliable pick-and-drop services for students, schools,
-              colleges, and businesses with monthly fixed-budget plans. We ensure safe, punctual, and hassle-free commuting every day.
+              colleges, and businesses with monthly fixed-budget plans. We <span className="text-[#2E2C80] font-bold">ensure safe, punctual,</span> and hassle-free commuting every day.
             </motion.p>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-[140px] h-[45px] sm:h-[50px] rounded-[8px] text-[clamp(14px,1vw,18px)] font-medium text-white transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]"
+              className="w-full sm:w-[140px] h-[45px] sm:h-[50px] rounded-md text-[clamp(14px,1vw,18px)] font-medium text-white transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]"
             >
               Subscribe
             </motion.button>
           </motion.div>
 
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full flex justify-center lg:justify-end">
             <motion.img
               src={group}
               alt="Pick & Drop Service"
-              className="w-full max-w-[480px] h-auto object-contain"
+              className="w-full max-w-[380px] sm:max-w-[450px] md:max-w-[550px] lg:max-w-[550px] h-auto object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: false }}
             />
           </div>
+
         </div>
-      </div>
+      </section>
+
 
       <div>
         <CounterList />
       </div>
 
       <section className="w-full bg-white py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-48 2xl:px-48">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <motion.div
             className="max-w-3xl mb-14"
             initial={{ opacity: 0, y: 50 }}
@@ -124,7 +126,7 @@ const Pick = () => {
               Arrive Happy!
             </motion.h2>
             <motion.p
-              className="text-lg md:text-xl font-normal leading-[27px] max-w-3xl text-[#666666]"
+              className="text-sm sm:text-base md:text-lg leading-[27px] max-w-3xl text-[#666666]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -158,9 +160,9 @@ const Pick = () => {
                 1024: { slidesPerView: 1 },
                 1280: { slidesPerView: 3 },
                 1380: { slidesPerView: 2 },
-                1480: { slidesPerView: 3 },
+                1480: { slidesPerView: 4 },
               }}
-              className="!pb-24"
+              className="!pb-20"
             >
               {SliderData.map((review, index) => (
                 <SwiperSlide key={index}>
@@ -169,33 +171,16 @@ const Pick = () => {
               ))}
             </Swiper>
           </motion.div>
-          <motion.div
-            className="flex border-b border-[#c1d0e5] justify-between mt-0 mb-5 relative h-[85px]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <motion.h2
-              className="text-2xl font-bold leading-[44px]"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              Need{" "}
-              <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
-                Pick & Drop
-              </span>
-            </motion.h2>
-            <div className="flex gap-[100px] justify-between">
-              <motion.button
-                className="next-button w-9 h-9 rounded-full flex mx-2"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.5 }}
-              >
-                <ArrowRight />
-              </motion.button>
+          <div className="flex flex-col sm:flex-row border-b-2 border-[#c1d0e5] justify-between items-center lg:pb-10 relative w-full sm:w-[560px]">
+            <h2 className="text-xl sm:text-2xl font-bold leading-[32px] sm:leading-[44px] lg:mb-4 sm:mb-0">
+              Need <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">Pick & Drop</span>
+            </h2>
+            <div className="flex gap-4 sm:gap-[100px] items-center">
+              <button className="next-button cursor-pointer w-12 h-12 flex items-center justify-center">
+                <FaArrowRight />
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -232,7 +217,7 @@ const Pick = () => {
               </span>
               , Universities
             </h2>
-            <p className="text-[#666666] font-normal text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-[#666666] font-normal leading-relaxed max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
               Reliable transportation for schools, colleges, and universities,
               ensuring safe and timely commutes every day
             </p>

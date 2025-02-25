@@ -68,7 +68,7 @@ const WhyChooseUs: React.FC = () => {
             choose us
           </span>
         </h2>
-        <p className="text-[#666666] mt-2">
+        <p className="text-[#666666] mt-2 text-sm sm:text-base md:text-lg">
           At EasyDrop, we prioritize your convenience, safety, and satisfaction. Whether it's reliable pick-and-drop
           <br />
           services or unforgettable travel experiences, we ensure top-notch service tailored to your needs.

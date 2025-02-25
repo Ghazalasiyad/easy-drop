@@ -45,13 +45,13 @@ const cardData: CardProps[] = [
 
 const CardList: React.FC = () => {
     return (
-        <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] px-4 sm:px-6 lg:px-8 py-20">
             <div className="container mx-auto max-w-screen-2xl">
                 <div className="text-center mb-12">
                     <h1 className="text-xl sm:text-3xl font-bold text-gray-900">
                         Why <span className="text-[#2E2C80]">choose us</span>
                     </h1>
-                    <p className="mt-2 text-gray-600 max-w-lg sm:max-w-2xl mx-auto text-sm sm:text-base">
+                    <p className="mt-2 text-gray-600 max-w-lg sm:max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
                         At EasyDrop, we prioritize your convenience, safety, and satisfaction. Whether it's reliable pick-and-drop services or unforgettable travel experiences, we ensure top-notch service tailored to your needs.
                     </p>
                 </div>

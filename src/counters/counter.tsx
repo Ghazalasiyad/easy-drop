@@ -14,7 +14,7 @@ const Counter: React.FC<CounterProps> = ({ icon, value, label }) => {
 
   return (
     <motion.div
-      className="bg-white rounded-xl flex items-center p-6 w-full min-h-[235px] gap-10 transition-all duration-300 
+      className="bg-white rounded-xl flex items-center p-4 ull min-h-[235px] gap-10 transition-all duration-300 
       border-b-0 
       hover:shadow-[6px_6px_15px_rgba(46,44,128,0.3)] hover:border-b-[6px] hover:border-[#2E2C80] 
       hover:scale-105 cursor-pointer overflow-hidden"
