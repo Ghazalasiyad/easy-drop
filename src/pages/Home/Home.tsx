@@ -16,7 +16,7 @@ export default function Home() {
     <>
       {/* First Section Start */}
       <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] flex justify-center items-center">
-        <div className="container w-full h-auto pt-45 sm:pt-28 md:pt-36 lg:pt-60 pb-10 sm:pb-16 lg:pb-20 flex justify-center items-center">
+        <div className="container max-w-screen-[1920px] h-auto pt-45 sm:pt-28 md:pt-36 lg:pt-60 pb-10 sm:pb-16 lg:pb-20 flex justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full text-center md:text-left gap-6 sm:gap-8">
             <motion.div
               className="space-y-4 sm:space-y-6 px-4 sm:px-8"
@@ -34,8 +34,7 @@ export default function Home() {
               >
                 <span className="text-gray-800">Seamless </span>
                 <span className="font-bold bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
-            text-transparent bg-clip-text">Rides</span>
-                <span className="text-gray-800">, </span>
+            text-transparent bg-clip-text">Rides,</span>
                 <br className="hidden md:block" />
                 <span className="text-gray-800">Memorable</span>
                 <br />
@@ -72,17 +71,18 @@ export default function Home() {
               <img
                 src={Hero}
                 alt="Easy Drop Fleet"
-                className="w-full sm:max-w-[350px] md:max-w-[450px] lg:max-w-[650px] h-auto object-contain"
+                className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[800px] h-auto object-contain"
               />
             </motion.div>
+
           </div>
         </div>
       </div>
       {/* First Section End */}
 
       {/* Second Section Start */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <section>
+        <div className="container mx-auto max-w-screen-[1920px] flex flex-col lg:flex-row items-center gap-12 px-4 sm:px-6 lg:px-8 lg:py-20">
           <motion.div
             className="w-full lg:w-1/2 lg:pr-12 text-center lg:text-left"
             initial={{ opacity: 0, y: 10 }}
@@ -101,16 +101,16 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              className="text-gray-800 mb-12 leading-relaxed"
+              className="text-gray-800 mb-12 leading-relaxed text-sm sm:text-base md:text-lg"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              At EasyDrop, we provide reliable pick-and-drop services<br /> and unforgettable travel
-              experiences. With a focus on<br /> safety and convenience, our professional team ensures <br />
-              timely commutes and scenic tours to breathtaking<br /> destinations like Gilgit-Baltistan.
-              EasyDrop is your trusted<br /> partner for seamless transportation and memorable<br /> adventures.
+              At EasyDrop, we provide reliable pick-and-drop services and unforgettable travel
+              experiences. With a focus on safety and convenience, our professional team ensures 
+              timely commutes and scenic tours to breathtaking destinations like Gilgit-Baltistan.
+              EasyDrop is your trusted partner for seamless transportation and memorable adventures.
             </motion.p>
 
             <motion.button
@@ -134,7 +134,7 @@ export default function Home() {
             <img src={scndSection} className="max-w-full h-auto object-cover" alt="EasyDrop Services" />
           </motion.div>
         </div>
-      </div>
+      </section>
       {/* Second Section End */}
 
       <div>
@@ -142,8 +142,8 @@ export default function Home() {
       </div>
 
       {/* Fourth Section Start */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <section>
+        <div className="container mx-auto max-w-screen-[1920px] flex flex-col lg:flex-row items-center gap-12 px-4 sm:px-6 lg:px-8 lg:py-30">
           <motion.div
             className="w-full lg:w-1/2 lg:pr-12"
             initial={{ opacity: 0, y: 10 }}
@@ -154,7 +154,7 @@ export default function Home() {
             <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
               <span className="text-[#2E2C80]">Pick & Drop</span> Service
             </h1>
-            <p className="text-gray-800 text-sm sm:text-base leading-relaxed mb-8 sm:mb-12">
+            <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-12">
               <span className="text-[#2E2C80] font-bold">Easydrop</span> ensures safe, reliable transportation for students <br />
               and professionals. Affordable monthly plans designed for <br /> convenience and flexibility. Sign up online with ease
               and <br /> customize your schedule effortlessly. Experience smooth, <br /> stress-free commutes tailored to your routine.
@@ -174,7 +174,7 @@ export default function Home() {
             <img src={SectionForth} className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[559px] h-auto object-contain" alt="Pick & Drop Service" />
           </motion.div>
         </div>
-      </div>
+      </section>
       {/* Fourth Section End */}
 
       <div>

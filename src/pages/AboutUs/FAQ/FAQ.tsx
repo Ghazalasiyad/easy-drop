@@ -41,7 +41,7 @@ const FAQ: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto p-4 sm:p-6v mb-10">
       <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-4">Frequently Asked Questions</h2>
-      <p className="text-gray-600 text-center mb-8">
+      <p className="text-gray-600 text-center mb-8 text-sm sm:text-base md:text-lg">
         Find answers to many of your questions by looking in our FAQs
       </p>
       <div className="space-y-4">

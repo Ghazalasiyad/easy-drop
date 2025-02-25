@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
           </motion.div>
 
           <motion.div variants={fadeIn}>
-            <h4 className="font-semibold mb-4">Our Destinations</h4>
+            <h4 className="font-semibold mb-4 text-sm sm:text-base md:text-lg">Our Destinations</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
           </motion.div>
 
           <motion.div variants={fadeIn}>
-            <h4 className="font-semibold mb-4">Our Activities</h4>
+            <h4 className="font-semibold mb-4 text-sm sm:text-base md:text-lg">Our Activities</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#" target="_blank" className="hover:text-gray-300">
@@ -118,20 +118,20 @@ const Footer: React.FC = () => {
           </motion.div>
 
           <motion.div variants={fadeIn}>
-            <h4 className="font-semibold mb-4">About Us</h4>
+            <h4 className="font-semibold mb-4 text-sm sm:text-base md:text-lg">About Us</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-gray-300">
+                <a href="#" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
                   Our Story
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
+                <a href="#" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
                   Who We Are
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
+                <a href="#" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
                   FAQs
                 </a>
               </li>
@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
           </motion.div>
 
           <motion.div variants={fadeIn}>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
+            <h4 className="font-semibold text-sm sm:text-base md:text-lg mb-4">Contact Us</h4>
             <ul className="space-y-2">
               <li>
                 <span>0355 4173434</span>
@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="mt-8 pt-4 text-center text-sm border-t border-white"
+          className="mt-8 pt-4 text-center text-sm sm:text-base md:text-lg border-t border-white"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}

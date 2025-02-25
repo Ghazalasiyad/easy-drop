@@ -26,20 +26,20 @@ const AboutUs: React.FC = () => {
             Our <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
                text-transparent bg-clip-text">Story</span>
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-4 text-base sm:text-lg">
+          <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base md:text-lg">
             Easy Drop was founded to make daily commuting stress-free and reliable for students, schools, colleges, and businesses.
             We identified the need for a safe and punctual pick-and-drop service and created a solution built on trust and convenience.
             Our focus is on providing reliable, hassle-free, and affordable travel. With fixed-budget plans, we ensure every ride is safe and on time.
             Easy Drop is your trusted partner for seamless daily commuting!
           </p>
-          <p className="text-gray-700 leading-relaxed mb-8 text-base sm:text-lg">
+          <p className="text-gray-700 leading-relaxed mb-8 text-sm sm:text-base md:text-lg">
             Over the years, Easy Drop has become a trusted partner for families and organizations by providing reliable services with fixed-budget monthly plans.
             We prioritize safety, affordability, and convenience to make daily travel stress-free. Our services ensure every ride is secure and on time.
             With a focus on hassle-free commuting, we bridge the gap for students and professionals. Easy Drop is your dependable solution for seamless everyday travel.
           </p>
-          <hr className="w-full max-w-md border-t border-gray-600 mb-6" />
+          <hr className="w-full max-w-md border-t border-gray-600 mb-2" />
           <p className="bg-gradient-to-r from-[#2E2C80] to-[#2458A4] 
-               text-transparent bg-clip-text font-medium text-sm sm:text-base">
+               text-transparent bg-clip-text font-medium text-sm sm:text-base md:text-lg">
             Easy Drop
           </p>
         </div>
