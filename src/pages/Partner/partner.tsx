@@ -314,20 +314,16 @@ const Partner = () => {
               ))}
             </Swiper>
           </motion.div>
-          <motion.div
+          <div
             className="flex flex-col sm:flex-row  border-b border-[#c1d0e5] justify-between mt-0 mb-5 sm:ml-0 relative h-[85px] w-full sm:w-[560px]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            
           >
-            <motion.h2
+            <h2
               className="text-2xl font-bold leading-[44px] bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text text-center sm:text-left"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+             
             >
               Be A Partner With Us
-            </motion.h2>
+            </h2>
             <div className="flex gap-2 justify-center sm:justify-start mt-4 sm:mt-0">
               <motion.button
                 className="next-button w-9 h-9 rounded-full flex"
@@ -337,7 +333,7 @@ const Partner = () => {
                 <ArrowRight />
               </motion.button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
