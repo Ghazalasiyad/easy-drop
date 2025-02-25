@@ -160,7 +160,7 @@ const DriverForm: React.FC = () => {
                     name="serviceType"
                     value={formData.serviceType}
                     onChange={handleSelectChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none appearance-none"
                   >
                     <option value="">Pick and Drop</option>
                     <option value="1">service1</option>
@@ -182,7 +182,7 @@ const DriverForm: React.FC = () => {
                     name="vehicleType"
                     value={formData.vehicleType}
                     onChange={handleSelectChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none appearance-none"
                   >
                     <option value="1">Bolan</option>
                     <option value="2">Van</option>
@@ -214,7 +214,7 @@ const DriverForm: React.FC = () => {
                     name="seater"
                     value={formData.seater}
                     onChange={handleSelectChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none appearance-none"
                   >
                     <option value="1">9</option>
                     <option value="2">10</option>

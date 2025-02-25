@@ -21,15 +21,16 @@ const ExpertDriversCard: React.FC<ExpertDriversCardProps> = ({
       >
         <img className="" src={icon} alt="icon" />
       </div>
-      <div className="w-[280px] h-[123px] bg-[#E9EDF5] text-center"> <h3 className="text-2xl  font-medium leading-[24px] pt-6 pb-2">{title}</h3>
-      <p className="text-[#0D0D0C] text-base font-normal leading-[26px]">
-        {description}
-    
-      </p>
-      <p className="text-[#0D0D0C] text-base font-normal leading-[26px]">
-        {experience}
-    
-      </p></div>
+      <div className="w-[280px] h-[123px] bg-[#E9EDF5] text-center rounded-lg">
+  <h3 className="text-2xl font-medium leading-[24px] pt-6 pb-2">{title}</h3>
+  <p className="text-[#0D0D0C] text-base font-normal leading-[26px]">
+    {description}
+  </p>
+  <p className="text-[#0D0D0C] text-base font-normal leading-[26px]">
+    {experience}
+  </p>
+</div>
+
      
     </div>
   );

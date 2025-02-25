@@ -16,12 +16,9 @@ const PartnerCard: React.FC<SliderProps> = ({
   review,
 }) => {
   return (
-    <motion.div
+    <div
     className="sm:p-6  relative flex flex-col"
-    initial={{ opacity: 0, y: 30 }} 
-    whileInView={{ opacity: 1, y: 0 }} 
-    transition={{ duration: 0.8, ease: "easeOut" }} 
-    viewport={{ once: false }} 
+     
   >
     <div className="flex flex-col items-center sm:items-start mb-4 w-[496px] h-[396px]">
       <div className="mb-4 sm:mb-6">
@@ -39,7 +36,7 @@ const PartnerCard: React.FC<SliderProps> = ({
     </p>
     </div>
     
-  </motion.div>
+  </div>
   );
 };
 

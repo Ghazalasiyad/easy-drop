@@ -150,7 +150,7 @@ const PickDropForm: React.FC = () => {
                       name={id}
                       value={formData[id as keyof FormData]}
                       onChange={handleSelectChange}
-                      className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#333] rounded-md focus:outline-none"
+                      className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#333] rounded-md focus:outline-none appearance-none"
                     >
                       <option value="">Choose {label.toLowerCase()}</option>
                       {options.map((option, index) => (
