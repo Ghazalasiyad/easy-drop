@@ -15,7 +15,7 @@ const SliderCard: React.FC<SliderProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-white w-full max-w-[333px] h-[323px] rounded-xl border border-[#F5F5F5] p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 relative flex flex-col"
+      className="Slider_cards bg-white w-full h-[323px] border  border-[#1F75BA]/20 rounded-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 relative flex flex-col"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

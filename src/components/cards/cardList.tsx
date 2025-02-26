@@ -47,7 +47,7 @@ const CardList: React.FC = () => {
     return (
         <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] px-4 sm:px-6 lg:px-8 py-20">
             <div className="container mx-auto max-w-screen-2xl">
-                <div className="text-center mb-12">
+                <div className="lg:text-center sm:text-start mb-12">
                     <h1 className="text-xl sm:text-3xl font-bold text-gray-900">
                         Why <span className="text-[#2E2C80]">choose us</span>
                     </h1>

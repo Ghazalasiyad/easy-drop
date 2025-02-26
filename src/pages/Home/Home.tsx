@@ -17,7 +17,7 @@ export default function Home() {
       {/* First Section Start */}
       <div className="bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF] flex justify-center items-center">
         <div className="container max-w-screen-[1920px] h-auto pt-45 sm:pt-28 md:pt-36 lg:pt-60 pb-10 sm:pb-16 lg:pb-20 flex justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full text-center md:text-left gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 w-full text-center md:text-left gap-6 sm:gap-8">
             <motion.div
               className="space-y-4 sm:space-y-6 px-4 sm:px-8"
               initial={{ opacity: 0, y: 50 }}
@@ -26,7 +26,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <motion.h1
-                className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-snug"
+                className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-snug text-start"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}
@@ -42,7 +42,7 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
-                className="text-gray-600 text-sm sm:text-base md:text-lg max-w-sm sm:max-w-md md:max-w-lg mx-auto md:mx-0"
+                className="text-gray-600 text-sm sm:text-base md:text-lg max-w-sm sm:max-w-md md:max-w-lg mx-auto md:mx-0 text-start"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
@@ -50,7 +50,6 @@ export default function Home() {
               >
                 From Daily Pick-And-Drop Services To Tailored Travel Experiences, We've Got You Covered
               </motion.p>
-
               <motion.button
                 className="w-[110px] sm:w-[130px] h-[40px] sm:h-[45px] rounded-md text-sm sm:text-base font-medium text-white transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683] cursor-pointer"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -71,10 +70,9 @@ export default function Home() {
               <img
                 src={Hero}
                 alt="Easy Drop Fleet"
-                className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[800px] h-auto object-contain"
+                className="w-full max-w-[600px] md:max-w-[700px] lg:max-w-[900px] h-auto object-contain"
               />
             </motion.div>
-
           </div>
         </div>
       </div>
@@ -91,7 +89,7 @@ export default function Home() {
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-3xl font-bold mb-6"
+              className="text-3xl font-bold lg:mb-6 sm:mb-2 text-start"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: false }}
@@ -101,14 +99,14 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              className="text-gray-800 mb-12 leading-relaxed text-sm sm:text-base md:text-lg"
+              className="text-gray-800 mb-12 leading-relaxed text-sm sm:text-base md:text-lg text-start"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               At EasyDrop, we provide reliable pick-and-drop services and unforgettable travel
-              experiences. With a focus on safety and convenience, our professional team ensures 
+              experiences. With a focus on safety and convenience, our professional team ensures
               timely commutes and scenic tours to breathtaking destinations like Gilgit-Baltistan.
               EasyDrop is your trusted partner for seamless transportation and memorable adventures.
             </motion.p>
