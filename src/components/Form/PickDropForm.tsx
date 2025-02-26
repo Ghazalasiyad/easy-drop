@@ -119,7 +119,7 @@ const PickDropForm: React.FC = () => {
                   { label: "Drop off Timing", id: "droptiming", type: "time" },
                 ].map(({ label, id, type }) => (
                   <div className="space-y-2" key={id}>
-                    <label htmlFor={id} className="block text-sm font-medium text-[#7f8a8f]">
+                    <label htmlFor={id} className="block text-sm font-medium text-[#666666]">
                       {label}
                     </label>
                     <input
@@ -129,7 +129,7 @@ const PickDropForm: React.FC = () => {
                       name={id}
                       value={formData[id as keyof FormData]}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#333] rounded-md focus:outline-none"
+                      className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] rounded-md focus:outline-none"
                     />
                   </div>
                 ))}
@@ -142,7 +142,7 @@ const PickDropForm: React.FC = () => {
                   { label: "Destination", id: "destination", options: ["Gilgit", "Hunza", "Jutial", "City"] },
                 ].map(({ label, id, options }) => (
                   <div className="space-y-2" key={id}>
-                    <label htmlFor={id} className="block text-sm font-medium text-[#7f8a8f]">
+                    <label htmlFor={id} className="block text-sm font-medium text-[#666666]">
                       {label}
                     </label>
                     <select
@@ -150,7 +150,7 @@ const PickDropForm: React.FC = () => {
                       name={id}
                       value={formData[id as keyof FormData]}
                       onChange={handleSelectChange}
-                      className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#333] rounded-md focus:outline-none appearance-none"
+                      className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] rounded-md focus:outline-none appearance-none"
                     >
                       <option value="">Choose {label.toLowerCase()}</option>
                       {options.map((option, index) => (

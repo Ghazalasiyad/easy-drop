@@ -109,7 +109,7 @@ const DriverForm: React.FC = () => {
               {/* First Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="name" className="block text-sm font-medium text-[#666666]">
                     Name
                   </label>
                   <input
@@ -119,12 +119,12 @@ const DriverForm: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] rounded-md font-normal text-sm focus:outline-none"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="contactNumber" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="contactNumber" className="block text-sm font-medium text-[#666666]">
                     Contact Number
                   </label>
                   <input
@@ -134,11 +134,11 @@ const DriverForm: React.FC = () => {
                     name="contactNumber"
                     value={formData.contactNumber}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] rounded-md font-normal text-sm focus:outline-none"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="Cnic" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="Cnic" className="block text-sm font-medium text-[#666666]">
                     Cnic
                   </label>
                   <input
@@ -148,11 +148,11 @@ const DriverForm: React.FC = () => {
                     name="Cnic"
                     value={formData.Cnic}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] font-normal text-sm rounded-md focus:outline-none"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="serviceType" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="serviceType" className="block text-sm font-medium text-[#666666]">
                     Service Type
                   </label>
                   <select
@@ -160,9 +160,9 @@ const DriverForm: React.FC = () => {
                     name="serviceType"
                     value={formData.serviceType}
                     onChange={handleSelectChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none appearance-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] font-normal text-sm rounded-md focus:outline-none appearance-none"
                   >
-                    <option value="">Pick and Drop</option>
+                    <option className="font-normal text-sm text-[#666666]" value="">Pick and Drop</option>
                     <option value="1">service1</option>
                     <option value="2">service2</option>
                     <option value="3">service3</option>
@@ -174,7 +174,7 @@ const DriverForm: React.FC = () => {
               {/* Second Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="Vehicle" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="Vehicle" className="block text-sm font-medium text-[#666666]">
                     Vehicle Type
                   </label>
                   <select
@@ -182,7 +182,7 @@ const DriverForm: React.FC = () => {
                     name="vehicleType"
                     value={formData.vehicleType}
                     onChange={handleSelectChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none appearance-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] font-normal text-sm rounded-md focus:outline-none appearance-none"
                   >
                     <option value="1">Bolan</option>
                     <option value="2">Van</option>
@@ -192,7 +192,7 @@ const DriverForm: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="vehiclemodel" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="vehiclemodel" className="block text-sm font-medium text-[#666666]">
                     Vehicle Model
                   </label>
                   <input
@@ -202,11 +202,11 @@ const DriverForm: React.FC = () => {
                     name="vehiclemodel"
                     value={formData.vehiclemodel}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] font-normal text-sm rounded-md focus:outline-none"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="seater" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="seater" className="block text-sm font-medium text-[#666666]">
                     Seater
                   </label>
                   <select
@@ -214,7 +214,7 @@ const DriverForm: React.FC = () => {
                     name="seater"
                     value={formData.seater}
                     onChange={handleSelectChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none appearance-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] font-normal text-sm font-normal text-sm rounded-md focus:outline-none appearance-none"
                   >
                     <option value="1">9</option>
                     <option value="2">10</option>
@@ -223,7 +223,7 @@ const DriverForm: React.FC = () => {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="experience" className="block text-sm font-medium text-[#7f8a8f]">
+                  <label htmlFor="experience" className="block text-sm font-medium text-[#666666]">
                     Experience
                   </label>
                   <input
@@ -233,7 +233,7 @@ const DriverForm: React.FC = () => {
                     name="experience"
                     value={formData.experience}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#b8c0c8] rounded-md focus:outline-none"
+                    className="w-full px-4 py-2.5 bg-[#e7edf3] text-[#666666] font-normal text-sm rounded-md focus:outline-none"
                   />
                 </div>
               </div>
