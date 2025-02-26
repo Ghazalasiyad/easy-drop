@@ -45,7 +45,7 @@ const Pick = () => {
   return (
     <>
       <section className="py-8 sm:py-12 lg:py-16">
-        <div className="container mx-auto mt-[8%] px-4 flex flex-col lg:flex-row items-center gap-6">
+        <div className="container mx-auto lg:mt-[8%] md:mt-[10%] sm:mt-[25%] mt-[30%] px-4 flex flex-col lg:flex-row items-center gap-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,11 +58,12 @@ const Pick = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: false }}
-              className="text-[clamp(24px,4vw,40px)] font-semibold mb-4 sm:mb-6 leading-[clamp(30px,5vw,60px)]"
+              className="text-[clamp(28px,6vw,50px)] font-semibold mb-4 sm:mb-6 leading-[clamp(36px,7vw,65px)]"
             >
-              Your <span className="text-[#2E2C80]">Journey, </span><br />
+              Your <span className="text-[#2E2C80]">Journey, </span> <br />
               Our Commitment
             </motion.h1>
+
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -95,7 +96,6 @@ const Pick = () => {
               viewport={{ once: false }}
             />
           </div>
-
         </div>
       </section>
 

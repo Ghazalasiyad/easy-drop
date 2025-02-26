@@ -15,7 +15,7 @@ const TravelTour: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.h1
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 sm:text-start text-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -24,7 +24,7 @@ const TravelTour: React.FC = () => {
             </motion.h1>
 
             <motion.p
-              className="text-gray-800 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg"
+              className="text-gray-800 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg sm:text-start text-start"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}

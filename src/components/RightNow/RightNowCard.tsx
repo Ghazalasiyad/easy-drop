@@ -7,7 +7,7 @@ interface SliderProps {
 
 const RightNowCard: React.FC<SliderProps> = ({ name, image, review, showVerticalLine }) => {
     return (
-        <div className="relative bg-white w-[264px] h-[254px] p-6 items-center rounded-xl text-center gap-16">
+        <div className="relative bg-white w-full h-[254px] p-6 items-center rounded-xl text-center gap-16">
             <div className="items-center">
                 <div className="mb-6 flex justify-center">
                     <img src={image} alt="profile" className="w-20 h-20 rounded-full object-cover" />

@@ -5,7 +5,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description }) => {
   return (
     <div
       className={clsx(
-        "bg-white p-6 sm:p-12 pb-0 flex flex-col items-start text-start",
+        "bg-white p-6 sm:p-12 pb-5 flex flex-col items-start text-start",
         "transition-all duration-300 ease-in-out",
         "rounded-xl hover:shadow-md",
         "hover:border-gray-200",
