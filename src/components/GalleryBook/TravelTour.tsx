@@ -24,7 +24,7 @@ const TravelTour: React.FC = () => {
             </motion.h1>
 
             <motion.p
-              className="text-gray-800 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg sm:text-start text-start"
+              className="max-w-[500px] text-gray-800 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg sm:text-start text-start"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}

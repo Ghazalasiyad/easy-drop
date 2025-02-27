@@ -51,7 +51,7 @@ const Pick = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="w-full max-w-2xl px-4 sm:px-6 lg:px-0 text-center lg:text-left"
+            className="w-full max-w-2xl px-2 lg:px-0 lg:text-left text-start"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

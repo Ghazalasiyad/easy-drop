@@ -15,8 +15,8 @@ const ContactForm: React.FC = () => {
 
     return (
         <div id="ContactForm" className='bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]'>
-            <div className="container mx-auto flex items-center justify-evenly px-4 py-12 h-[757px]">
-                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 p-6 lg:p-12">
+            <div className="container mx-auto flex items-center justify-evenly px-3 sm:pt-10 sm:pb-0 h-[757px]">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:p-12 lg:pt-10">
                     <div className="flex flex-col justify-center">
                         <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-[#2E2C80] to-[#2458A4] mb-2">
                             Contact Us ____
@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className='h-[429px]'>
+                    <div className=''>
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
                                 <label htmlFor="name" className="sr-only">Name</label>
@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
                                     id="name"
                                     type="text"
                                     placeholder="Name"
-                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 />
                             </div>
@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
                                     id="email"
                                     type="email"
                                     placeholder="Your email"
-                                    className="w-full border border-gray-200 bg-white  rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-200 bg-white  rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 />
                             </div>
@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
                                     id="message"
                                     placeholder="Message"
                                     rows={4}
-                                    className="w-full border border-gray-200 bg-white  rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-200 bg-white  rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 ></textarea>
                             </div>
@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className={`w-[134px] h-[47px] rounded-lg cursor-pointer text-lg font-medium text-white transition-colors bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] focus:outline-none focus:ring-2 focus:ring-blue-500 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                                    className={`w-full sm:w-[130px] h-[47px] rounded-lg cursor-pointer text-base sm:text-lg font-medium text-white transition-colors bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] focus:outline-none focus:ring-2 focus:ring-blue-500 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                                         }`}
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Contact us'}
