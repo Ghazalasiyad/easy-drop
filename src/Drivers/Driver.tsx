@@ -4,8 +4,8 @@ import BottomImage from "../assets/ImagesGallery/image2.png";
 
 const Driver = () => {
     return (
-        <div className="bg-gradient-to-r from-white to-[#E5F4FF] py-20">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-white to-[#E5F4FF]">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 lg:py-20">
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                     <motion.div
                         className="space-y-6"
@@ -38,7 +38,7 @@ const Driver = () => {
                             smooth and stress-free.
                         </motion.p>
                         <motion.button
-                            className="w-[134px] h-[47px] rounded-lg text-lg font-medium text-white bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] transition-colors cursor-pointer"
+                            className="w-full sm:w-[130px] h-[47px] rounded-lg text-base sm:text-lg font-medium text-white bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] transition-colors cursor-pointer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             initial={{ opacity: 0, scale: 0.9 }}

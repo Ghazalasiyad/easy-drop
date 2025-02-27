@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
       <img
         src={images[0]}
         alt="Mountain"
-        className="rounded-2xl w-full h-[250px] xs:h-[300px] sm:h-[400px] object-cover col-span-1 sm:col-span-1 sm:row-span-2"
+        className="rounded-2xl w-full h-[300px] xs:h-[300px] sm:h-[400px] object-cover col-span-1 sm:col-span-1 sm:row-span-2"
       />
       <img
         src={images[2]}

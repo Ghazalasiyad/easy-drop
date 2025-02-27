@@ -51,7 +51,7 @@ export default function Home() {
                 From Daily Pick-And-Drop Services To Tailored Travel Experiences, We've Got You Covered
               </motion.p>
               <motion.button
-                className="w-[110px] sm:w-[130px] h-[40px] sm:h-[45px] rounded-md text-sm sm:text-base font-medium text-white transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683] cursor-pointer"
+                className="w-full sm:w-[130px] h-[40px] sm:h-[45px] rounded-md text-sm sm:text-base font-medium text-white transition-colors duration-200 bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#252369] hover:to-[#1d4683] cursor-pointer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false }}
@@ -99,7 +99,7 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              className="text-gray-800 mb-12 leading-relaxed text-sm sm:text-base md:text-lg text-start"
+              className="max-w-[500px] text-gray-800 mb-12 leading-relaxed text-sm sm:text-base md:text-lg text-start"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
@@ -112,7 +112,7 @@ export default function Home() {
             </motion.p>
 
             <motion.button
-              className="w-[134px] h-[47px] rounded-[8px] text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer"
+              className="w-full sm:w-[130px] h-[47px] rounded-lg text-sm sm:text-base font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false }}
@@ -152,12 +152,12 @@ export default function Home() {
             <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
               <span className="text-[#2E2C80]">Pick & Drop</span> Service
             </h1>
-            <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-12">
-              <span className="text-[#2E2C80] font-bold">Easydrop</span> ensures safe, reliable transportation for students <br />
-              and professionals. Affordable monthly plans designed for <br /> convenience and flexibility. Sign up online with ease
-              and <br /> customize your schedule effortlessly. Experience smooth, <br /> stress-free commutes tailored to your routine.
+            <p className="max-w-[500px] text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-12">
+              <span className="text-[#2E2C80] font-bold">Easydrop</span> ensures safe, reliable transportation for students
+              and professionals. Affordable monthly plans designed for convenience and flexibility. Sign up online with ease
+              and customize your schedule effortlessly. Experience smooth, stress-free commutes tailored to your routine.
             </p>
-            <button className="w-[120px] sm:w-[134px] h-[45px] sm:h-[47px] rounded-md text-base sm:text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer">
+            <button className="w-full sm:w-[130px] h-[45px] sm:h-[47px] rounded-md text-base sm:text-lg font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer">
               Subscribe
             </button>
           </motion.div>
