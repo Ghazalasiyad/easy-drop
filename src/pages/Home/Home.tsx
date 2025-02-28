@@ -112,7 +112,7 @@ export default function Home() {
             </motion.p>
 
             <motion.button
-              className="w-full sm:w-[130px] h-[47px] rounded-lg text-sm sm:text-base font-medium text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer"
+              className="w-full sm:w-[130px] text-sm sm:text-base font-medium h-[47px] rounded-lg text-white leading-[17.07px] text-center transition-colors bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)] cursor-pointer"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false }}

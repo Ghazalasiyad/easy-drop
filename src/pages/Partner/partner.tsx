@@ -83,7 +83,7 @@ const Partner = () => {
 
             {/* Text Section */}
             <motion.div
-              className="w-full text-center lg:text-left"
+              className="w-full text-start"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
@@ -116,7 +116,7 @@ const Partner = () => {
                 <br className="hidden sm:block" /> travel experiences, we’ve got you covered.
               </motion.p>
 
-              <button className="mt-6 w-[150px] sm:w-[170px] h-[45px] sm:h-[47px] rounded-[8px] text-base sm:text-lg font-medium text-white text-center transition-all duration-300 hover:opacity-90 bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]">
+              <button className="mt-6 w-full sm:w-[130px] text-sm sm:text-base font-medium h-[45px] sm:h-[47px] rounded-[8px] text-white text-center transition-all duration-300 hover:opacity-90 bg-[linear-gradient(180deg,#2E2C80_0%,#2458A4_100%)]">
                 Be a Partner
               </button>
             </motion.div>
@@ -141,7 +141,7 @@ const Partner = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="lg:text-center sm:text-start mb-16"
             initial="hidden"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -178,7 +178,7 @@ const Partner = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
-              className="text-center p-6"
+              className="text-center"
               initial="hidden"
               animate="visible"
               variants={cardVariants}
@@ -334,7 +334,7 @@ const Partner = () => {
 
       <section className="py-12 px-4 md:px-6 lg:px-8 max-w-[1186px] h-auto md:h-auto mx-auto flex flex-col items-center">
         <div className="text-center mb-4">
-          <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-medium text-lg leading-[18px]">
+          <span className="lg:text-center sm:text-start bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-medium text-lg leading-[18px]">
             Easy Drop
           </span>
         </div>
@@ -342,7 +342,7 @@ const Partner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-[20px] sm:text-[24px] md:text-[32px] lg:text-[38px] font-normal leading-[28px] sm:leading-[32px] md:leading-[50px] lg:leading-[60px] mb-6 sm:mb-8 md:mb-12 lg:mb-16 px-4"
+          className="lg:text-center sm:text-start text-[20px] sm:text-[24px] md:text-[32px] lg:text-[38px] font-normal leading-[28px] sm:leading-[32px] md:leading-[50px] lg:leading-[60px] mb-6 sm:mb-8 md:mb-12 lg:mb-16 px-4"
         >
           Your Road To{" "}
           <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text font-semibold">
@@ -534,7 +534,7 @@ const Partner = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-28"
+            className="lg:text-center sm:text-start max-w-3xl mx-auto mb-28"
           >
             <h2 className="text-[38px] font-semibold leading-[42px]">
               Our{" "}
@@ -543,7 +543,7 @@ const Partner = () => {
               </span>{" "}
               Drivers
             </h2>
-            <p className="text-[#59636A] text-lg leading-[26px] font-normal md:text-xl font-urbanist mt-4 max-w-[949px] mx-auto">
+            <p className="text-[#59636A] font-normal text-sm sm:text-base md:text-lg leading-[26px] font-urbanist mt-4 max-w-[949px] mx-auto">
               Our expert drivers are the backbone of Easy Drop, dedicated to
               providing safe, reliable, and punctual transportation services.
               With extensive experience and a commitment to customer
