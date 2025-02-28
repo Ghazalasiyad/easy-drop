@@ -52,12 +52,12 @@ export default function Tabs() {
     <div className="bg-[#F7F9FC]">
       <div className="container mx-auto px-2 lg:px-4 py-12">
         <motion.div
-          className="text-center mb-8"
+          className="lg:text-center sm:text-start mb-8"
           initial={{ opacity: 0, y: 50 }}
           exit={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10 text-center">
+          <h1 className="text-3xl sm:text-4xl font-semibold leading-[42px] mb-4 mt-10">
             <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] text-transparent bg-clip-text">
               Book
             </span>
@@ -107,7 +107,7 @@ export default function Tabs() {
               key={vehicle.id}
               className="bg-[#F7F9FC] border hover:bg-white border-[#E6E6E6] shadow-md rounded-lg overflow-hidden transition-all duration-300"
             >
-              <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 p-4">
+              <div className="w-full h-auto sm:h-56 md:h-64 lg:h-72 lg:p-4 sm:p-0">
                 <img
                   src={vehicle.image || "/placeholder.svg"}
                   alt={vehicle.name}

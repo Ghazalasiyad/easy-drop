@@ -175,7 +175,7 @@ const Tour: React.FC = () => {
 
           <div className="text-center mt-12">
             <motion.button
-              className="rounded-md bg-gradient-to-b from-[#2E2C80] to-[#2458A4] px-6 py-3 text-[14px] font-semibold text-white leading-[17.07px] hover:opacity-90 transition-opacity"
+              className="w-full sm:w-[130px] lg:w-[155px] rounded-md bg-gradient-to-b from-[#2E2C80] to-[#2458A4] px-6 py-4 text-[14px] font-semibold text-white leading-[17.07px] hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
               whileInView={{ opacity: 1, y: 0 }}
