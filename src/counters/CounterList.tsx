@@ -5,10 +5,10 @@ import iconVehicles from "../assets/CounterIcons/vehicles.png";
 import Counter from "./counter";
 
 const stats = [
-  { icon: iconBusiness, value: "6+", label: "Years in Business" },
-  { icon: iconDrivers, value: "50+", label: "Drivers" },
-  { icon: iconPassengers, value: "500+", label: "Passengers" },
-  { icon: iconVehicles, value: "35+", label: "Vehicles" },
+  { icon: iconBusiness, value: "7+", label: "Years in Business" },
+  { icon: iconDrivers, value: "60+", label: "Drivers" },
+  { icon: iconPassengers, value: "10k+", label: "Passengers" },
+  { icon: iconVehicles, value: "60+", label: "Vehicles" },
 ];
 
 const CounterList: React.FC = () => {
