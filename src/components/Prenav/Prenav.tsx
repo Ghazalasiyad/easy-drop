@@ -8,7 +8,7 @@ const Prenav: React.FC = () => {
         <div className="hidden md:flex items-center space-x-4 md:space-x-6">
           <div className="flex items-center space-x-2">
             <FaPhone className="text-[16px]" />
-            <span className="text-xs sm:text-sm">+92-3554347521</span>  
+            <span className="text-xs sm:text-sm">+92-3454272735</span>  
             <div className="border-l border-[#FFFFFF1A] h-10"></div>
           </div>
           <div className="flex items-center space-x-2">
