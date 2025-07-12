@@ -39,6 +39,7 @@ const PickDropForm: React.FC = () => {
         .then(
           (result) => {
             console.log("Email sent successfully:", result.text);
+            alert("Request sent successfully!");
           },
           (error) => {
             console.error("Error sending email:", error.text);
