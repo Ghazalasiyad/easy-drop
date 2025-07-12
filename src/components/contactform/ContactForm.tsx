@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
                                     id="email"
                                     type="email"
                                     placeholder="Your email"
-                                    className="w-full border border-gray-200 bg-white  rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
+                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 />
                             </div>
@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
                                     id="message"
                                     placeholder="Message"
                                     rows={4}
-                                    className="w-full border border-gray-200 bg-white  rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
+                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 ></textarea>
                             </div>
