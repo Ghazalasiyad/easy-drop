@@ -188,6 +188,7 @@ const Pick = () => {
         <PickDropForm />
       </div>
 
+
       <div>
         <WhyChooseUs />
       </div>
