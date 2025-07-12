@@ -58,7 +58,7 @@ const Pick = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: false }}
-              className="text-[clamp(28px,6vw,50px)] font-semibold mb-4 sm:mb-6 leading-[clamp(36px,7vw,65px)]"
+              className="text-[clamp(28px,6vw,50px)] font-semibold mb-4 sm:mb-6 leading-[clamp(36px,7vw,65px)] "
             >
               Your <span className="text-[#2E2C80]">Journey, </span> <br />
               Our Commitment
