@@ -84,6 +84,8 @@ export default function Home() {
         </AnimatePresence>
       </div>
 
+
+
       {/* Second Section Start */}
       <section className="bg-white py-20 relative overflow-hidden">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
@@ -129,6 +131,10 @@ export default function Home() {
         <CardList />
       </div>
 
+      <div>
+        <TravelTour />
+      </div>
+
       {/* Fourth Section Start */}
       <section>
         <div className="container mx-auto max-w-screen-[1920px] flex flex-col lg:flex-row items-center gap-12 px-4 sm:px-6 lg:px-8 lg:py-30">
@@ -164,9 +170,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div>
-        <TravelTour />
-      </div>
+
 
       <div>
         <CounterList />
