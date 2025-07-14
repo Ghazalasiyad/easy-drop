@@ -27,25 +27,41 @@ const Form: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (formRef.current) {
-      emailjs
-        .sendForm(
-          "service_7ty2wk2",
-          "template_8wwro0o",
-          formRef.current,
-          "hRMsfCXWHx-PVRRzw"
-        )
-        .then(
-          (result) => {
-            console.log("Email sent successfully:", result.text);
-            alert("Request sent successfully!");
-          },
-          (error) => {
-            console.error("Error sending email:", error.text);
-          }
-        );
-    }
-  };
+  e.preventDefault();
+
+  if (!formRef.current) return; // ✅ Early exit if ref is null
+
+  emailjs
+    .sendForm(
+      "service_7ty2wk2",
+      "template_8wwro0o",
+      formRef.current,
+      "hRMsfCXWHx-PVRRzw"
+    )
+    .then(
+      (result) => {
+        console.log("Email sent successfully:", result.text);
+        alert("Request sent successfully!");
+
+        // ✅ Reset DOM form (safe way)
+        formRef.current?.reset();
+
+        // ✅ Reset React state
+        setFormData({
+          name: "",
+          contactNumber: "",
+          numberOfDays: "",
+          location: "",
+          vehicleType: "",
+          destination: "",
+          passengers: "",
+        });
+      },
+      (error) => {
+        console.error("Error sending email:", error.text);
+      }
+    );
+};
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>

@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 const ContactForm: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -9,6 +12,9 @@ const ContactForm: React.FC = () => {
 
         setTimeout(() => {
             alert('Form submitted!');
+            setName('');
+            setEmail('');
+            setMessage('');
             setIsSubmitting(false);
         }, 2000);
     };
@@ -25,41 +31,47 @@ const ContactForm: React.FC = () => {
                             Get In Touch
                         </h1>
                         <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-sm">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.1127672137104!2d74.37619077640038!3d35.919739716834094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e6496221ad0aeb%3A0xc5fd48782e73fa82!2sDanyore%20Main%20Chowk%20Gilgit!5e0!3m2!1sen!2s!4v1739350516879!5m2!1sen!2s" className="absolute top-0 left-0 w-full h-full border-0"
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=..."
+                                className="absolute top-0 left-0 w-full h-full border-0"
                                 loading="lazy"
                                 aria-label="Location map of IdeoMetriX Pvt. Ltd"
-                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
                     </div>
 
-                    <div className=''>
+                    <div>
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
-                                <label htmlFor="name" className="sr-only">Name</label>
                                 <input
                                     id="name"
                                     type="text"
                                     placeholder="Name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                     className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 />
                             </div>
                             <div>
-                                <label htmlFor="email" className="sr-only">Email</label>
                                 <input
                                     id="email"
                                     type="email"
                                     placeholder="Your email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 />
                             </div>
                             <div>
-                                <label htmlFor="message" className="sr-only">Message</label>
                                 <textarea
                                     id="message"
                                     placeholder="Message"
                                     rows={4}
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
                                 ></textarea>
@@ -68,8 +80,7 @@ const ContactForm: React.FC = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className={`w-full sm:w-[130px] h-[47px] rounded-lg cursor-pointer text-base sm:text-lg font-medium text-white transition-colors bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] focus:outline-none focus:ring-2 focus:ring-blue-500 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-                                        }`}
+                                    className={`w-full sm:w-[130px] h-[47px] rounded-lg cursor-pointer text-base sm:text-lg font-medium text-white transition-colors bg-gradient-to-b from-[#2E2C80] to-[#2458A4] hover:from-[#3a3799] hover:to-[#3069b5] focus:outline-none focus:ring-2 focus:ring-blue-500 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Contact us'}
                                 </button>
@@ -79,7 +90,6 @@ const ContactForm: React.FC = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 
