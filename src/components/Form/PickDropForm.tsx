@@ -40,7 +40,19 @@ const PickDropForm: React.FC = () => {
           (result) => {
             console.log("Email sent successfully:", result.text);
             alert("Request sent successfully!");
+            formRef.current?.reset();
+
+            setFormData({
+              name: "",
+              contactNumber: "",
+              location: "",
+              pickup: "",
+              droptiming: "",
+              vehicleType: "",
+              destination: "",
+            });
           },
+
           (error) => {
             console.error("Error sending email:", error.text);
           }
