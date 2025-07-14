@@ -91,9 +91,6 @@ const Tour: React.FC = () => {
         </div>
       </div>
 
-
-
-
       <div>
         <Tabs />
       </div>
