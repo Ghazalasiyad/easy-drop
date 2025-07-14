@@ -19,6 +19,8 @@ const ContactForm: React.FC = () => {
         }, 2000);
     };
 
+
+    
     return (
         <div id="ContactForm" className='bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]'>
             <div className="container mx-auto flex items-center justify-evenly px-3 sm:pt-10 sm:pb-0 h-[757px]">

@@ -122,7 +122,6 @@ const Tour: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Large Featured Image - Hunza Baltit Fort */}
             <motion.div
               className="relative rounded-2xl overflow-hidden md:col-span-2 row-span-2"
               whileHover={{ scale: 1.05 }}
