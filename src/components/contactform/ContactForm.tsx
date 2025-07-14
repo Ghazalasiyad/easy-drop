@@ -30,6 +30,7 @@ const ContactForm: React.FC = () => {
                         <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#2E2C80] to-[#2458A4] mb-6">
                             Get In Touch
                         </h1>
+                        
                         <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-sm">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=..."
