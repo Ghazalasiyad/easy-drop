@@ -29,8 +29,7 @@ const Form: React.FC = () => {
     e.preventDefault();
   e.preventDefault();
 
-  if (!formRef.current) return; // ✅ Early exit if ref is null
-
+  if (!formRef.current) return; 
   emailjs
     .sendForm(
       "service_7ty2wk2",
@@ -42,11 +41,8 @@ const Form: React.FC = () => {
       (result) => {
         console.log("Email sent successfully:", result.text);
         alert("Request sent successfully!");
-
-        // ✅ Reset DOM form (safe way)
         formRef.current?.reset();
 
-        // ✅ Reset React state
         setFormData({
           name: "",
           contactNumber: "",
