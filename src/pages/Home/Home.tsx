@@ -84,10 +84,7 @@ export default function Home() {
         </AnimatePresence>
       </div>
 
-
-
-      {/* Second Section Start */}
-      <section className="bg-white py-20 relative overflow-hidden">
+      <section id="team" className="bg-white py-20 relative overflow-hidden">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-3xl font-bold text-gray-900">
@@ -125,18 +122,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Second Section End */}
 
-      <div>
-        <CardList />
-      </div>
-
-      <div>
-        <TravelTour />
-      </div>
-
-      {/* Fourth Section Start */}
       <section>
+        <CardList />
+      </section>
+
+      <section id="travel-tour">
+        <TravelTour />
+      </section>
+
+      <section id="Pick-and-Drop">
         <div className="container mx-auto max-w-screen-[1920px] flex flex-col lg:flex-row items-center gap-12 px-4 sm:px-6 lg:px-8 lg:py-30">
           <motion.div
             className="w-full lg:w-1/2 lg:pr-12"
@@ -170,27 +165,25 @@ export default function Home() {
         </div>
       </section>
 
-
-
-      <div>
+      <section>
         <CounterList />
-      </div>
+      </section>
 
-      <div>
+      <section id="drivers">
         <Driver />
-      </div>
+      </section>
 
-      <div>
+      <section>
         <Testimonials />
-      </div>
+      </section>
 
-      <div>
+      <section>
         <ContactForm />
-      </div>
+      </section>
 
-      <div>
+      <section>
         <Footer />
-      </div>
+      </section>
     </>
   );
 }

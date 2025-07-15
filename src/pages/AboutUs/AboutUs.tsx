@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AboutGallery from "./AboutUsGallery/AboutGallery";
 import CounterList from "../../counters/CounterList";
 import FAQ from "./FAQ/FAQ";
@@ -9,9 +9,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import { FaArrowRight } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 
 const AboutUs: React.FC = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const elementId = location.hash.replace("#", "");
+
+      const scrollToElement = () => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else {
+          setTimeout(scrollToElement, 100);
+        }
+      };
+
+      setTimeout(scrollToElement, 100);
+    }
+  }, [location]);
+
+
   return (
     <>
       {/* First Section */}
@@ -20,7 +42,7 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* Second Section */}
-      <div className="bg-[#F7F9FC] py-10 sm:py-16">
+      <section id="story" className="bg-[#F7F9FC] py-10 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 sm:mb-6">
             Our <span className="bg-gradient-to-b from-[#2E2C80] to-[#2458A4] 
@@ -43,7 +65,7 @@ const AboutUs: React.FC = () => {
             Easy Drop
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Third Section */}
       <div>
@@ -101,9 +123,9 @@ const AboutUs: React.FC = () => {
       </div>
       {/* Slider Section */}
 
-      <div>
+      <section id="faq">
         <FAQ />
-      </div>
+      </section>
 
       <div>
         <Footer />
