@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                 <FaInstagram className="text-[#2458A4]" />
               </a>
               <a
-                href="https://www.linkedin.com/company/pick-and-drop/"
+                href="https://www.linkedin.com/company/easy-drop-travel/posts/?feedView=all"
                 target="_blank"
                 aria-label="LinkedIn"
                 className="p-2 bg-white rounded-full hover:scale-110 transition-transform"
