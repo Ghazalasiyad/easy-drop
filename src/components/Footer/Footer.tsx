@@ -100,17 +100,17 @@ const Footer: React.FC = () => {
             <h4 className="font-semibold mb-4 text-sm sm:text-base md:text-lg">Our Activities</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" target="_blank" className="hover:text-gray-300">
+                <a href="/#Pick-and-Drop" className="hover:text-gray-300">
                   Pick & Drop Services
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" className="hover:text-gray-300">
+                <a href="/#travel-tour" className="hover:text-gray-300">
                   Travel & Tour Service
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" className="hover:text-gray-300">
+                <a href="/#drivers" className="hover:text-gray-300">
                   Drivers
                 </a>
               </li>
@@ -121,17 +121,17 @@ const Footer: React.FC = () => {
             <h4 className="font-semibold mb-4 text-sm sm:text-base md:text-lg">About Us</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
+                <a href="/about" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
                   Our Story
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
+                <a href="/home#team" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
                   Who We Are
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
+                <a href="/about#faq" className="hover:text-gray-300 text-sm sm:text-base md:text-lg">
                   FAQs
                 </a>
               </li>
