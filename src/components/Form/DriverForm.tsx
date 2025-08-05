@@ -32,7 +32,7 @@ const DriverForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (formRef.current) {
-      emailjs.sendForm("service_7ty2wk2", "template_x7to1s8", formRef.current, "hRMsfCXWHx-PVRRzw").then(
+      emailjs.sendForm("service_easydrop", "template_26m6pql", formRef.current, "pQbL6scWwGL52zucs").then(
         (result) => {
           console.log("Email sent successfully:", result.text)
         },

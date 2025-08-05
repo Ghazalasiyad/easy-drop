@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm: React.FC = () => {
+    const formRef = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -10,17 +12,32 @@ const ContactForm: React.FC = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        setTimeout(() => {
-            alert('Form submitted!');
-            setName('');
-            setEmail('');
-            setMessage('');
-            setIsSubmitting(false);
-        }, 2000);
+        if (!formRef.current) return;
+
+        emailjs
+            .sendForm(
+                'service_email',
+                'template_2gn1ihp',
+                formRef.current,
+                'pQbL6scWwGL52zucs'
+            )
+            .then(
+                () => {
+                    alert('Form submitted successfully!');
+                    setName('');
+                    setEmail('');
+                    setMessage('');
+                    setIsSubmitting(false);
+                    formRef.current?.reset();
+                },
+                (error) => {
+                    console.error('Failed to send form:', error);
+                    alert('Something went wrong. Please try again.');
+                    setIsSubmitting(false);
+                }
+            );
     };
 
-
-    
     return (
         <div id="ContactForm" className='bg-gradient-to-r from-[#FFFFFF] to-[#E5F4FF]'>
             <div className="container mx-auto flex items-center justify-evenly px-3 sm:pt-10 sm:pb-0 h-[757px]">
@@ -34,7 +51,7 @@ const ContactForm: React.FC = () => {
                         </h1>
                         <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-sm">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.1153817231384!2d74.38549497629283!3d35.919675716837936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e649b604ba8633%3A0x6bfa22d5c992633d!2sEasydrop%20travel!5e0!3m2!1sen!2s!4v1752490424937!5m2!1sen!2s"
+                                src="https://www.google.com/maps/embed?...your map link..."
                                 width="600"
                                 height="450"
                                 style={{ border: 0 }}
@@ -46,39 +63,42 @@ const ContactForm: React.FC = () => {
                     </div>
 
                     <div>
-                        <form className="space-y-6" onSubmit={handleSubmit}>
+                        <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
                             <div>
                                 <input
                                     id="name"
+                                    name="name"
                                     type="text"
                                     placeholder="Name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
+                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                 />
                             </div>
                             <div>
                                 <input
                                     id="email"
+                                    name="email"
                                     type="email"
                                     placeholder="Your email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
+                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                 />
                             </div>
                             <div>
                                 <textarea
                                     id="message"
+                                    name="message"
                                     placeholder="Message"
                                     rows={4}
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
-                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
                                     required
-                                ></textarea>
+                                    className="w-full border border-gray-200 bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-blue-200"
+                                />
                             </div>
                             <div className="flex justify-start">
                                 <button

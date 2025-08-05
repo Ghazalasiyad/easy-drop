@@ -31,10 +31,10 @@ const PickDropForm: React.FC = () => {
     if (formRef.current) {
       emailjs
         .sendForm(
-          "service_7ty2wk2",
-          "template_8wwro0o",
+          "service_easydrop",
+          "template_26m6pql",
           formRef.current,
-          "hRMsfCXWHx-PVRRzw"
+          "pQbL6scWwGL52zucs"
         )
         .then(
           (result) => {
